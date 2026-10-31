@@ -1,0 +1,98 @@
+{
+  "slug": "ganar-con-claude",
+  "title": "3 formas de ganar dinero con Claude (sin saber programar)",
+  "voice": "ef_dora",
+  "speed": 1.2,
+  "pronunciation": {"IA": "i a", "Claude": "Clod", "CLAUDE": "Clod", "PDF": "pe de efe", "WhatsApp": "guatsap"},
+  "scenes": [
+    {
+      "vo": "La mayoría usa la *IA* para preguntarle cosas. Los que están *facturando* la usan para entregar *trabajo.*",
+      "punch": ["trabajo"],
+      "beats": [
+        {"type": "search", "text": "Pregúntale lo que sea",
+         "cross": {"at": "preguntarle", "title": "!NO! LA USES\nCOMO BUSCADOR"}},
+        {"at": "facturando", "type": "icon", "icon": "package-check", "title": "ÚSALA PARA\n*ENTREGAR\nTRABAJO*"}
+      ]
+    },
+    {
+      "vo": "El error es pensar que la IA te va a hacer *rico* sola. *No.* Lo que sí hace es que tú produzcas en *horas* lo que antes tomaba *días.* Y eso se *vende.*",
+      "punch": ["vende"],
+      "beats": [
+        {"type": "icon", "icon": "bot", "float": "?", "title": "¿LA IA TE VA\nA HACER *RICO*?"},
+        {"at": "no", "type": "big", "text": "NO.", "color": "red", "size": 300},
+        {"at": "lo", "type": "counter", "icon": "clock", "from": {"n": 5, "unit": "DÍAS"}, "to": {"n": 3, "unit": "HORAS"}, "toAt": "horas", "strikeAt": "días", "sub": "Produces más rápido"},
+        {"at": "eso", "type": "icon", "icon": "badge-dollar-sign", "color": "gold", "drop": true, "title": "ESO SE\n*VENDE*", "titleSize": 150}
+      ]
+    },
+    {
+      "label": {"num": "01", "text": "VENDE SERVICIOS"},
+      "vo": "Primero: *servicios.* *Guiones* para videos, *textos* para redes, *descripciones* de productos, *correos* para negocios. Claude te hace el primer *borrador,* tú lo ajustas y lo entregas. Tu valor está en el *criterio,* no en teclear.",
+      "punch": ["criterio"],
+      "beats": [
+        {"type": "text", "title": "~PRIMERO~\nSERVICIOS", "size": 150},
+        {"at": "guiones", "type": "cards", "items": [
+          {"icon": "clapperboard", "label": "GUIONES", "at": "guiones"},
+          {"icon": "megaphone", "label": "POSTS", "at": "textos"},
+          {"icon": "pen-line", "label": "COPY", "at": "descripciones"},
+          {"icon": "mail", "label": "CORREOS", "at": "correos"}]},
+        {"at": "claude", "type": "chat", "prompt": "Guion de 30 s para una cafetería", "answer": "GANCHO: ¿Tu café sabe a prisa?\nAquí lo hacemos lento.\nPasa hoy y pide el de la casa.", "underlineAt": "ajustas", "checkAt": "entregas"},
+        {"at": "valor", "zone": "low", "type": "text", "title": "TU VALOR =\n*CRITERIO*", "size": 124, "sub": "no teclear", "strikeAt": "teclear"}
+      ]
+    },
+    {
+      "label": {"num": "02", "text": "CREA PRODUCTOS\nDIGITALES"},
+      "vo": "Segundo: *productos digitales.* Plantillas, guías en PDF, presentaciones, hojas de cálculo con fórmulas. Claude te ayuda a investigar, redactar y armar el archivo. Lo haces *una vez* y lo vendes *muchas veces.*",
+      "punch": ["muchas"],
+      "beats": [
+        {"type": "orbit", "center": "PRODUCTOS\n~DIGITALES~", "items": [
+          {"icon": "layout-template", "label": "PLANTILLAS", "at": "plantillas"},
+          {"icon": "file-text", "label": "GUÍAS PDF", "at": "pdf"},
+          {"icon": "presentation", "label": "SLIDES", "at": "presentaciones"},
+          {"icon": "sheet", "label": "HOJAS", "at": "hojas"}]},
+        {"at": "claude", "type": "chips", "icon": "file-check", "items": [
+          {"text": "INVESTIGA", "at": "investigar"}, {"text": "REDACTA", "at": "redactar"}, {"text": "ARMA", "at": "armar"}]},
+        {"at": "haces", "type": "clone", "icon": "file-check", "count": 100, "title": "HAZLO ~1~ VEZ ->\nVÉNDELO *100* VECES"}
+      ]
+    },
+    {
+      "label": {"num": "03", "text": "NEGOCIOS LOCALES"},
+      "badge": {"text": "CASI NADIE LO HACE", "at": "nadie"},
+      "vo": "Y la *tercera,* la que casi nadie aprovecha: negocios de tu *barrio.* Una página *web* sencilla, un *menú* digital, una calculadora de *cotizaciones,* respuestas para *WhatsApp.* Ellos no saben que esto se puede hacer *rápido.* *Tú sí.*",
+      "beats": [
+        {"type": "pills",
+         "bases": [{"icon": "utensils", "at": "tercera"}, {"icon": "scissors", "at": "aprovecha"}, {"icon": "store", "at": "barrio"}],
+         "items": [
+          {"icon": "globe", "label": "PÁGINA WEB", "at": "página", "from": 2},
+          {"icon": "qr-code", "label": "MENÚ DIGITAL", "at": "menú", "from": 0},
+          {"icon": "calculator", "label": "COTIZADOR", "at": "calculadora", "from": 2},
+          {"icon": "message-circle", "label": "RESPUESTAS\nAUTOMÁTICAS", "at": "respuestas", "from": 1}]},
+        {"at": "ellos", "type": "phone", "site": {"kicker": "RESTAURANTE", "title": "LA\nESQUINA", "subtitle": "Comida casera desde 1998", "button": "VER MENÚ",
+          "items": [["Bandeja del día", "$18.900"], ["Ajiaco santafereño", "$16.500"], ["Arepa rellena", "$9.800"], ["Jugo natural", "$5.500"], ["Postre casero", "$7.000"], ["Café tinto", "$2.500"]],
+          "cta": "PEDIR POR CHAT"}},
+        {"at": "tú", "type": "big", "text": "TÚ SÍ.", "color": "gold", "size": 220, "sparkles": true, "strong": true}
+      ]
+    },
+    {
+      "vo": "Ojo: nadie te va a *pagar* por usar *IA.* Te pagan por *resultados.* Empieza con un *nicho,* haz *tres* ejemplos gratis para tu portafolio y luego *cobra.*",
+      "punch": ["resultados", "cobra"],
+      "beats": [
+        {"type": "icon", "icon": "triangle-alert", "color": "gold", "pulse": true, "title": "NADIE TE PAGA\nPOR USAR !IA!"},
+        {"at": "pagan-0.15", "type": "text", "title": "TE PAGAN POR\n*RESULTADOS*", "size": 112},
+        {"at": "empieza", "type": "steps", "icon": "triangle-alert", "title": "EMPIEZA ~ASÍ:~", "items": [
+          {"icon": "target", "label": "1 NICHO", "at": "nicho"},
+          {"icon": "folder-open", "label": "3 EJEMPLOS", "at": "ejemplos"},
+          {"icon": "wallet", "label": "COBRA", "at": "cobra"}]}
+      ]
+    },
+    {
+      "bg": "terra",
+      "vo": "Si quieres que te muestre paso a paso cómo hago uno de estos, comenta *CLAUDE* y armo la *parte 2.* *Guárdalo* para cuando empieces.",
+      "beats": [
+        {"type": "cta", "heading": "¿QUIERES EL\n_PASO A PASO?_", "keyword": "CLAUDE", "keywordAt": "comenta", "saveAt": "guárdalo"}
+      ]
+    }
+  ],
+  "thumbnail": {"big": "3", "lines": ["FORMAS DE", "*GANAR CON*", "CLAUDE"], "icon": "badge-dollar-sign"},
+  "caption": "La mayoría usa la IA para preguntarle cosas. Los que facturan la usan para entregar trabajo. 💸\n\n3 formas de empezar a ganar dinero con Claude sin saber programar:\n1️⃣ Vende servicios\n2️⃣ Crea productos digitales\n3️⃣ Ayuda a negocios de tu barrio\n\n💬 Comenta CLAUDE y armo la parte 2.\n📌 Guárdalo para cuando empieces.",
+  "hashtags": ["inteligenciaartificial", "claude", "ganardineroonline", "emprendimiento", "ia", "freelance"]
+}

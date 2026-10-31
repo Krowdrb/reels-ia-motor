@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:"IT";src:url("assets/InterTight.ttf");font-weight:100 900}
+body{margin:0}
+#t{position:relative;width:1080px;height:1920px;overflow:hidden;font-family:"IT";color:#fff;
+ background:radial-gradient(circle at 92% 6%,rgba(217,119,87,.5) 0%,rgba(217,119,87,.14) 34%,rgba(15,15,18,0) 60%),radial-gradient(circle at 0% 100%,rgba(217,119,87,.14) 0%,rgba(15,15,18,0) 45%),#0F0F12}
+#g{position:absolute;inset:0;background:url(assets/grain/g3.png);background-size:1080px 1920px;opacity:.09;mix-blend-mode:overlay}
+.big{position:absolute;left:0;right:0;top:250px;text-align:center;font-weight:900;line-height:1;color:#D97757;letter-spacing:-.06em;text-shadow:0 30px 120px rgba(217,119,87,.45);white-space:nowrap}
+.ic{position:absolute;right:120px;top:300px;width:250px;height:250px;border-radius:50%;background:#F5C26B;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 18px #0F0F12,0 0 90px rgba(245,194,107,.6);transform:rotate(12deg)}
+.txt{position:absolute;left:0;right:0;top:1290px;text-align:center;font-weight:900;text-transform:uppercase;line-height:.98;letter-spacing:-.02em}
+.ln{white-space:nowrap}
+.gold{color:#F5C26B}.terra{color:#D97757}.red{color:#FF4D4D}
+.bar{display:inline-block;background:#fff;color:#0F0F12;padding:4px 30px 10px;border-radius:24px;margin-top:8px}
+</style></head><body>
+<div id="t"><div id="g"></div><div class="big" id="big"></div><div class="ic" id="ic"></div><div class="txt" id="txt"></div></div>
+<script src="icons.js"></script><script src="thumb.js"></script>
+<script>
+const f=s=>String(s).replace(/\*([^*]+)\*/g,'<span class="gold">$1</span>').replace(/~([^~]+)~/g,'<span class="terra">$1</span>');
+const T=THUMB, big=document.getElementById('big');
+big.textContent=T.big||'';big.style.fontSize=(T.big&&T.big.length>2?Math.round(1050*2.2/T.big.length):1050)+'px';
+if(T.big&&T.big.length>1&&T.big.length<=2)big.style.fontSize='820px';
+if(T.icon&&ICONS[T.icon])document.getElementById('ic').innerHTML=`<svg viewBox="0 0 24 24" width="150" height="150" fill="none" stroke="#0F0F12" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">${ICONS[T.icon]}</svg>`;else document.getElementById('ic').style.display='none';
+const lines=T.lines||[];const sz=Math.min(150,Math.round(1500/Math.max(...lines.map(l=>l.replace(/[*~]/g,'').length),8)));
+document.getElementById('txt').innerHTML=lines.map((l,i)=>i===lines.length-1&&T.boxLast!==false?`<div class="ln" style="font-size:${sz}px"><span class="bar">${f(l)}</span></div>`:`<div class="ln" style="font-size:${sz}px">${f(l)}</div>`).join('');
+const tx=document.getElementById('txt');if(!T.big){tx.style.top='auto';tx.style.bottom='560px'}
+</script>
+</body></html>

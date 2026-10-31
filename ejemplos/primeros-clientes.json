@@ -1,0 +1,78 @@
+{
+  "slug": "primeros-clientes",
+  "title": "3 prompts para conseguir tus primeros clientes con Claude (sin experiencia)",
+  "voice": "ef_dora",
+  "speed": 1.2,
+  "pronunciation": {"Claude": "Clod", "CLAUDE": "Clod", "prompts": "prómts", "PROMPTS": "prómts", "prompt": "prómt", "IA": "i a", "DM": "de eme", "reels": "rils"},
+  "scenes": [
+    {
+      "vo": "¿Crees que sin experiencia nadie te va a *contratar*? Te contratan cuando llegas con una *solución,* y estos tres prompts te ayudan a armarla.",
+      "punch": ["solución"],
+      "beats": [
+        {"type": "icon", "icon": "briefcase", "float": "?", "title": "¿SIN EXPERIENCIA\nNADIE TE\n*CONTRATA*?",
+         "cross": {"at": "llegas", "title": "LLEGA CON UNA\n*SOLUCIÓN*"}},
+        {"at": "tres", "type": "big", "text": "3 PROMPTS", "color": "gold", "size": 220, "strong": true}
+      ]
+    },
+    {
+      "label": {"num": "01", "text": "ELIGE A QUIÉN\nAYUDAR"},
+      "vo": "Primero: *a quién* ayudar. Pídele a Claude: tengo estas habilidades, ¿qué negocios las necesitan y qué *problema* les resuelvo? Así dejas de ofrecer *de todo* y eliges un *nicho.*",
+      "punch": ["nicho"],
+      "beats": [
+        {"type": "text", "title": "~PRIMERO~\nA QUIÉN\nAYUDAR", "size": 140},
+        {"at": "pídele", "type": "chat", "prompt": "Sé editar video. ¿Qué 5 negocios lo necesitan y qué problema les resuelvo?", "answer": "1. Gimnasios: reels de clases\n2. Inmobiliarias: recorridos\n3. Restaurantes: plato del día", "underlineAt": "problema", "checkAt": "dejas"},
+        {"at": "eliges", "type": "icon", "icon": "target", "color": "gold", "pulse": true, "title": "ELIGE UN\n*NICHO*"}
+      ]
+    },
+    {
+      "label": {"num": "02", "text": "PORTAFOLIO\nSIN CLIENTES"},
+      "vo": "Segundo: tu *portafolio,* aunque no tengas clientes. Pide: crea tres casos de ejemplo para un gimnasio, con el antes, el después y el *resultado* buscado. Luego haz uno *gratis* para un negocio real, y ya tienes *pruebas.*",
+      "punch": ["pruebas"],
+      "beats": [
+        {"type": "clone", "icon": "folder-open", "count": 3, "title": "~0~ CLIENTES ->\n*3* CASOS"},
+        {"at": "pide", "type": "cards", "title": "CASO DE EJEMPLO", "items": [
+          {"icon": "circle-dashed", "label": "ANTES", "at": "antes"},
+          {"icon": "circle-check", "label": "DESPUÉS", "at": "después"},
+          {"icon": "trending-up", "label": "RESULTADO", "at": "resultado"}]},
+        {"at": "luego", "type": "chips", "icon": "badge-check", "items": [
+          {"text": "1 GRATIS", "at": "gratis"},
+          {"text": "NEGOCIO REAL", "at": "real"},
+          {"text": "PRUEBAS", "at": "pruebas"}]}
+      ]
+    },
+    {
+      "label": {"num": "03", "text": "EL MENSAJE QUE\nABRE PUERTAS"},
+      "vo": "Tercero: el *mensaje.* Pega la info del negocio y pide: un mensaje corto que mencione un problema *específico* suyo y ofrezca una *muestra* gratis. Nada de copiar y pegar a *cien* personas. *Diez* personalizados valen más.",
+      "punch": ["diez"],
+      "beats": [
+        {"type": "big", "text": "EL MENSAJE", "color": "terra", "size": 220},
+        {"at": "pega", "type": "chat", "header": "Claude", "prompt": "Escríbeme un mensaje corto para esta panadería", "answer": "Hola, vi que sus reels no muestran\nel pan saliendo del horno.\nLes hago uno de muestra, sin costo.\n¿Se los envío?", "underlineAt": "específico", "checkAt": "muestra"},
+        {"at": "nada", "type": "counter", "icon": "send", "from": {"n": 100, "unit": "GENÉRICOS"}, "to": {"n": 10, "unit": "PERSONALES"}, "strikeAt": "cien", "toAt": "diez", "sub": "Menos, pero mejores"}
+      ]
+    },
+    {
+      "badge": {"text": "LA PARTE QUE NADIE CUENTA", "at": "ojo"},
+      "vo": "Ojo: Claude no consigue clientes *por ti.* Te ahorra horas, pero el que escribe, ajusta y da la cara eres *tú.* Habrá *silencio* y habrá *noes.* Ajusta y sigue enviando.",
+      "punch": ["tú", "sigue"],
+      "beats": [
+        {"type": "text", "title": "CLAUDE NO\nVENDE !POR TI!", "size": 130},
+        {"at": "pero", "type": "steps", "title": "LO HACES ~TÚ:~", "items": [
+          {"icon": "pen-line", "label": "ESCRIBES", "at": "escribe"},
+          {"icon": "sliders-horizontal", "label": "AJUSTAS", "at": "ajusta"},
+          {"icon": "user-check", "label": "DAS LA CARA", "at": "cara"}], "doneAt": "tú"},
+        {"at": "habrá", "type": "search", "text": "¿Por qué nadie me responde?",
+         "cross": {"at": "sigue", "title": "*AJUSTA* Y\nSIGUE ENVIANDO"}}
+      ]
+    },
+    {
+      "bg": "terra",
+      "vo": "¿Quieres los tres prompts completos para copiar? Comenta *PROMPTS* y te los paso. *Guárdalo* para tu primer cliente.",
+      "beats": [
+        {"type": "cta", "heading": "¿QUIERES LOS\n_3 PROMPTS?_", "keyword": "PROMPTS", "keywordAt": "Comenta", "saveAt": "guárdalo"}
+      ]
+    }
+  ],
+  "thumbnail": {"big": "3", "lines": ["PROMPTS PARA", "*TUS PRIMEROS*", "CLIENTES"], "icon": "user-plus"},
+  "caption": "¿Sin experiencia y sin clientes? 🤔 No te contratan por tu currículum, te contratan por traer una solución.\n\n3 prompts para empezar con Claude:\n1️⃣ Elige a quién ayudar (tu nicho)\n2️⃣ Arma un portafolio aunque no tengas clientes\n3️⃣ Escribe un mensaje personalizado que abra la puerta\n\n⚠️ Claude no vende por ti: tú escribes, ajustas y das la cara.\n\n💬 Comenta PROMPTS y te los paso completos.\n📌 Guárdalo para tu primer cliente.",
+  "hashtags": ["inteligenciaartificial", "claude", "freelance", "primerosclientes", "emprendimiento", "ia", "prompts"]
+}
