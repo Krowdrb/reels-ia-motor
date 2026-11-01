@@ -1,7 +1,7 @@
 # Temas pendientes
 
 ## Candidato en prueba: Fe / historias bíblicas animadas
-- El hijo pródigo: el padre que corre a abrazarte (Lucas 15) — 2026-11-01
+- (hijo-prodigo publicado; agregar el próximo tema de fe)
 
 ## Nicho vigente
 Nicho: cómo usar IA (sobre todo Claude) para ganar dinero, conseguir clientes y trabajar mejor, sin saber programar. Público: creadores y emprendedores de Latinoamérica.

@@ -1,0 +1,220 @@
+{
+  "slug": "hijo-prodigo",
+  "title": "El hijo pródigo: el Padre que corre a abrazarte (Lucas 15) #shorts",
+  "voice": "em_santa",
+  "speed": 1.2,
+  "pronunciation": {},
+  "scenes": [
+    {
+      "vo": "Si sientes que te *alejaste* demasiado de Dios, escucha esto: hay un Padre que *corre* a abrazarte.",
+      "punch": [
+        "corre"
+      ],
+      "beats": [
+        {
+          "type": "icon",
+          "icon": "hand-heart",
+          "color": "gold",
+          "pulse": true,
+          "title": "UN PADRE QUE\n*CORRE A\nABRAZARTE*"
+        },
+        {
+          "at": "corre",
+          "type": "big",
+          "text": "A TI.",
+          "color": "gold",
+          "size": 280,
+          "sparkles": true,
+          "strong": true
+        }
+      ]
+    },
+    {
+      "label": {
+        "num": "01",
+        "text": "SE VA"
+      },
+      "vo": "Un hijo pidió su *herencia*, se fue lejos y la gastó *toda*. Terminó cuidando *cerdos*, con hambre.",
+      "punch": [
+        "toda"
+      ],
+      "beats": [
+        {
+          "type": "icon",
+          "icon": "coins",
+          "color": "gold",
+          "drop": true,
+          "title": "PIDIÓ SU\n*HERENCIA*"
+        },
+        {
+          "at": "gastó",
+          "type": "counter",
+          "icon": "wallet",
+          "from": {
+            "n": 100,
+            "unit": "%"
+          },
+          "to": {
+            "n": 0,
+            "unit": "%"
+          },
+          "toAt": "toda",
+          "sub": "LO PERDIÓ TODO"
+        },
+        {
+          "at": "cerdos",
+          "type": "chips",
+          "icon": "wheat",
+          "items": [
+            {
+              "text": "CERDOS",
+              "at": "cerdos"
+            },
+            {
+              "text": "HAMBRE",
+              "at": "hambre"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": {
+        "num": "02",
+        "text": "DECIDE VOLVER"
+      },
+      "vo": "Ahí *recapacitó*: volveré a mi padre y le diré que ya no merezco ser llamado su *hijo*.",
+      "punch": [
+        "volveré"
+      ],
+      "beats": [
+        {
+          "type": "steps",
+          "title": "~DECIDE~ VOLVER",
+          "items": [
+            {
+              "icon": "person-standing",
+              "label": "SE LEVANTA",
+              "at": "recapacitó"
+            },
+            {
+              "icon": "route",
+              "label": "CAMINA",
+              "at": "volveré"
+            },
+            {
+              "icon": "house",
+              "label": "A CASA",
+              "at": "padre"
+            }
+          ]
+        },
+        {
+          "at": "merezco",
+          "zone": "low",
+          "type": "text",
+          "title": "YA NO\n!MEREZCO!",
+          "size": 130
+        }
+      ]
+    },
+    {
+      "label": {
+        "num": "03",
+        "text": "EL PADRE CORRE"
+      },
+      "vo": "Pero el padre lo vio de *lejos*, tuvo compasión, *corrió* y lo abrazó. El hijo empezó a disculparse, y el padre ya estaba pidiendo *fiesta*.",
+      "punch": [
+        "corrió"
+      ],
+      "beats": [
+        {
+          "type": "cards",
+          "title": "~EL PADRE~",
+          "items": [
+            {
+              "icon": "eye",
+              "label": "LO VE",
+              "at": "lejos"
+            },
+            {
+              "icon": "footprints",
+              "label": "CORRE",
+              "at": "corrió"
+            },
+            {
+              "icon": "heart-handshake",
+              "label": "LO ABRAZA",
+              "at": "abrazó"
+            }
+          ]
+        },
+        {
+          "at": "fiesta-0.2",
+          "type": "big",
+          "text": "¡FIESTA!",
+          "color": "gold",
+          "size": 240,
+          "sparkles": true,
+          "sfx": "chime"
+        }
+      ]
+    },
+    {
+      "vo": "Hoy es igual. No importa cuán *lejos* te fuiste: Dios no te espera con reproche, te espera con los brazos *abiertos*.",
+      "punch": [
+        "abiertos"
+      ],
+      "beats": [
+        {
+          "type": "clone",
+          "icon": "footprints",
+          "count": 50,
+          "title": "NO IMPORTA\nCUÁN *LEJOS*"
+        },
+        {
+          "at": "dios",
+          "type": "text",
+          "title": "CON LOS\n*BRAZOS\nABIERTOS*",
+          "size": 130,
+          "sub": "con reproche",
+          "strikeAt": "reproche"
+        }
+      ]
+    },
+    {
+      "bg": "terra",
+      "vo": "¿Tú también estás volviendo a casa? Responde *SÍ*. Y etiqueta a alguien que necesita escuchar esto.",
+      "beats": [
+        {
+          "type": "cta",
+          "heading": "¿ESTÁS\n_VOLVIENDO?_",
+          "keyword": "SÍ",
+          "keywordAt": "responde",
+          "saveAt": "etiqueta",
+          "comment": "RESPONDE _«SÍ»_"
+        }
+      ]
+    }
+  ],
+  "thumbnail": {
+    "big": "LC 15",
+    "lines": [
+      "UN PADRE QUE",
+      "*CORRE A*",
+      "ABRAZARTE"
+    ],
+    "icon": "hand-heart"
+  },
+  "caption": "Si sientes que te alejaste demasiado, esto es para ti. 🤍\n\nEl hijo lo perdió todo, decidió volver… y el padre lo vio de lejos, corrió y lo abrazó antes de que terminara de disculparse. 🏃‍♂️🫂\n\n📖 Lucas 15:11-32\n\n🙏 ¿Tú también estás volviendo a casa? Responde SÍ.\n👥 Etiqueta a alguien que necesita escuchar esto.",
+  "hashtags": [
+    "hijoprodigo",
+    "fe",
+    "dios",
+    "biblia",
+    "historiasbiblicas",
+    "jesus",
+    "cristianos",
+    "noesunerror"
+  ]
+}
