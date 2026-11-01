@@ -1,0 +1,86 @@
+{
+  "slug": "portafolio-fin-de-semana",
+  "title": "Cómo armar tu portafolio en un fin de semana con Claude",
+  "voice": "ef_dora",
+  "speed": 1.2,
+  "pronunciation": {"Claude": "Clod", "CLAUDE": "Clod", "PDF": "pe de efe", "Notion": "Nóshon", "landing": "léndin", "link": "linc", "prompts": "prómts"},
+  "scenes": [
+    {
+      "vo": "Sin *portafolio,* nadie te contrata. Con *Claude* puedes armar uno decente en un solo *fin de semana.*",
+      "punch": ["fin"],
+      "beats": [
+        {"type": "icon", "icon": "briefcase", "float": "?", "title": "¿Y TU\n*PORTAFOLIO*?",
+         "cross": {"at": "nadie", "title": "!SIN! PORTAFOLIO\nNO HAY CLIENTES"}},
+        {"at": "fin", "type": "big", "text": "48 H", "color": "gold", "size": 280, "sparkles": true}
+      ]
+    },
+    {
+      "label": {"num": "01", "text": "ELIGE 3\nPROYECTOS"},
+      "badge": {"text": "MENOS ES MÁS", "at": "solo"},
+      "vo": "Sábado en la mañana: elige solo *tres* proyectos. Pídele a Claude ideas para tu *nicho:* un rediseño, un caso de práctica y uno para un *negocio* cercano.",
+      "punch": ["tres"],
+      "beats": [
+        {"type": "text", "title": "~SÁBADO AM~\nSOLO *3*\nPROYECTOS", "size": 140},
+        {"at": "pídele", "type": "cards", "title": "IDEAS PARA\nTU *NICHO*", "items": [
+          {"icon": "pen-tool", "label": "REDISEÑO", "at": "rediseño"},
+          {"icon": "flask-conical", "label": "PRÁCTICA", "at": "práctica"},
+          {"icon": "store", "label": "NEGOCIO\nCERCANO", "at": "negocio"}]}
+      ]
+    },
+    {
+      "label": {"num": "02", "text": "CONSTRUYE\nCON CLAUDE"},
+      "vo": "Sábado en la tarde: *construye.* Claude te ayuda a redactar textos, armar una *landing* o escribir el *código* de una mini app. Tú decides, corriges y *pruebas* cada parte.",
+      "punch": ["construye", "pruebas"],
+      "beats": [
+        {"type": "orbit", "center": "SÁBADO\n~TARDE~", "items": [
+          {"icon": "file-text", "label": "TEXTOS", "at": "textos"},
+          {"icon": "layout-template", "label": "LANDING", "at": "landing"},
+          {"icon": "code", "label": "CÓDIGO", "at": "código"}]},
+        {"at": "tú", "type": "chips", "icon": "user-check", "items": [
+          {"text": "DECIDES", "at": "decides"}, {"text": "CORRIGES", "at": "corriges"}, {"text": "PRUEBAS", "at": "pruebas"}]}
+      ]
+    },
+    {
+      "label": {"num": "03", "text": "CUENTA EL\nPROCESO"},
+      "vo": "Domingo: escribe el *proceso* de cada proyecto. Cuál era el problema, qué hiciste y qué *aprendiste.* Pídele a Claude que lo deje *corto* y claro.",
+      "punch": ["proceso"],
+      "beats": [
+        {"type": "steps", "title": "CADA ~PROYECTO~", "items": [
+          {"icon": "circle-question-mark", "label": "PROBLEMA", "at": "problema"},
+          {"icon": "wrench", "label": "QUÉ HICISTE", "at": "hiciste"},
+          {"icon": "lightbulb", "label": "APRENDIZAJE", "at": "aprendiste"}]},
+        {"at": "pídele", "type": "chat", "prompt": "Resume este caso en 3 líneas", "answer": "Problema: menú confuso.\nSolución: rediseño en 2 pantallas.\nAprendí: menos opciones, más claridad.", "underlineAt": "corto", "checkAt": "claro"}
+      ]
+    },
+    {
+      "label": {"num": "04", "text": "PUBLÍCALO"},
+      "vo": "Domingo en la tarde: *publícalo.* Una página sencilla, un Notion o un PDF con tu *link.* Así, el *lunes* ya lo puedes compartir.",
+      "punch": ["lunes"],
+      "beats": [
+        {"type": "phone", "site": {"kicker": "PORTAFOLIO", "title": "TU\nNOMBRE", "subtitle": "Diseño y contenido para negocios", "button": "VER PROYECTOS",
+          "items": [["Rediseño de menú", "Ver caso"], ["Landing de práctica", "Ver caso"], ["Textos para tienda", "Ver caso"]],
+          "cta": "ESCRÍBEME"}},
+        {"at": "lunes", "type": "counter", "icon": "folder-open", "from": {"n": 0, "unit": "PROYECTOS"}, "to": {"n": 3, "unit": "PROYECTOS"}, "toAt": "compartir", "sub": "Listos para mostrar"}
+      ]
+    },
+    {
+      "vo": "Ojo: Claude no reemplaza tu *criterio.* Nada de inventar *clientes* ni resultados. Muestra proyectos *reales* o de práctica, y dilo con *honestidad.*",
+      "punch": ["criterio", "honestidad"],
+      "beats": [
+        {"type": "icon", "icon": "triangle-alert", "color": "gold", "pulse": true, "title": "NO REEMPLAZA\nTU *CRITERIO*"},
+        {"at": "nada", "type": "text", "title": "!NO! INVENTES\nCLIENTES", "size": 120, "sub": "ni resultados", "strikeAt": "resultados"},
+        {"at": "muestra", "type": "big", "text": "SÉ REAL.", "color": "gold", "size": 190, "strong": true}
+      ]
+    },
+    {
+      "bg": "terra",
+      "vo": "Si quieres la lista de *prompts* que uso en cada paso, comenta *LISTA.* Y *guárdalo* para este fin de semana.",
+      "beats": [
+        {"type": "cta", "heading": "¿QUIERES MIS\n_PROMPTS?_", "keyword": "LISTA", "keywordAt": "comenta", "saveAt": "guárdalo"}
+      ]
+    }
+  ],
+  "thumbnail": {"big": "48H", "lines": ["TU PORTAFOLIO", "*CON CLAUDE*", "EN UN FINDE"], "icon": "briefcase"},
+  "caption": "Sin portafolio, nadie te contrata. Con Claude puedes armar uno decente en un fin de semana. 💼\n\n🗓️ Sábado AM: elige 3 proyectos\n🛠️ Sábado PM: constrúyelos (tú decides y pruebas)\n✍️ Domingo: cuenta el proceso\n🚀 Domingo PM: publícalo\n\n⚠️ Nada de inventar clientes ni resultados: proyectos reales o de práctica, dicho con honestidad.\n\n💬 Comenta LISTA y te paso mis prompts.\n📌 Guárdalo para este finde.",
+  "hashtags": ["portafolio", "claude", "inteligenciaartificial", "freelance", "ia", "primerempleo", "productividad"]
+}
