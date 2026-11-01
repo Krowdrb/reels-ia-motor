@@ -1,0 +1,299 @@
+{
+  "slug": "errores-pedirle-ia",
+  "title": "5 errores que cometes al pedirle cosas a la IA (y cómo arreglarlos con Claude)",
+  "voice": "ef_dora",
+  "speed": 1.2,
+  "pronunciation": {
+    "IA": "i a",
+    "Claude": "Clod",
+    "CLAUDE": "Clod",
+    "PROMPT": "promt",
+    "prompt": "promt",
+    "post": "poust"
+  },
+  "scenes": [
+    {
+      "vo": "Si la IA te da respuestas *genéricas,* el problema no es Claude. Es cómo le *pides* las cosas.",
+      "punch": [
+        "pides"
+      ],
+      "beats": [
+        {
+          "type": "search",
+          "text": "Escríbeme un post",
+          "title": "¿ASÍ LE\nPIDES?",
+          "cross": {
+            "at": "genéricas",
+            "title": "RESPUESTAS\n!GENÉRICAS!"
+          }
+        },
+        {
+          "at": "es",
+          "type": "icon",
+          "icon": "message-circle-question-mark",
+          "color": "terra",
+          "title": "EL PROBLEMA\nES *CÓMO*\nLE PIDES",
+          "sfx": "whoosh"
+        }
+      ]
+    },
+    {
+      "label": {
+        "num": "01",
+        "text": "SIN CONTEXTO"
+      },
+      "vo": "Error uno: pedir sin *contexto.* Claude no sabe quién eres, a quién le vendes ni qué tono usas. *Dile* tu negocio, tu cliente y tu objetivo.",
+      "punch": [
+        "dile"
+      ],
+      "beats": [
+        {
+          "type": "text",
+          "title": "PEDIR SIN\n!CONTEXTO!",
+          "size": 150
+        },
+        {
+          "at": "sabe",
+          "type": "chips",
+          "icon": "circle-question-mark",
+          "items": [
+            {
+              "text": "¿QUIÉN ERES?",
+              "at": "quién"
+            },
+            {
+              "text": "¿A QUIÉN?",
+              "at": "vendes"
+            },
+            {
+              "text": "¿QUÉ TONO?",
+              "at": "tono"
+            }
+          ]
+        },
+        {
+          "at": "dile",
+          "type": "cards",
+          "title": "*DILE:*",
+          "items": [
+            {
+              "icon": "store",
+              "label": "NEGOCIO",
+              "at": "negocio"
+            },
+            {
+              "icon": "users",
+              "label": "CLIENTE",
+              "at": "cliente"
+            },
+            {
+              "icon": "target",
+              "label": "OBJETIVO",
+              "at": "objetivo"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": {
+        "num": "2·3",
+        "text": "TODO DE UNA\nY SIN EJEMPLOS"
+      },
+      "vo": "Errores dos y tres: pedir *todo de una* y no dar *ejemplos.* Divide la tarea en pasos: primero ideas, luego el guion, luego el texto. Y pégale un *ejemplo* de lo que te gusta.",
+      "punch": [
+        "divide"
+      ],
+      "beats": [
+        {
+          "type": "big",
+          "text": "TODO\n!DE UNA!",
+          "color": "red",
+          "size": 240,
+          "strong": true
+        },
+        {
+          "at": "divide",
+          "type": "steps",
+          "icon": "list-ordered",
+          "title": "DIVIDE EN\n~PASOS~",
+          "items": [
+            {
+              "icon": "lightbulb",
+              "label": "IDEAS",
+              "at": "ideas"
+            },
+            {
+              "icon": "clapperboard",
+              "label": "GUION",
+              "at": "guion"
+            },
+            {
+              "icon": "pen-line",
+              "label": "TEXTO",
+              "at": "texto"
+            }
+          ],
+          "doneAt": "texto+0.3"
+        },
+        {
+          "at": "pégale",
+          "type": "clone",
+          "icon": "clipboard-paste",
+          "count": 12,
+          "title": "PEGA UN *EJEMPLO*\n-> COPIA TU ESTILO"
+        }
+      ]
+    },
+    {
+      "label": {
+        "num": "04",
+        "text": "LA PRIMERA\nRESPUESTA"
+      },
+      "vo": "Error cuatro: quedarte con la *primera* respuesta. Es un *borrador,* no el final. Pídele que lo haga más corto, más directo o con otro gancho. *Conversa* con Claude.",
+      "punch": [
+        "conversa"
+      ],
+      "beats": [
+        {
+          "type": "counter",
+          "icon": "file-pen-line",
+          "from": {
+            "n": 1,
+            "unit": "INTENTO"
+          },
+          "to": {
+            "n": 3,
+            "unit": "VERSIONES"
+          },
+          "toAt": "borrador",
+          "strikeAt": "final",
+          "sub": "Es un borrador"
+        },
+        {
+          "at": "pídele",
+          "type": "chat",
+          "prompt": "Hazlo más corto y con otro gancho",
+          "answer": "GANCHO: ¿Tu café sabe a prisa?\nAquí lo hacemos lento.\nPasa hoy.",
+          "underlineAt": "directo",
+          "checkAt": "conversa"
+        }
+      ]
+    },
+    {
+      "label": {
+        "num": "05",
+        "text": "SIN FORMATO"
+      },
+      "vo": "Error cinco: no pedir un *formato.* Dile la extensión, el tono y cómo lo quieres: lista, tabla o guion de *treinta* segundos.",
+      "punch": [
+        "formato"
+      ],
+      "beats": [
+        {
+          "type": "orbit",
+          "center": "PIDE EL\n*FORMATO*",
+          "items": [
+            {
+              "icon": "ruler",
+              "label": "EXTENSIÓN",
+              "at": "extensión"
+            },
+            {
+              "icon": "mic",
+              "label": "TONO",
+              "at": "tono"
+            },
+            {
+              "icon": "list",
+              "label": "LISTA",
+              "at": "lista"
+            },
+            {
+              "icon": "table",
+              "label": "TABLA",
+              "at": "tabla"
+            },
+            {
+              "icon": "timer",
+              "label": "30 SEG",
+              "at": "treinta"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "vo": "Ojo: aunque pidas perfecto, la IA se puede *equivocar.* Revisa datos, precios y fechas antes de publicar. El *criterio* sigue siendo tuyo.",
+      "punch": [
+        "criterio"
+      ],
+      "beats": [
+        {
+          "type": "icon",
+          "icon": "triangle-alert",
+          "color": "gold",
+          "pulse": true,
+          "title": "LA IA SE PUEDE\n!EQUIVOCAR!"
+        },
+        {
+          "at": "revisa",
+          "type": "chips",
+          "icon": "shield-check",
+          "items": [
+            {
+              "text": "DATOS",
+              "at": "datos"
+            },
+            {
+              "text": "PRECIOS",
+              "at": "precios"
+            },
+            {
+              "text": "FECHAS",
+              "at": "fechas"
+            }
+          ]
+        },
+        {
+          "at": "criterio",
+          "type": "text",
+          "title": "EL *CRITERIO*\nES TUYO",
+          "size": 130
+        }
+      ]
+    },
+    {
+      "bg": "terra",
+      "vo": "Si quieres plantillas listas para copiar, comenta *PROMPT* y armo la *parte dos.* *Guárdalo* para tu próximo pedido.",
+      "beats": [
+        {
+          "type": "cta",
+          "heading": "¿QUIERES LAS\n_PLANTILLAS?_",
+          "keyword": "PROMPT",
+          "keywordAt": "comenta",
+          "saveAt": "guárdalo"
+        }
+      ]
+    }
+  ],
+  "thumbnail": {
+    "big": "5",
+    "lines": [
+      "ERRORES AL",
+      "*PEDIRLE*",
+      "A LA IA"
+    ],
+    "icon": "message-circle-x"
+  },
+  "caption": "Si la IA te da respuestas genéricas, el problema casi siempre es cómo le pides las cosas. 🤖\n\n5 errores que cometes con Claude (y cómo arreglarlos):\n1️⃣ Pedir sin contexto\n2️⃣ Pedir todo de una\n3️⃣ No dar ejemplos\n4️⃣ Quedarte con la primera respuesta\n5️⃣ No pedir un formato\n\n⚠️ Y siempre revisa datos, precios y fechas antes de publicar.\n\n💬 Comenta PROMPT y armo la parte 2 con plantillas.\n📌 Guárdalo para tu próximo pedido.",
+  "hashtags": [
+    "inteligenciaartificial",
+    "claude",
+    "ia",
+    "prompts",
+    "emprendimiento",
+    "creadoresdecontenido",
+    "productividad"
+  ]
+}

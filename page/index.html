@@ -168,7 +168,7 @@ B.orbit=(b,r)=>{const cy=860;
     els.forEach((e,i)=>{const ti=(b.items[i].t??t0+.4+i*.4)-.05;const a=(-90+i*360/n+L*28)*Math.PI/180;put(e,CX+Math.cos(a)*320,cy+Math.sin(a)*320,pop(L,ti,.45),P(L,ti,.08));fillTile(e.t,P(L,ti+.15,.3))});
     return {}}};
 B.chips=(b,r)=>{const t=b.icon?tile(r,b.icon,280,.5):null;
-  const els=b.items.map(it=>mk(r,`<div class="h" style="font-size:44px;padding:20px 32px;border-radius:60px;background:#17171C;border:3px solid ${C.terra}">${fmt(it.text)}</div>`));
+  const els=b.items.map(it=>mk(r,`<div class="h" style="display:inline-block;white-space:nowrap;font-size:44px;padding:20px 32px;border-radius:60px;background:#17171C;border:3px solid ${C.terra}">${fmt(it.text)}</div>`));
   let lay=null;
   return L=>{const t0=b.t;if(t){put(t,CX,820,pop(L,t0+IN,.45),P(L,t0+IN,.1));fillTile(t,P(L,t0+.15,.3))}
     if(!lay){lay=[];const rows=[];els.forEach((e,i)=>{(rows[Math.floor(i/3)]=rows[Math.floor(i/3)]||[]).push(i)});
