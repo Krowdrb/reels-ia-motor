@@ -78,6 +78,9 @@ Campo opcional en cualquier beat: `"sfx"` ∈ impact · pop · whoosh · chachin
 **Iconos:** solo nombres actuales de Lucide (lucide.dev/icons), por ejemplo `circle-x`, `circle-check`, `triangle-alert`, `badge-dollar-sign`, `bot`, `clock`, `mail`, `globe`, `wallet`, `target`, `rocket`, `trending-up`, `users`, `camera`, `shopping-cart`, `graduation-cap`, `briefcase`, `lightbulb`, `zap`, `heart`, `star`, `calendar`, `chart-line`, `piggy-bank`, `hand-coins`, `brain`, `sparkles`, `message-circle`, `smartphone`, `video`, `image`, `book-open`, `pen-line`, `search`.
 Un nombre que no existe se dibuja como un signo de pregunta.
 
+## Antes de escribir
+Lee `aprendizajes.md` y el archivo más reciente de `investigacion/`. Aplica lo de "Hacer" y "Evitar" y usa un gancho del estilo de los que funcionaron. Si hay un experimento en curso, respétalo.
+
 ## Reglas de ritmo
 - Debe cambiar algo en pantalla cada 2–3 s: usa los `at` de los ítems (cards, orbit, chips, pills, steps) para que las cosas aparezcan cuando se mencionan.
 - Cada escena de 8–15 s debería tener 2–4 beats.
