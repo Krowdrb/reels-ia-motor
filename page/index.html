@@ -249,6 +249,18 @@ B.cta=(b,r)=>{
 // ================= scenes =================
 const scenesEl=document.getElementById('scenes');
 const SC=[];
+// shots: x,y offset (px) · s zoom · r roll (deg) · rx/ry tilt (deg) · d = drift per second [dx,dy,ds,dr,dry]
+const SHOTS=[
+ {x:0,y:10,s:1.00,r:0,rx:0,ry:0,d:[0,-14,.035,0,0]},
+ {x:-28,y:24,s:1.05,r:-3,rx:4,ry:11,d:[14,-6,.016,.8,-2.4]},
+ {x:28,y:-30,s:1.08,r:2.6,rx:-7,ry:-10,d:[-14,10,.012,-.7,2.2]},
+ {x:0,y:50,s:.93,r:0,rx:9,ry:0,d:[0,-20,.04,0,0]},
+ {x:26,y:14,s:1.03,r:3.5,rx:-4,ry:-12,d:[-12,-8,.018,-.9,2.6]},
+ {x:-24,y:-26,s:1.06,r:-3.2,rx:6,ry:9,d:[12,10,.014,.8,-2]}];
+const DIRS=[[1,0],[0,1],[-1,0],[0,-1],[1,.4],[-1,-.4]];
+let CAMG=0;
+const shotAt=(sh,a)=>{const d=sh.d;return {x:sh.x+d[0]*a,y:sh.y+d[1]*a,s:sh.s+d[2]*a,r:sh.r+d[3]*a,rx:sh.rx,ry:sh.ry+d[4]*a}};
+const mixShot=(A,Bs,k)=>{const o={};for(const q in A)o[q]=lerp(A[q],Bs[q],k);return o};
 function buildScenes(){
   TL.scenes.forEach((s,si)=>{
     const root=mk(scenesEl,'','','full'), cam=mk(root,'','','layer'), fix=mk(root,'','','full');
@@ -259,9 +271,12 @@ function buildScenes(){
     // timing: a full beat lasts until the next full beat; low beats push the current full beat up
     beats.forEach((x,i)=>{const nf=beats.slice(i+1).find(y=>(y.b.zone||'full')!=='low');x.t1=nf?nf.b.t:1e9;
       x.push=(x.b.zone||'full')!=='low'?beats.slice(i+1).filter(y=>y.b.zone==='low'&&y.b.t<x.t1).map(y=>y.b.t)[0]:null});
+    // virtual camera: each full beat gets its own shot; shots chain across scenes
+    beats.forEach(x=>{if((x.b.zone||'full')!=='low'){x.shot=SHOTS[CAMG%SHOTS.length];x.dir=DIRS[CAMG%DIRS.length];CAMG++}});
+    root.style.perspective='1600px';root.style.perspectiveOrigin='540px 860px';
     fitAll(root);
     root.style.display='none';
-    SC.push({root,cam,lab,badge,beats,s});
+    SC.push({root,cam,lab,badge,beats,s,idx:si});
   });
 }
 function updateScene(S,L,dur){
@@ -270,11 +285,21 @@ function updateScene(S,L,dur){
   if(S.badge){const tb=S.s.badge.t;put(S.badge,CX,440,pop(L,tb,.4),L<tb?0:(Math.floor((L-tb)*3)%2?.35:1))}
   for(const x of S.beats){
     const active=L>=x.b.t+IN-.05&&L<x.t1+.4;x.w.style.display=active?'block':'none';if(!active)continue;
-    const out=eo(P(L,x.t1-.12,.3)), push=x.push!=null?eio(P(L,x.push-.1,.45)):0;
-    x.w.style.opacity=1-out;x.w.style.transform=`translateY(${-out*80-push*150}px) scale(${1-push*.2})`;
+    const push=x.push!=null?eio(P(L,x.push-.1,.45)):0;
+    const nxt=S.beats.find(y=>y.b.t===x.t1&&y.dir), od=nxt?nxt.dir:[0,-1];
+    const out=eio(P(L,x.t1-.18,.42)), inn=x.dir&&x!==S.beats[0]?1-eo(P(L,x.b.t+IN-.05,.5)):0, d=x.dir||[0,0];
+    const tx=-od[0]*out*900+d[0]*inn*900, ty=-od[1]*out*1100+d[1]*inn*1100-push*150;
+    x.w.style.opacity=1-out*out;x.w.style.filter=(out>.02&&out<.98)||(inn>.02&&inn<.98)?`blur(${Math.max(out*(1-out),inn*(1-inn))*28}px)`:'none';
+    x.w.style.transform=`translate(${tx}px,${ty}px) scale(${(1-push*.2)*(1-out*.08)})`;
     const o=x.up(L,dur)||{};r.punch+=o.punch||0;r.shake=Math.max(r.shake,o.shake||0);
   }
   for(const p of S.s.punch)r.punch+=punchEnv(L,p,.45);
+  // camera: blend from previous shot to the current one around each full beat, always drifting
+  const fulls=S.beats.filter(x=>x.shot);let cam=shotAt(fulls[0].shot,L);
+  for(let k=1;k<fulls.length;k++){const tk=fulls[k].b.t;if(L<tk-.25)break;cam=mixShot(cam,shotAt(fulls[k].shot,L-tk),eio(P(L,tk-.3,.7)))}
+  // scene entry: arrive with a push-in from the whip direction
+  const ent=1-eo(P(L,0,.7));cam.s+=ent*.14;{const g=(S.idx-1)%2?1:-1;cam.x+=ent*-g*90;cam.ry+=ent*g*6}
+  r.cam=cam;
   return r;
 }
 
@@ -295,16 +320,16 @@ window.renderFrame=function(t){
   const s=TL.scenes[i],L=t-s.s,dur=s.e-s.s;
   SC.forEach((x,j)=>x.root.style.display=j===i?'block':'none');
   const r=updateScene(SC[i],L,dur);
-  let sc=1+.08*(L/dur)+.15*Math.min(1.6,r.punch),sx=0,sy=0;
-  if(r.shake){const f=Math.floor(L*30);sx=(rnd(f)-.5)*44;sy=(rnd(f+50)-.5)*44}
-  SC[i].cam.style.transform=`translate(${sx}px,${sy}px) scale(${sc})`;
+  const c=r.cam;let sc=c.s+.15*Math.min(1.6,r.punch),sx=c.x,sy=c.y;
+  if(r.shake){const f=Math.floor(L*30);sx+=(rnd(f)-.5)*44;sy+=(rnd(f+50)-.5)*44}
+  SC[i].cam.style.transform=`translate(${sx}px,${sy}px) rotateX(${c.rx}deg) rotateY(${c.ry}deg) rotate(${c.r}deg) scale(${sc})`;
   if(s.bg==='terra')bg.style.background=C.terra;
   else bg.style.background=`radial-gradient(circle at ${88+6*Math.sin(t*.4)}% ${6+4*Math.cos(t*.3)}%, rgba(217,119,87,.42) 0%, rgba(217,119,87,.12) 32%, rgba(15,15,18,0) 58%), radial-gradient(circle at 0% 100%, rgba(217,119,87,.10) 0%, rgba(15,15,18,0) 45%), #0F0F12`;
   world.style.filter='none';world.style.transform='none';
   const toNext=s.e-t,fromPrev=t-s.s;let mode=null,k=0,dir=0;
   if(i<n-1&&toNext<=.134){mode=i%2?'glitch':'whip';k=1-toNext/.134;dir=-1}
   else if(i>0&&fromPrev<.167){mode=(i-1)%2?'glitch':'whip';k=1-fromPrev/.167;dir=1}
-  if(mode==='whip'){document.getElementById('whipblur').setAttribute('stdDeviation',`${k*90} 0`);world.style.filter='url(#whip)';world.style.transform=`translateX(${dir<0?-ei(k)*620:k*k*620}px)`}
+  if(mode==='whip'){document.getElementById('whipblur').setAttribute('stdDeviation',`${k*90} 0`);world.style.filter='url(#whip)';{const cut=dir<0?i:i-1,g=cut%2?1:-1;world.style.transform=`translateX(${dir<0?g*ei(k)*620:-g*k*k*620}px)`}}
   else if(mode==='glitch'){const f=Math.round(t*30);const g=dir<0?(toNext<=.067):(fromPrev<.067);
     if(g){const a=(rnd(f)-.5)*2;document.getElementById('gturb').setAttribute('seed',f%50);document.getElementById('gdisp').setAttribute('scale',90+rnd(f+3)*120);
       document.getElementById('goffr').setAttribute('dx',24*a+12);document.getElementById('goffb').setAttribute('dx',-24*a-12);
