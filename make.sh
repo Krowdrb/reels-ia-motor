@@ -63,6 +63,14 @@ for s in tl['scenes']: print(s['i'], round(s['s']*30), round(s['e']*30))" > rang
   cat ranges.txt | xargs -P"$P" -L1 sh -c 'node render.js video parts/tmp_$0.mp4 $1 $2 && mv parts/tmp_$0.mp4 parts/s$0.mp4'
   : > list.txt; while read i a b; do echo "file 'parts/s$i.mp4'" >> list.txt; done < ranges.txt
   ffmpeg -y -loglevel error -f concat -safe 0 -i list.txt -c copy video_only.mp4
+  # Portada: el fotograma más llamativo (cover.jpg) y además el PRIMER fotograma del video,
+  # para que ninguna red tome un destello blanco como portada.
+  cp "$R/engine/cover.py" "$W/" && python3 cover.py video_only.mp4
+  F0=$(head -1 ranges.txt | awk '{print $1}')
+  ffmpeg -y -loglevel error -i "parts/s$F0.mp4" -loop 1 -i cover.jpg -filter_complex "[1]scale=1080:1920,format=yuv420p[c];[0][c]overlay=enable='eq(n\,0)':shortest=1" \
+    -c:v libx264 -preset veryfast -crf 18 -pix_fmt yuv420p -r 30 parts/tmp_cover.mp4 && mv parts/tmp_cover.mp4 "parts/s${F0}c.mp4"
+  sed "s|parts/s$F0.mp4|parts/s${F0}c.mp4|" list.txt > list_c.txt
+  ffmpeg -y -loglevel error -f concat -safe 0 -i list_c.txt -c copy video_only.mp4
   ffmpeg -y -loglevel error -i video_only.mp4 -i mix.wav -map 0:v -map 1:a -c:v copy -c:a aac -b:a 192k -ar 48000 -shortest -movflags +faststart tmp_final.mp4
   mv tmp_final.mp4 "$SLUG.mp4"
   python3 - "$G" <<'EOF'
@@ -76,7 +84,8 @@ EOF
   node render.js thumb portada.png
   LUFS=$(ffmpeg -hide_banner -i "$SLUG.mp4" -af ebur128 -f null - 2>&1 | grep -A2 "Integrated loudness" | grep "I:" | awk '{print $2}')
   DUR=$(ffprobe -v error -show_entries format=duration -of csv=p=0 "$SLUG.mp4")
-  echo "OK render: $W/$SLUG.mp4 (${DUR}s, ${LUFS} LUFS) + subtitulos.srt + portada.png + descripcion.txt"
+  cp cover.jpg "$SLUG.jpg"
+  echo "OK render: $W/$SLUG.mp4 (${DUR}s, ${LUFS} LUFS) + $SLUG.jpg (portada = fotograma más llamativo, $(cat cover.json)) + portada.png (diseño) + subtitulos.srt + descripcion.txt"
   exit 0
 fi
 echo "Modo desconocido: $MODE (usa preview o render)"; exit 1

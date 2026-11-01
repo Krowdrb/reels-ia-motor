@@ -11,6 +11,7 @@ const path = require('path');
   page.on('pageerror', e => errs.push('PAGEERROR ' + e.message));
   await page.goto('file://' + path.resolve(process.cwd(), 'index.html'));
   await page.evaluate(() => window.ready);
+  if (process.env.NOCAPS) await page.evaluate(() => { window.NOCAPS = true; });
   const stage = await page.$('#stage');
   if (mode === 'thumb') {
     await page.goto('file://' + path.resolve(process.cwd(), 'thumb.html'));
@@ -19,7 +20,7 @@ const path = require('path');
   } else if (mode === 'stills') {
     for (const t of rest) {
       await page.evaluate(t => window.renderFrame(t), +t);
-      await stage.screenshot({ path: `${out}/f_${(+t).toFixed(2)}.jpg`, type: 'jpeg', quality: 85 });
+      await stage.screenshot({ path: `${out}/f_${(+t).toFixed(2)}.jpg`, type: 'jpeg', quality: process.env.NOCAPS ? 95 : 85 });
     }
   } else {
     const [a, b] = rest.map(Number);

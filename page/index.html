@@ -336,7 +336,7 @@ window.renderFrame=function(t){
       world.style.filter='url(#glitch)';world.style.transform=`translate(${(rnd(f+9)-.5)*40}px,${(rnd(f+4)-.5)*20}px)`}}
   flash.style.opacity=(t<2/30)?1:0;
   grain.src=grainSrc[Math.floor(t*30)%8];
-  renderCaps(t);
+  if(window.NOCAPS){capsEl.innerHTML='';capsEl.dataset.k=''}else renderCaps(t);
   return true;
 };
 window.ready=document.fonts.load('900 100px IT').then(()=>document.fonts.ready).then(()=>{buildScenes();return Promise.all(grainSrc.map(src=>new Promise(r=>{const im=new Image();im.onload=r;im.onerror=r;im.src=src})))});
