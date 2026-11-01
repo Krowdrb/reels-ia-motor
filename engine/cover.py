@@ -68,5 +68,5 @@ else:
 shutil.rmtree('cover_tmp', ignore_errors=True)
 chk = np.asarray(Image.open('cover.jpg').convert('L'), np.float32)
 assert chk.mean() < 225 and chk.std() > 15, 'portada en blanco o vacía'
-json.dump({'t': round(t, 3), 'ms': int(t * 1000), 'score': round(best[0], 3)}, open('cover.json', 'w'))
+json.dump({'t': round(float(t), 3), 'ms': int(t * 1000), 'score': round(float(best[0]), 3)}, open('cover.json', 'w'))
 print(f'OK portada en {t:.2f}s (puntaje {best[0]:.2f})')
