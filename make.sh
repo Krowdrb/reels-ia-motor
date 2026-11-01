@@ -12,7 +12,8 @@ cd "$W"
 
 prepare() {
   python3 "$R/engine/build.py" "$G" "$W"
-  cp "$R/page/index.html" "$R/page/render.js" "$R/page/thumb.html" "$R/engine/audio.py" "$W/"
+  cp "$R/page/index.html" "$R/page/render.js" "$R/page/thumb.html" "$R/page/characters.js" "$R/page/char3d.js" "$R/engine/audio.py" "$W/"
+  ln -sfn "$R/page/vendor" "$W/vendor"
   ln -sfn "$R/assets" "$W/assets"
   [ -f "$W/icons.js" ] || python3 - "$R/assets/lucide/icons" "$W/icons.js" <<'EOF'
 import json, os, re, sys

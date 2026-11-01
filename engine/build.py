@@ -131,7 +131,7 @@ def main(gpath, W):
                     b[k] = resolve(si, b[k], b['t'])
             if isinstance(b.get('cross'), dict):
                 b['cross']['t'] = resolve(si, b['cross'].get('at'), b['t'])
-            for key in ('items', 'bases'):
+            for key in ('items', 'bases', 'poses'):
                 last = b['t']
                 for it in b.get(key, []):
                     if isinstance(it, dict) and 'at' in it:
@@ -140,6 +140,8 @@ def main(gpath, W):
             beats.append(b)
         out['beats'] = beats
         out['bg'] = sc.get('bg', 'dark')
+        if sc.get('backdrop'):
+            out['backdrop'] = sc['backdrop']
         out['label'] = sc.get('label')
         if sc.get('badge'):
             out['badge'] = dict(text=sc['badge']['text'], t=resolve(si, sc['badge'].get('at', 'start')))
@@ -168,7 +170,20 @@ def main(gpath, W):
         e = min(max(e, s + 0.35), nxt) if nxt - e < 0.6 else e + 0.15
         caps.append(dict(s=round(s, 3), e=round(e, 3), words=[dict(w=w['w'], key=w['key'], s=w['s']) for w in c]))
 
-    tl = dict(total=t0, scenes=scenes_out, caps=caps)
+    # personajes: definidos en el guion ("characters") o en personajes/<id>.json del repo
+    chars = {}
+    root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    for sc in G['scenes']:
+        for bt in sc.get('beats', []):
+            cid = bt.get('character')
+            if cid and cid not in chars:
+                if cid in G.get('characters', {}):
+                    chars[cid] = G['characters'][cid]
+                elif os.path.exists(f'{root}/personajes/{cid}.json'):
+                    chars[cid] = json.load(open(f'{root}/personajes/{cid}.json'))
+                else:
+                    raise SystemExit(f'ERROR: personaje "{cid}" no está en "characters" del guion ni en personajes/{cid}.json')
+    tl = dict(total=t0, scenes=scenes_out, caps=caps, characters=chars)
     json.dump(tl, open(f'{W}/timeline.json', 'w'), ensure_ascii=False, indent=1)
     open(f'{W}/tl.js', 'w').write('const TL=' + json.dumps(tl, ensure_ascii=False) + ';\n')
 
@@ -179,6 +194,15 @@ def main(gpath, W):
         i = int(t * SR)
         buf[i:i + len(a)] += a[:N - i]
     wavfile.write(f'{W}/vo_track.wav', SR, buf)
+    # envolvente de la voz por fotograma (para mover la boca de los personajes)
+    hop = SR // 30
+    env = np.array([np.sqrt(np.mean(buf[i:i + hop] ** 2)) if i < len(buf) else 0 for i in range(0, int(t0 * SR) + hop, hop)])
+    ref = np.percentile(env[env > 1e-4], 90) if (env > 1e-4).any() else 1
+    env = np.clip(env / ref, 0, 1)
+    env = np.convolve(env, [0.25, 0.5, 0.25], 'same')
+    tl['mouth'] = [round(float(v), 2) for v in env]
+    open(f'{W}/tl.js', 'w').write('const TL=' + json.dumps(tl, ensure_ascii=False) + ';\n')
+    json.dump(tl, open(f'{W}/timeline.json', 'w'), ensure_ascii=False, indent=1)
 
     def ts(x):
         ms = int(round(x * 1000)); h, ms = divmod(ms, 3600000); m, ms = divmod(ms, 60000); s, ms = divmod(ms, 1000)

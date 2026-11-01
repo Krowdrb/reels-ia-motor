@@ -17,6 +17,7 @@ html,body{margin:0;padding:0;background:#0F0F12;overflow:hidden}
 .gold{color:#F5C26B}.red{color:#FF4D4D}.terra{color:#D97757}.green{color:#3DDC97}.dark{color:#0F0F12}
 .roll{display:inline-block;height:1em;overflow:hidden;vertical-align:top;line-height:1em}
 .roll div{line-height:1em}
+.lit .h{-webkit-text-stroke:12px #0F0F12;paint-order:stroke fill;text-shadow:0 10px 30px rgba(0,0,0,.35)}
 </style></head>
 <body>
 <div id="stage">
@@ -39,6 +40,8 @@ html,body{margin:0;padding:0;background:#0F0F12;overflow:hidden}
 </div>
 <script src="icons.js"></script>
 <script src="tl.js"></script>
+<script src="characters.js"></script>
+<script src="char3d.js"></script>
 <script>
 // ================= helpers =================
 const CX=540;
@@ -70,6 +73,7 @@ function punchEnv(L,t0,hold=.35){if(L<t0)return 0;const a=L-t0;if(a<.1)return eo
 function typeText(str,L,t0,cps){return str.slice(0,Math.floor(clamp((L-t0)*cps,0,str.length)))}
 function caret(L){return (Math.floor(L*2.2)%2===0)?'|':'&nbsp;'}
 function arrowSvg(w,h,k,c='#fff',sw=12){const len=w+60;return `<svg width="${w+20}" height="${h}" viewBox="0 0 ${w+20} ${h}"><path d="M8 ${h/2} H${w} M${w-34} ${h/2-30} L${w} ${h/2} L${w-34} ${h/2+30}" fill="none" stroke="${c}" stroke-width="${sw}" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="${len+80}" stroke-dashoffset="${(1-k)*(len+80)}"/></svg>`}
+let S_T=0;
 const IN=-.2; // entrance starts slightly before the beat so cuts land with content on screen
 
 // ================= cross overlay (any beat with "cross") =================
@@ -246,6 +250,28 @@ B.cta=(b,r)=>{
     if(tG!=null){put(bm,CX+150,1330,pop(L,tG-.05,.45)*pulse,P(L,tG-.05,.1));bmr.setAttribute('y',24-24*eo(P(L,tG+.3,.5)))}else put(bm,0,0,1,0);
     return {punch:.8*punchEnv(L,tC+.6,.5)}}};
 
+B.character=(b,r)=>{
+  const spec=(TL.characters||{})[b.character]||{};
+  const is3d=spec.style==='3d'&&window.THREE;const ch=is3d?buildCharacter3D(spec,r):buildCharacter(spec,r);ch.setProp(b.prop);const CH=is3d?1050:905;
+  const place=b.place||'center', sc=b.size||(place==='center'?1.15:0.95);
+  const x=place==='left'?330:place==='right'?750:CX, flip=place==='right';
+  const tt=b.title?title(r,b.title,b.titleSize||104,900):null;
+  const bub=mk(r,'',`max-width:440px;background:#F4F1EC;color:#0F0F12;border-radius:40px;padding:26px 34px;font-weight:800;font-size:44px;line-height:1.08;text-align:center;box-shadow:0 20px 50px rgba(0,0,0,.35)`);
+  const tail=mk(r,'<svg width="60" height="50"><path d="M0 0 H60 L8 50 Z" fill="#F4F1EC"/></svg>');
+  const keys=[{t:b.t,pose:b.pose||'idle',expr:b.expr||'happy',bubble:b.bubble}].concat((b.poses||[]).map(p=>({t:p.t??b.t,pose:p.pose||b.pose||'idle',expr:p.expr||b.expr||'happy',bubble:p.bubble})));
+  return L=>{const t0=b.t;const k=back(P(L,t0+IN,.5),1.3);
+    const bottom=1490, y=lerp(bottom+700,bottom,k)-CH*sc/2;
+    ch.el.style.transformOrigin='50% 100%';put(ch.el,x,y,sc,P(L,t0+IN,.1));
+    let st=keys[0];for(const kk of keys)if(L>=kk.t-.05)st=kk;
+    const f=Math.max(0,Math.round((S_T+L)*30));const amp=b.talk===false?0:((TL.mouth||[])[f]||0);
+    ch.update(L,{pose:st.pose,expr:st.expr,since:st.t,talk:amp,flip,look:place==='left'?1:place==='right'?-1:0});
+    if(tt)put(tt,CX,470,lerp(.8,1,eo(P(L,t0+.1,.35))),P(L,t0+.1,.15));
+    const btxt=st.bubble;if(btxt){if(bub.dataset.t!==btxt){bub.dataset.t=btxt;bub.innerHTML=fmt(btxt)}
+      const headY=bottom-CH*sc+(is3d?260:250)*sc, bx=place==='right'?Math.max(270,x-380):Math.min(810,x+330), by=headY-30;
+      const kb=back(P(L,st.t+.1,.35));put(bub,bx,by,kb,P(L,st.t+.1,.06));put(tail,place==='right'?bx+90:bx-110,by+70,kb,P(L,st.t+.1,.06),place==='right'?0:0);
+      tail.firstChild.style.transform=place==='right'?'scaleX(-1)':'';}else{put(bub,0,0,1,0);put(tail,0,0,1,0)}
+    return {}}};
+
 // ================= scenes =================
 const scenesEl=document.getElementById('scenes');
 const SC=[];
@@ -264,13 +290,14 @@ const mixShot=(A,Bs,k)=>{const o={};for(const q in A)o[q]=lerp(A[q],Bs[q],k);ret
 function buildScenes(){
   TL.scenes.forEach((s,si)=>{
     const root=mk(scenesEl,'','','full'), cam=mk(root,'','','layer'), fix=mk(root,'','','full');
+    if(s.backdrop)root.classList.add('lit');
     let lab=null,badge=null;
     if(s.label){lab=mk(fix,`<div style="display:flex;align-items:center;gap:30px;padding:0 44px;height:170px"><span style="font-weight:900;font-size:130px;color:${C.terra};letter-spacing:-.04em">${fmt(s.label.num)}</span><span style="width:4px;height:90px;background:#3a3a44"></span><span class="h" style="font-size:${s.label.text.length>18?54:64}px;text-align:left;line-height:1">${fmt(s.label.text)}</span></div>`,'background:#17171Cee;border:3px solid #D9775788;border-radius:40px');lab.fitW=1000}
     if(s.badge)badge=mk(fix,`<div class="h" style="font-size:40px;color:#0F0F12;background:${C.gold};padding:14px 30px;border-radius:40px">${fmt(s.badge.text)}</div>`,'filter:drop-shadow(0 0 24px #F5C26B88)');
     const beats=s.beats.map((b,bi)=>{const w=mk(cam,'','transform-origin:540px 700px','full');const up=(B[b.type]||B.text)(b,w);return {b,w,up}});
     // timing: a full beat lasts until the next full beat; low beats push the current full beat up
-    beats.forEach((x,i)=>{const nf=beats.slice(i+1).find(y=>(y.b.zone||'full')!=='low');x.t1=nf?nf.b.t:1e9;
-      x.push=(x.b.zone||'full')!=='low'?beats.slice(i+1).filter(y=>y.b.zone==='low'&&y.b.t<x.t1).map(y=>y.b.t)[0]:null});
+    beats.forEach((x,i)=>{const nf=beats.slice(i+1).find(y=>!['low','stay'].includes(y.b.zone||'full'));x.t1=nf?nf.b.t:1e9;
+      x.push=!['low','stay'].includes(x.b.zone||'full')?beats.slice(i+1).filter(y=>y.b.zone==='low'&&y.b.t<x.t1).map(y=>y.b.t)[0]:null});
     // virtual camera: each full beat gets its own shot; shots chain across scenes
     beats.forEach(x=>{if((x.b.zone||'full')!=='low'){x.shot=SHOTS[CAMG%SHOTS.length];x.dir=DIRS[CAMG%DIRS.length];CAMG++}});
     root.style.perspective='1600px';root.style.perspectiveOrigin='540px 860px';
@@ -319,12 +346,15 @@ window.renderFrame=function(t){
   const n=TL.scenes.length;let i=TL.scenes.findIndex(s=>t>=s.s&&t<s.e);if(i<0)i=n-1;
   const s=TL.scenes[i],L=t-s.s,dur=s.e-s.s;
   SC.forEach((x,j)=>x.root.style.display=j===i?'block':'none');
+  S_T=s.s;
   const r=updateScene(SC[i],L,dur);
   const c=r.cam;let sc=c.s+.15*Math.min(1.6,r.punch),sx=c.x,sy=c.y;
   if(r.shake){const f=Math.floor(L*30);sx+=(rnd(f)-.5)*44;sy+=(rnd(f+50)-.5)*44}
   SC[i].cam.style.transform=`translate(${sx}px,${sy}px) rotateX(${c.rx}deg) rotateY(${c.ry}deg) rotate(${c.r}deg) scale(${sc})`;
+  if(s.backdrop){if(bg.dataset.k!==s.backdrop){bg.dataset.k=s.backdrop;bg.style.background='#0F0F12';bg.innerHTML=backdropSvg(s.backdrop)}}
+  else{if(bg.dataset.k){bg.dataset.k='';bg.innerHTML=''}
   if(s.bg==='terra')bg.style.background=C.terra;
-  else bg.style.background=`radial-gradient(circle at ${88+6*Math.sin(t*.4)}% ${6+4*Math.cos(t*.3)}%, rgba(217,119,87,.42) 0%, rgba(217,119,87,.12) 32%, rgba(15,15,18,0) 58%), radial-gradient(circle at 0% 100%, rgba(217,119,87,.10) 0%, rgba(15,15,18,0) 45%), #0F0F12`;
+  else bg.style.background=`radial-gradient(circle at ${88+6*Math.sin(t*.4)}% ${6+4*Math.cos(t*.3)}%, rgba(217,119,87,.42) 0%, rgba(217,119,87,.12) 32%, rgba(15,15,18,0) 58%), radial-gradient(circle at 0% 100%, rgba(217,119,87,.10) 0%, rgba(15,15,18,0) 45%), #0F0F12`;}
   world.style.filter='none';world.style.transform='none';
   const toNext=s.e-t,fromPrev=t-s.s;let mode=null,k=0,dir=0;
   if(i<n-1&&toNext<=.134){mode=i%2?'glitch':'whip';k=1-toNext/.134;dir=-1}
@@ -339,6 +369,7 @@ window.renderFrame=function(t){
   if(window.NOCAPS){capsEl.innerHTML='';capsEl.dataset.k=''}else renderCaps(t);
   return true;
 };
-window.ready=document.fonts.load('900 100px IT').then(()=>document.fonts.ready).then(()=>{buildScenes();return Promise.all(grainSrc.map(src=>new Promise(r=>{const im=new Image();im.onload=r;im.onerror=r;im.src=src})))});
+const need3d=Object.values(TL.characters||{}).some(c=>c.style==='3d');
+window.ready=(need3d?import('./vendor/three.module.js').then(m=>{window.THREE=m}).catch(e=>console.error('three',e)):Promise.resolve()).then(()=>document.fonts.load('900 100px IT')).then(()=>document.fonts.ready).then(()=>{buildScenes();return Promise.all(grainSrc.map(src=>new Promise(r=>{const im=new Image();im.onload=r;im.onerror=r;im.src=src})))});
 </script>
 </body></html>

@@ -1,0 +1,163 @@
+{
+ "slug": "ejemplo-personajes",
+ "title": "Prueba de personajes",
+ "voice": "ef_dora",
+ "speed": 1.2,
+ "pronunciation": {
+  "IA": "i a",
+  "Claude": "Clod"
+ },
+ "characters": {
+  "padre": {
+   "name": "Padre",
+   "skin": "#B9825A",
+   "hair": "veil",
+   "veilColor": "#E8DCC4",
+   "hairColor": "#D9D4CC",
+   "beard": "long",
+   "beardColor": "#E6E1D8",
+   "outfit": "robe",
+   "outfitColor": "#8B5E3C",
+   "accent": "#C9A46A",
+   "age": "old",
+   "accessory": "staff"
+  },
+  "hijo": {
+   "name": "Hijo",
+   "skin": "#C98B5E",
+   "hair": "curly",
+   "hairColor": "#2B1B14",
+   "beard": "short",
+   "outfit": "tunic",
+   "outfitColor": "#6E7F5A",
+   "accent": "#4A5A3A",
+   "age": "young",
+   "blinkSeed": 0.8
+  },
+  "nico3d": {
+   "name": "Nico",
+   "skin": "#C98B5E",
+   "hair": "short",
+   "hairColor": "#2B1B14",
+   "outfit": "hoodie",
+   "outfitColor": "#D97757",
+   "accent": "#F5C26B",
+   "accessory": "none",
+   "eyes": "#2A1A10",
+   "age": "young",
+   "style": "3d"
+  },
+  "padre3d": {
+   "name": "Padre",
+   "skin": "#B9825A",
+   "hair": "veil",
+   "veilColor": "#E8DCC4",
+   "hairColor": "#D9D4CC",
+   "beard": "long",
+   "beardColor": "#E6E1D8",
+   "outfit": "robe",
+   "outfitColor": "#8B5E3C",
+   "accent": "#C9A46A",
+   "age": "old",
+   "accessory": "staff",
+   "style": "3d"
+  }
+ },
+ "scenes": [
+  {
+   "vo": "Hola, soy Nico. Hoy te muestro *tres* trucos de IA que nadie te cuenta.",
+   "beats": [
+    {
+     "type": "character",
+     "character": "nico",
+     "pose": "wave",
+     "expr": "happy",
+     "title": "*3 TRUCOS* DE IA",
+     "bubble": "¡Hola!",
+     "poses": [
+      {
+       "at": "tres",
+       "pose": "explain",
+       "expr": "surprised",
+       "bubble": "Nadie los cuenta"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "vo": "Primero: pídele a Claude que te haga *preguntas* antes de responder.",
+   "beats": [
+    {
+     "type": "character",
+     "character": "vale",
+     "pose": "point",
+     "expr": "determined",
+     "place": "left",
+     "prop": "message-circle",
+     "title": "01 · QUE TE\n*PREGUNTE*",
+     "poses": [
+      {
+       "at": "preguntas",
+       "pose": "think",
+       "expr": "happy",
+       "bubble": "¿Para quién es?"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "backdrop": "desert",
+   "vo": "Y el padre lo vio de lejos, corrió hacia él y lo *abrazó.*",
+   "beats": [
+    {
+     "type": "character",
+     "character": "hijo",
+     "pose": "pray",
+     "expr": "sad",
+     "place": "left",
+     "talk": false,
+     "size": 0.8
+    },
+    {
+     "at": "corrió",
+     "type": "character",
+     "character": "padre3d",
+     "pose": "open",
+     "expr": "happy",
+     "place": "right",
+     "talk": false,
+     "size": 0.9,
+     "title": "LO *ABRAZÓ*",
+     "zone": "stay"
+    }
+   ]
+  },
+  {
+   "backdrop": "night",
+   "vo": "Comenta *PERSONAJES* si quieres más.",
+   "beats": [
+    {
+     "type": "character",
+     "character": "nico3d",
+     "pose": "celebrate",
+     "expr": "wink",
+     "bubble": "¡Comenta!"
+    }
+   ]
+  }
+ ],
+ "thumbnail": {
+  "big": "3",
+  "lines": [
+   "TRUCOS",
+   "*DE IA*"
+  ],
+  "icon": "sparkles"
+ },
+ "caption": "Prueba",
+ "hashtags": [
+  "prueba"
+ ]
+}

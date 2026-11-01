@@ -78,6 +78,44 @@ Campo opcional en cualquier beat: `"sfx"` ∈ impact · pop · whoosh · chachin
 **Iconos:** solo nombres actuales de Lucide (lucide.dev/icons), por ejemplo `circle-x`, `circle-check`, `triangle-alert`, `badge-dollar-sign`, `bot`, `clock`, `mail`, `globe`, `wallet`, `target`, `rocket`, `trending-up`, `users`, `camera`, `shopping-cart`, `graduation-cap`, `briefcase`, `lightbulb`, `zap`, `heart`, `star`, `calendar`, `chart-line`, `piggy-bank`, `hand-coins`, `brain`, `sparkles`, `message-circle`, `smartphone`, `video`, `image`, `book-open`, `pen-line`, `search`.
 Un nombre que no existe se dibuja como un signo de pregunta.
 
+## Personajes y fondos ilustrados
+
+### Beat `character`
+Muestra un personaje que mueve la boca con la voz, parpadea y respira. Cambia de pose y de expresión en las palabras clave.
+```json
+{"type": "character", "character": "nico", "pose": "wave", "expr": "happy", "place": "center",
+ "title": "*3 TRUCOS* DE IA", "bubble": "¡Hola!", "prop": "smartphone", "talk": true, "size": 1.15, "zone": "stay",
+ "poses": [{"at": "tres", "pose": "explain", "expr": "surprised", "bubble": "Nadie los cuenta"}]}
+```
+- `character`: id de una ficha en `personajes/<id>.json` o en `"characters"` del propio guion.
+- `pose`: idle · wave · point · think · celebrate · explain · shrug · pray · open (brazos abiertos) · hold.
+- `expr`: neutral · happy · surprised · worried · sad · wink · determined.
+- `place`: center · left · right. A la derecha, el personaje mira hacia el centro.
+- `title`: texto arriba. `bubble`: globo de diálogo, de 2 a 5 palabras.
+- `prop`: icono de Lucide que el personaje sostiene en la mano.
+- `talk: false`: la boca no se mueve. Úsalo cuando el personaje no es quien narra.
+- `poses[]`: cambios de pose, expresión o globo cuando se dice la palabra de `at`.
+- `"zone": "stay"`: el beat se suma al anterior sin reemplazarlo. Sirve para tener dos personajes en pantalla, uno a la izquierda y otro a la derecha.
+
+### Fondo ilustrado de la escena
+En la escena (no en el beat) puedes poner `"backdrop"` con uno de estos valores: desert · night · field · village · room · city.
+Sin `backdrop`, la escena usa el fondo oscuro de la marca. Con fondo ilustrado, los títulos llevan contorno oscuro de forma automática.
+
+### Ficha de personaje (`personajes/<id>.json`)
+```json
+{"name": "Nico", "style": "2d", "skin": "#C98B5E", "hair": "short", "hairColor": "#2B1B14", "beard": "none",
+ "outfit": "hoodie", "outfitColor": "#D97757", "accent": "#F5C26B", "accessory": "headset", "eyes": "#2A1A10", "age": "young"}
+```
+- `hair`: short · long · bun · curly · cap · bald · veil (manto de época; usa `veilColor`) · crown.
+- `beard`: none · short · long (usa `beardColor`).
+- `outfit`: hoodie · shirt · blazer · robe · tunic · dress.
+- `accessory`: none · glasses · headset · staff (bastón) · halo.
+- `age`: young · adult · old.
+- `style`: `2d` (por defecto, el recomendado) o `3d` (experimental: muñeco de juguete en 3D, más lento de renderizar).
+- `blinkSeed`: número opcional para que dos personajes no parpadeen al mismo tiempo.
+
+Reutiliza siempre las mismas fichas para los personajes recurrentes, para que se reconozcan entre videos. Crea fichas nuevas solo para personajes nuevos.
+
 ## Antes de escribir
 Lee `aprendizajes.md` y el archivo más reciente de `investigacion/`. Aplica lo de "Hacer" y "Evitar" y usa un gancho del estilo de los que funcionaron. Si hay un experimento en curso, respétalo.
 
