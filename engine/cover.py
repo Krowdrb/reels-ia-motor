@@ -4,7 +4,7 @@ Salida: cover.jpg (1080x1920), cover.json {t, ms, score}
 Criterios: color y contraste altos, nitidez (no fotogramas en transición), sin destellos blancos ni pantallas vacías,
 bonus si es un beat de impacto (big / icon / clone / counter / text).
 """
-import json, subprocess, sys
+import json, os, subprocess, sys
 import numpy as np
 from PIL import Image, ImageFilter
 
@@ -56,6 +56,8 @@ for t, bonus in cands:
     if sc > best[0]:
         best = (sc, t)
 t = best[1] if best[0] > -9 else tl['total'] / 3
+if os.environ.get('COVER_T'):  # instante forzado (p. ej. el gancho que eligió el director de arte)
+    t = float(os.environ['COVER_T'])
 # portada limpia (sin subtítulos), dibujada por el renderizador en ese mismo instante
 import os, shutil, glob
 os.makedirs('cover_tmp', exist_ok=True)

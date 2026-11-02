@@ -1,0 +1,244 @@
+{
+ "slug": "primer-agente-ia",
+ "title": "Tu primer agente de IA sin programar, en 3 pasos con Claude",
+ "voice": "ef_dora",
+ "speed": 1.2,
+ "pronunciation": {
+  "IA": "i a",
+  "Claude": "Clod",
+  "CLAUDE": "Clod"
+ },
+ "scenes": [
+  {
+   "vo": "Tu primer *agente* de IA, *sin programar,* en *tres pasos* con Claude.",
+   "punch": [
+    "tres"
+   ],
+   "beats": [
+    {
+     "type": "big",
+     "text": "TU *AGENTE*\nSIN PROGRAMAR",
+     "color": "white",
+     "size": 230,
+     "strong": true
+    },
+    {
+     "at": "tres",
+     "type": "big",
+     "text": "3 PASOS",
+     "color": "gold",
+     "size": 260,
+     "strong": true,
+     "sfx": "impact"
+    }
+   ]
+  },
+  {
+   "vo": "Ojo: no es un *robot* mágico. Es un *asistente* de Claude con *instrucciones* fijas y tus *documentos.* Responde como tu *negocio.*",
+   "beats": [
+    {
+     "type": "icon",
+     "icon": "bot",
+     "float": "?",
+     "title": "¿QUÉ ES UN\n*AGENTE*?",
+     "cross": {
+      "at": "robot",
+      "title": "!NO! ES UN\nROBOT MÁGICO"
+     }
+    },
+    {
+     "at": "asistente",
+     "type": "cards",
+     "items": [
+      {
+       "icon": "bot",
+       "label": "ASISTENTE",
+       "at": "asistente"
+      },
+      {
+       "icon": "clipboard-list",
+       "label": "INSTRUCCIONES",
+       "at": "instrucciones"
+      },
+      {
+       "icon": "file-text",
+       "label": "TUS DOCUMENTOS",
+       "at": "documentos"
+      }
+     ]
+    },
+    {
+     "at": "responde",
+     "type": "big",
+     "text": "COMO TU\nNEGOCIO",
+     "color": "gold",
+     "size": 190,
+     "sparkles": true
+    }
+   ]
+  },
+  {
+   "label": {
+    "num": "01",
+    "text": "CREA UN PROYECTO"
+   },
+   "vo": "Paso uno: en Claude, crea un *Proyecto.* Llámalo *Atención a clientes.*",
+   "punch": [
+    "proyecto"
+   ],
+   "beats": [
+    {
+     "type": "icon",
+     "icon": "folder-plus",
+     "color": "terra",
+     "title": "~PASO 1~\nCREA UN\n*PROYECTO*"
+    },
+    {
+     "at": "llámalo",
+     "type": "search",
+     "title": "NOMBRE DEL\n*PROYECTO*",
+     "text": "Atención a clientes"
+    }
+   ]
+  },
+  {
+   "label": {
+    "num": "02",
+    "text": "ESCRIBE SUS\nINSTRUCCIONES"
+   },
+   "vo": "Paso dos: escribe sus *instrucciones.* Quién es, qué tono, qué *nunca* debe prometer y cuándo pasarte el caso a *ti.*",
+   "punch": [
+    "nunca"
+   ],
+   "beats": [
+    {
+     "type": "text",
+     "title": "~PASO 2~\n*INSTRUCCIONES*",
+     "size": 140
+    },
+    {
+     "at": "quién",
+     "type": "cards",
+     "items": [
+      {
+       "icon": "user-round",
+       "label": "QUIÉN ES",
+       "at": "quién"
+      },
+      {
+       "icon": "message-circle",
+       "label": "TONO",
+       "at": "tono"
+      },
+      {
+       "icon": "ban",
+       "label": "NO PROMETER",
+       "at": "nunca"
+      },
+      {
+       "icon": "hand-helping",
+       "label": "PASA A TI",
+       "at": "pasarte"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "label": {
+    "num": "03",
+    "text": "SUBE TUS ARCHIVOS"
+   },
+   "vo": "Paso tres: sube tus *archivos.* Precios, horarios, preguntas frecuentes. Ahora le pegas el mensaje de un cliente y te arma la *respuesta* o la *cotización.*",
+   "punch": [
+    "cotización"
+   ],
+   "beats": [
+    {
+     "type": "orbit",
+     "center": "TUS\n~ARCHIVOS~",
+     "items": [
+      {
+       "icon": "tag",
+       "label": "PRECIOS",
+       "at": "precios"
+      },
+      {
+       "icon": "clock",
+       "label": "HORARIOS",
+       "at": "horarios"
+      },
+      {
+       "icon": "circle-question-mark",
+       "label": "PREGUNTAS",
+       "at": "preguntas"
+      }
+     ]
+    },
+    {
+     "at": "ahora",
+     "type": "chat",
+     "header": "Atención a clientes",
+     "prompt": "Hola, ¿cuánto cuesta el corte? ¿Hay cita el sábado?",
+     "answer": "¡Hola! El corte cuesta $25.000.\nEl sábado tengo cita a las 10 a. m.\n¿Te la aparto?",
+     "underlineAt": "respuesta",
+     "checkAt": "cotización"
+    }
+   ]
+  },
+  {
+   "vo": "Tú *revisas* y envías. Ya no escribes lo mismo *cada día.*",
+   "punch": [
+    "revisas"
+   ],
+   "beats": [
+    {
+     "type": "icon",
+     "icon": "user-check",
+     "color": "green",
+     "title": "TÚ *REVISAS*\nY ENVÍAS"
+    },
+    {
+     "at": "ya",
+     "type": "big",
+     "text": "ADIÓS A\nREPETIR",
+     "color": "terra",
+     "size": 230,
+     "strong": true
+    }
+   ]
+  },
+  {
+   "bg": "terra",
+   "vo": "¿Ya usas IA con tus clientes? Responde *SÍ* o *NO* y *guárdalo.*",
+   "beats": [
+    {
+     "type": "cta",
+     "heading": "¿YA USAS IA\n_CON CLIENTES?_",
+     "keyword": "SÍ o NO",
+     "keywordAt": "responde",
+     "saveAt": "guárdalo"
+    }
+   ]
+  }
+ ],
+ "thumbnail": {
+  "big": "3",
+  "lines": [
+   "PASOS PARA",
+   "*TU AGENTE*",
+   "SIN PROGRAMAR"
+  ],
+  "icon": "bot"
+ },
+ "caption": "Tu primer agente de IA sin programar, en 3 pasos con Claude 🤖\n\nUn agente aquí es un asistente con instrucciones fijas y tus documentos:\n1️⃣ Crea un Proyecto en Claude\n2️⃣ Escríbele sus instrucciones\n3️⃣ Sube tus archivos (precios, horarios, preguntas frecuentes)\n\nLuego pegas el mensaje de un cliente, revisas la respuesta y la envías ✅\n\n💬 ¿Ya usas IA con tus clientes? Responde SÍ o NO.\n📌 Guárdalo para armarlo hoy.",
+ "hashtags": [
+  "inteligenciaartificial",
+  "claude",
+  "agentesdeia",
+  "sinprogramar",
+  "emprendimiento",
+  "ia",
+  "atencionalcliente"
+ ]
+}
