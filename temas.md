@@ -1,7 +1,9 @@
 # Temas pendientes
 
-## Candidato en prueba: Fe / historias bíblicas animadas
-- (hijo-prodigo publicado; agregar el próximo tema de fe)
+## Candidato en prueba: IA para conseguir clientes (desde 2026-11-02; fe retirado: el dueño canceló hijo-prodigo)
+- Encuentra clientes en la Biblioteca de Anuncios de Meta y véndeles creativos con IA (investigación 2026-11-01)
+- 3 servicios que puedes vender a negocios de tu barrio con IA
+- Cómo responder clientes por WhatsApp en la mitad del tiempo
 
 ## Nicho vigente
 Nicho: cómo usar IA (sobre todo Claude) para ganar dinero, conseguir clientes y trabajar mejor, sin saber programar. Público: creadores y emprendedores de Latinoamérica.
