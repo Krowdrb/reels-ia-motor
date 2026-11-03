@@ -1,0 +1,218 @@
+{
+  "slug": "jesus-calma-la-tormenta",
+  "title": "Todos tenían miedo… y Él dormía 🌊 | Jesús calma la tormenta #shorts",
+  "voice": "em_santa",
+  "speed": 1.2,
+  "pronunciation": {},
+  "scenes": [
+    {
+      "backdrop": "night",
+      "vo": "Las olas ya metían agua en la barca, y Jesús *dormía*.",
+      "punch": [
+        "dormía"
+      ],
+      "beats": [
+        {
+          "type": "icon",
+          "icon": "sailboat",
+          "color": "terra",
+          "float": "Zz",
+          "pulse": true,
+          "title": "JESÚS DORMÍA\nEN LA *TORMENTA*",
+          "sfx": "impact"
+        },
+        {
+          "at": "barca",
+          "type": "icon",
+          "icon": "cloud-lightning",
+          "color": "red",
+          "title": "!TORMENTA!"
+        },
+        {
+          "at": "dormía",
+          "type": "icon",
+          "icon": "sailboat",
+          "color": "terra",
+          "float": "Zz",
+          "title": "Y ÉL *DORMÍA*"
+        }
+      ]
+    },
+    {
+      "backdrop": "night",
+      "vo": "Al caer la tarde cruzaban el mar. Se levantó una gran *tempestad*, y él seguía en la popa, dormido sobre un cabezal. Los discípulos lo despertaron: Maestro, ¿no te importa que *perezcamos*?",
+      "punch": [
+        "tempestad",
+        "perezcamos"
+      ],
+      "beats": [
+        {
+          "type": "icon",
+          "icon": "cloud-rain-wind",
+          "color": "red",
+          "title": "UNA GRAN\n!TEMPESTAD!",
+          "sfx": "whoosh",
+          "sub": "*MARCOS 4:35–41*"
+        },
+        {
+          "at": "popa",
+          "type": "icon",
+          "icon": "moon-star",
+          "color": "gold",
+          "float": "Zz",
+          "title": "DORMIDO EN\nLA *POPA*"
+        },
+        {
+          "at": "discípulos",
+          "type": "character",
+          "character": "pedro",
+          "place": "left",
+          "pose": "shrug",
+          "expr": "worried",
+          "talk": false,
+          "size": 0.9
+        },
+        {
+          "at": "despertaron",
+          "zone": "stay",
+          "type": "character",
+          "character": "juan",
+          "place": "right",
+          "pose": "pray",
+          "expr": "worried",
+          "talk": false,
+          "size": 0.85,
+          "title": "¿NO TE\n*IMPORTA*?"
+        }
+      ]
+    },
+    {
+      "backdrop": "night",
+      "vo": "Jesús se levantó, reprendió al viento y dijo al mar: *Calla, enmudece*. Y el viento cesó, y se hizo grande *bonanza*.",
+      "punch": [
+        "calla"
+      ],
+      "beats": [
+        {
+          "type": "character",
+          "character": "jesus",
+          "place": "center",
+          "pose": "idle",
+          "expr": "neutral",
+          "talk": false,
+          "size": 1.1,
+          "title": "REPRENDIÓ\nAL *VIENTO*",
+          "poses": [
+            {
+              "at": "reprendió",
+              "pose": "point",
+              "expr": "determined"
+            }
+          ]
+        },
+        {
+          "at": "calla",
+          "type": "character",
+          "character": "jesus",
+          "place": "center",
+          "pose": "open",
+          "expr": "neutral",
+          "talk": false,
+          "size": 1.1,
+          "title": "*CALLA,\nENMUDECE*",
+          "sfx": "impact"
+        },
+        {
+          "at": "cesó",
+          "type": "icon",
+          "icon": "waves-horizontal",
+          "color": "green",
+          "title": "GRANDE\n^BONANZA^",
+          "sfx": "chime"
+        }
+      ]
+    },
+    {
+      "backdrop": "night",
+      "vo": "Y les dijo: ¿Por qué tenéis *miedo*? ¿Aún no tenéis fe? Y ellos, llenos de temor, se decían: ¿Quién es este, que aun el viento y el mar le *obedecen*?",
+      "punch": [
+        "obedecen"
+      ],
+      "beats": [
+        {
+          "type": "character",
+          "character": "jesus",
+          "place": "left",
+          "pose": "explain",
+          "expr": "happy",
+          "talk": false,
+          "size": 0.95,
+          "title": "¿POR QUÉ\nTENÉIS *MIEDO*?",
+          "poses": [
+            {
+              "at": "fe",
+              "bubble": "¿Aún no tenéis fe?"
+            }
+          ]
+        },
+        {
+          "at": "decían",
+          "type": "character",
+          "character": "pedro",
+          "place": "left",
+          "pose": "think",
+          "expr": "surprised",
+          "talk": false,
+          "size": 0.9
+        },
+        {
+          "at": "quién",
+          "zone": "stay",
+          "type": "character",
+          "character": "juan",
+          "place": "right",
+          "pose": "idle",
+          "expr": "surprised",
+          "talk": false,
+          "size": 0.85,
+          "title": "¿QUIÉN\nES *ESTE*?"
+        }
+      ]
+    },
+    {
+      "bg": "terra",
+      "vo": "Él sigue en tu barca. ¿Estás pasando por una tormenta? Responde SÍ, y etiqueta a alguien que necesita esta calma.",
+      "beats": [
+        {
+          "type": "cta",
+          "heading": "¿VIVES UNA\n_TORMENTA?_",
+          "keyword": "SÍ",
+          "keywordAt": "responde",
+          "saveAt": "etiqueta",
+          "comment": "RESPONDE _«SÍ»_"
+        }
+      ]
+    }
+  ],
+  "thumbnail": {
+    "big": "MC 4",
+    "lines": [
+      "JESÚS DORMÍA",
+      "*EN LA*",
+      "TORMENTA"
+    ],
+    "icon": "cloud-lightning"
+  },
+  "caption": "Las olas ya metían agua en la barca… y Jesús dormía. 🌊⛵\n\nLos discípulos lo despertaron con miedo. Él se levantó, le dijo al mar «Calla, enmudece»… y todo quedó en calma. 🌙\n\nLa tormenta no era más grande que Él. Y Él sigue en tu barca. 🤍\n\n📖 Marcos 4:35-41\n\n🙏 ¿Estás pasando por una tormenta? Responde SÍ.\n👥 Etiqueta a alguien que necesita esta calma.",
+  "hashtags": [
+    "biblia",
+    "historiasbiblicas",
+    "fe",
+    "dios",
+    "jesus",
+    "jesuscalmalatormenta",
+    "marcos4",
+    "cristianos",
+    "noesunerror"
+  ]
+}

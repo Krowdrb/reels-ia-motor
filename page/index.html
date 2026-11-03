@@ -299,7 +299,7 @@ function buildScenes(){
     beats.forEach((x,i)=>{const nf=beats.slice(i+1).find(y=>!['low','stay'].includes(y.b.zone||'full'));x.t1=nf?nf.b.t:1e9;
       x.push=!['low','stay'].includes(x.b.zone||'full')?beats.slice(i+1).filter(y=>y.b.zone==='low'&&y.b.t<x.t1).map(y=>y.b.t)[0]:null});
     // virtual camera: each full beat gets its own shot; shots chain across scenes
-    beats.forEach(x=>{if((x.b.zone||'full')!=='low'){x.shot=SHOTS[CAMG%SHOTS.length];x.dir=DIRS[CAMG%DIRS.length];CAMG++}});
+    beats.forEach(x=>{if((x.b.zone||'full')!=='low'){x.shot=x.b.type==='cta'?{x:0,y:0,s:1,r:0,rx:0,ry:0,d:[0,-6,.008,0,0]}:SHOTS[CAMG%SHOTS.length];x.dir=DIRS[CAMG%DIRS.length];CAMG++}});
     root.style.perspective='1600px';root.style.perspectiveOrigin='540px 860px';
     fitAll(root);
     root.style.display='none';
