@@ -21,6 +21,16 @@ for s in tl['scenes']:
             t = s['s'] + b['t'] + dt
             if t < s['e'] - 0.3:
                 cands.append((t, BONUS.get(b['type'], 0)))
+# estilo cinematográfico: candidatos por plano (bonus al clímax y a los planos con luz)
+for s in tl['scenes']:
+    for sh in s.get('shots', []):
+        for dt in (1.0, 2.0, 3.0):
+            t = s['s'] + sh.get('t', 0) + dt
+            if t < s['e'] - 0.3:
+                bonus = (0.5 if s.get('climax') else 0) + (0.2 if 'rays' in (sh.get('fx') or []) else 0)
+                cands.append((t, bonus))
+if tl.get('title_card'):
+    cands = [c for c in cands if c[0] > tl['title_card'].get('dur', 3.2) + 0.8]
 cands = [c for c in cands if 0.5 < c[0] < tl['total'] - 1]
 
 

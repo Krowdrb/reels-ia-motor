@@ -41,6 +41,15 @@ if [ ! -f "$R/assets/InterTight.ttf" ]; then
   cp "$T"/gf/ofl/intertight/InterTight\[wght\].ttf "$R/assets/InterTight.ttf"; rm -rf "$T"
 fi
 
+# 4b) Fuentes del estilo cinematográfico (Cinzel y Playfair Display Italic)
+if [ ! -f "$R/assets/Cinzel.ttf" ] || [ ! -f "$R/assets/PlayfairItalic.ttf" ]; then
+  echo "== Fuentes cinematográficas"
+  T=$(mktemp -d); git clone -q --depth 1 --filter=blob:none --sparse https://github.com/google/fonts.git "$T/gf"
+  (cd "$T/gf" && git sparse-checkout set ofl/cinzel ofl/playfairdisplay >/dev/null 2>&1)
+  cp "$T"/gf/ofl/cinzel/Cinzel\[wght\].ttf "$R/assets/Cinzel.ttf"
+  cp "$T"/gf/ofl/playfairdisplay/PlayfairDisplay-Italic\[wght\].ttf "$R/assets/PlayfairItalic.ttf"; rm -rf "$T"
+fi
+
 # 5) Grano de película
 [ -f "$R/assets/grain/g7.png" ] || python3 - "$R/assets/grain" <<'EOF'
 import os, sys, numpy as np

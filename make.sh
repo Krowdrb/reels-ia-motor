@@ -15,6 +15,8 @@ prepare() {
   cp "$R/page/index.html" "$R/page/render.js" "$R/page/thumb.html" "$R/page/characters.js" "$R/page/char3d.js" "$R/engine/audio.py" "$W/"
   ln -sfn "$R/page/vendor" "$W/vendor"
   ln -sfn "$R/assets" "$W/assets"
+  STYLE=$(python3 -c "import json,sys;print(json.load(open(sys.argv[1])).get('style','motion'))" "$G")
+  if [ "$STYLE" = "cinematico" ]; then cp "$R/page/cine.html" "$W/index.html"; cp "$R/engine/audio_cine.py" "$W/audio.py"; fi
   [ -f "$W/icons.js" ] || python3 - "$R/assets/lucide/icons" "$W/icons.js" <<'EOF'
 import json, os, re, sys
 d = {}
@@ -43,6 +45,7 @@ for s in tl['scenes']:
         if isinstance(b.get('cross'),dict): ts.append(s['s']+b['cross']['t']+0.5)
         for it in b.get('items',[]):
             if isinstance(it,dict) and 't' in it and it is b['items'][-1]: ts.append(s['s']+it['t']+0.5)
+    for sh in s.get('shots',[]): ts.append(s['s']+sh.get('t',0)+1.2)
     ts.append(s['e']-0.3)
 print(' '.join(f'{min(t,tl[\"total\"]-0.05):.2f}' for t in sorted(set(round(x,2) for x in ts))))")
   rm -rf prev && mkdir prev

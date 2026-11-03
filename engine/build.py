@@ -139,6 +139,22 @@ def main(gpath, W):
                         last = it['t']
             beats.append(b)
         out['beats'] = beats
+        # estilo cinematográfico: campos de escena y planos (shots) con su palabra de entrada
+        for k, v in sc.items():
+            if k not in ('vo', 'beats', 'punch', 'label', 'badge', 'bg', 'backdrop', 'hold', 'shots'):
+                out.setdefault(k, v)
+        if sc.get('shots') or sc.get('set'):
+            shots = json.loads(json.dumps(sc.get('shots') or [{k: sc[k] for k in ('set', 'cam', 'chars', 'fx', 'mood', 'light') if k in sc}]))
+            prev_t = 0.0
+            for sh in shots:
+                sh['t'] = resolve(si, sh.get('at', 'start'), prev_t)
+                prev_t = sh['t']
+                for ch in sh.get('chars', []):
+                    if isinstance(ch.get('at'), str):
+                        ch['at'] = round(resolve(si, ch['at'], sh['t']) - sh['t'], 3)
+                for ev in sh.get('events', []):
+                    ev['t'] = resolve(si, ev.get('at', 'start'), sh['t'])
+            out['shots'] = shots
         out['bg'] = sc.get('bg', 'dark')
         if sc.get('backdrop'):
             out['backdrop'] = sc['backdrop']
@@ -183,7 +199,7 @@ def main(gpath, W):
                     chars[cid] = json.load(open(f'{root}/personajes/{cid}.json'))
                 else:
                     raise SystemExit(f'ERROR: personaje "{cid}" no está en "characters" del guion ni en personajes/{cid}.json')
-    tl = dict(total=t0, scenes=scenes_out, caps=caps, characters=chars)
+    tl = dict(total=t0, scenes=scenes_out, caps=caps, characters=chars, style=G.get('style', 'motion'), title_card=G.get('title_card'))
     json.dump(tl, open(f'{W}/timeline.json', 'w'), ensure_ascii=False, indent=1)
     open(f'{W}/tl.js', 'w').write('const TL=' + json.dumps(tl, ensure_ascii=False) + ';\n')
 

@@ -1,0 +1,61 @@
+{
+  "slug": "lazaro-ven-fuera",
+  "style": "cinematico",
+  "title": "Cuando ya era demasiado tarde… Él dijo: ¡ven fuera! ✝️ | La resurrección de Lázaro #shorts",
+  "voice": "em_santa",
+  "speed": 1.0,
+  "pronunciation": {},
+  "title_card": {"text": "Lázaro,<br>ven fuera", "sub": "Juan 11", "dur": 3.4},
+  "scenes": [
+    {"mood": "night", "trans": "cut",
+     "vo": "Lázaro llevaba cuatro días en la tumba. Todos pensaban que ya era *demasiado tarde.*",
+     "shots": [
+       {"set": ["mountain", {"el": "olive", "x": 0.85}, {"el": "tomb", "x": 0.55}], "cam": "push", "focus": {"x": 0.55, "y": 0.62}, "light": {"x": 0.3, "y": 0.22},
+        "chars": [{"who": "mourners", "x": 0.25, "depth": "near", "n": 4, "pose": "bow"}], "fx": ["fog", "dust"]}
+     ]},
+    {"mood": "dusk", "trans": "fade",
+     "vo": "Cuando Jesús llegó, Marta salió a su encuentro: Señor, si hubieras estado aquí, mi hermano no habría *muerto.*",
+     "shots": [
+       {"set": [{"el": "city", "x": 0.5}, "hills", {"el": "palm", "x": 0.15}], "cam": "panR", "light": {"x": 0.72, "y": 0.5},
+        "chars": [{"who": "jesus", "x": 0.62, "depth": "near", "pose": "stand"}, {"who": "woman", "x": 0.36, "depth": "near", "pose": "kneel", "at": "Señor"}]}
+     ]},
+    {"mood": "night", "trans": "dip",
+     "vo": "Y Jesús *lloró.* No por falta de poder, sino por *amor.*",
+     "shots": [
+       {"set": ["hills", {"el": "olive", "x": 0.8, "depth": "near"}], "cam": "push", "focus": {"x": 0.45, "y": 0.6}, "light": {"x": 0.45, "y": 0.3},
+        "chars": [{"who": "jesus", "x": 0.45, "depth": "front", "pose": "bow", "dy": -40}], "fx": ["fog", "dust"]}
+     ]},
+    {"mood": "dawn", "trans": "fade",
+     "vo": "Entonces dijo: *quitad la piedra.* Y movieron la piedra de la entrada.",
+     "shots": [
+       {"set": ["mountain", {"el": "tomb", "x": 0.55}], "cam": "tiltDown", "light": {"x": 0.62, "y": 0.3},
+        "chars": [{"who": "jesus", "x": 0.2, "depth": "near", "pose": "point"}, {"who": "crowd", "x": 0.85, "depth": "near", "n": 3}]},
+       {"at": "movieron", "set": ["mountain", {"el": "tomb", "x": 0.55, "open": true}], "cam": "push", "focus": {"x": 0.55, "y": 0.62}, "light": {"x": 0.55, "y": 0.62}, "trans": "fade",
+        "chars": [{"who": "crowd", "x": 0.85, "depth": "near", "n": 3}], "fx": ["dust"]}
+     ]},
+    {"mood": "holy", "trans": "flare", "climax": true,
+     "vo": "Jesús alzó la voz: *¡Lázaro, ven fuera!* Y el que había muerto *salió.*",
+     "shots": [
+       {"set": [{"el": "tomb", "x": 0.55, "open": true, "lit": true}], "cam": "pull", "focus": {"x": 0.55, "y": 0.6}, "light": {"x": 0.55, "y": 0.5},
+        "chars": [{"who": "jesus", "x": 0.33, "depth": "front", "pose": "point", "lit": true, "sash": "#B5452F", "dy": -30},
+                  {"who": "robed", "x": 0.55, "depth": "near", "pose": "stand", "lit": true, "robe": "#F4F0E6", "face": false, "glow": true, "at": "salió", "dy": -30}],
+        "fx": ["rays", "dust"]}
+     ]},
+    {"mood": "golden", "trans": "fade",
+     "vo": "Porque para Dios nunca es *demasiado tarde.* Lo que tú das por muerto, él lo puede *levantar.*",
+     "shots": [
+       {"set": ["hills", {"el": "city", "x": 0.5}], "cam": "rise", "light": {"x": 0.5, "y": 0.3},
+        "chars": [{"who": "jesus", "x": 0.5, "depth": "near", "pose": "open", "lit": true, "sash": "#B5452F", "glow": true},
+                  {"who": "crowd", "x": 0.18, "depth": "near", "n": 3, "pose": "arms"}, {"who": "crowd", "x": 0.84, "depth": "near", "n": 3, "pose": "arms"}],
+        "fx": ["rays", "dust"]}
+     ]},
+    {"mood": "golden", "trans": "flare",
+     "vo": "Si hoy estás esperando un milagro, escribe *AMÉN* y no te rindas.",
+     "shots": [
+       {"set": ["hills", {"el": "cross", "x": 0.5, "cloth": true}], "cam": "pull", "focus": {"x": 0.5, "y": 0.5}, "light": {"x": 0.5, "y": 0.28}, "fx": ["rays", "dust"]}
+     ]}
+  ],
+  "thumbnail": {"big": "", "lines": ["LÁZARO,", "*VEN FUERA*"], "icon": ""},
+  "caption": "Cuatro días en la tumba. Todos pensaban que ya era tarde… pero Jesús no llega tarde. ✝️\n\n📖 Juan 11:1-44\n\n🙏 Si estás esperando un milagro, escribe AMÉN.\n👥 Etiqueta a alguien que necesita leer esto hoy.",
+  "hashtags": ["lazaro", "jesus", "biblia", "fe", "dios", "historiasbiblicas", "milagros", "cristianos", "shorts"]
+}

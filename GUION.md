@@ -116,6 +116,54 @@ Sin `backdrop`, la escena usa el fondo oscuro de la marca. Con fondo ilustrado, 
 
 Reutiliza siempre las mismas fichas para los personajes recurrentes, para que se reconozcan entre videos. Crea fichas nuevas solo para personajes nuevos.
 
+## Estilo cinematográfico (`"style": "cinematico"`)
+Es el estilo de nuestro Short más visto, «La Resurrección de Jesús». Es el estilo por defecto para los relatos bíblicos.
+Se ve así: siluetas planas en capas con profundidad (2.5D), cámara lenta con paralaje, color que cuenta la historia (noche azul → amanecer rosado → oro), rayos de luz, polvo dorado, niebla y destellos de luz entre escenas. Lleva voz masculina grave (em_santa, speed 1.0) y música orquestal que crece hasta el clímax (con coro).
+**El texto en pantalla es solo el título al comienzo (`title_card`) y los subtítulos de la narración**, que son grandes, dorados en las palabras clave y animados según el ambiente. Este estilo no lleva beats.
+
+```json
+{"style": "cinematico", "voice": "em_santa", "speed": 1.0,
+ "title_card": {"text": "Lázaro,<br>ven fuera", "sub": "Juan 11", "dur": 3.4},
+ "scenes": [
+  {"mood": "night", "trans": "cut", "vo": "… *palabra clave* …",
+   "shots": [
+     {"set": ["mountain", {"el": "tomb", "x": 0.55}], "cam": "push", "focus": {"x": 0.55, "y": 0.62}, "light": {"x": 0.3, "y": 0.22},
+      "chars": [{"who": "mourners", "x": 0.25, "depth": "near", "n": 4, "pose": "bow"}], "fx": ["fog", "dust"]},
+     {"at": "movieron", "set": [{"el": "tomb", "x": 0.55, "open": true}], "cam": "push", "trans": "fade"}
+   ]},
+  {"mood": "holy", "trans": "flare", "climax": true, "vo": "…", "shots": [ … ]}
+ ]}
+```
+
+### Escena
+- **`mood`** (ambiente y paleta): night (azul, luna) · dusk (atardecer rojizo) · dawn (amanecer rosa y lila, con niebla) · golden (oro) · holy (luz divina, rayos fuertes) · storm (tormenta: lluvia y relámpagos) · day.
+- **`trans`** (cómo entra la escena): cut · fade · dip (fundido a negro) · flare (destello de luz; úsalo para revelaciones y para el clímax).
+- **`climax: true`**: marca UNA escena. Ahí la música pasa de menor a mayor, entra el coro y suena un golpe grave.
+
+### Plano (`shots[]`)
+Cada escena tiene 1 o 2 planos. El segundo plano entra con `at`, que es una palabra de la voz de esa escena.
+- **`set`** (escenografía): hills · dunes · ground · mountain · calvary (colina con 3 cruces) · cross (`cloth: true` añade el manto blanco) · tomb (`open`, `lit`) · olive · palm · cypress · city (Jerusalén) · temple · sea · boat · tent · well · sheep · rocks · throne · ark · manger · star.
+  - Cada elemento puede ser un texto (`"olive"`) o un objeto con `x` (0–1), `depth` (far · mid · near · front) y `s` (escala).
+- **`cam`** (cámara): push (acercar) · pull (alejar) · panL · panR · tiltDown · tiltUp · rise · still.
+  - `focus` {x, y} indica hacia dónde se acerca la cámara.
+- **`light`** {x, y}: dónde está la fuente de luz (sol, luna o resplandor). De ahí salen los rayos.
+- **`fx`** (efectos): rays · dust · fog · rain. El ambiente storm añade relámpagos solo.
+  - `events: [{"at": "palabra", "do": "lightning"}]` pone un relámpago con trueno en una palabra concreta.
+- **`chars`** (siluetas): `who` puede ser jesus · robed · woman · soldier · shepherd · king · child · crowd · mourners (con `n` = cantidad).
+  - `pose`: stand · kneel · bow · mourn · arms (brazos al cielo) · open (brazos abiertos) · point · pray.
+  - `x`, `depth`, `dy` (ajuste vertical), `at` (palabra en la que aparece).
+  - `lit: true` dibuja la figura iluminada, con ropa clara y rostro sereno. Úsalo para Jesús o un ángel en momentos de luz. Con `sash` le das color a la banda y con `robe` a la túnica.
+  - `glow: true` añade un halo de luz. `veil` pone velo, `jar` un cántaro, `staff` un bastón, `crown` una corona y `halo` una aureola.
+  - En la oscuridad los personajes son siluetas sin rostro. Esa es la estética del estilo.
+
+### Reglas del estilo
+- La historia se cuenta con el color: empieza oscuro (night/dusk), pasa por dawn y se resuelve en golden/holy.
+- Haz 6–8 escenas de 4–9 s. La duración total va de 50 a 65 s, con 130–150 palabras a speed 1.0.
+- Usa una cita bíblica real en la voz o en `title_card.sub`, siempre fiel al texto.
+- Marca 1–2 palabras clave por oración: salen doradas con brillo en los subtítulos.
+- Cierra con una pregunta o un «escribe AMÉN» o «etiqueta a alguien». No hagas un CTA gráfico.
+- Para la portada, el motor elige solo un fotograma del clímax o de un plano con rayos de luz.
+
 ## Antes de escribir
 Lee `aprendizajes.md` y el archivo más reciente de `investigacion/`. Aplica lo de "Hacer" y "Evitar" y usa un gancho del estilo de los que funcionaron. Si hay un experimento en curso, respétalo.
 
