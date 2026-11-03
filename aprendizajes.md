@@ -5,17 +5,23 @@ Reglas: máximo unas 25 viñetas vigentes. Cada una lleva su evidencia entre par
 
 ## Hacer
 - Nicho Biblia (desde 2026-11-02, decisión del dueño): citar en pantalla libro, capítulo y versículo; ser fiel al sentido del texto; tono cálido y respetuoso; nada de polémicas entre iglesias ni de profecías o fechas inventadas (decisión del dueño 2026-11-02)
-- Decir y escribir la promesa completa en los primeros 2 s; el primer fotograma es la portada en TikTok, así que debe llevar texto grande de 3–5 palabras (métricas 2026-11-01, señal: ganar-con-claude retiene 2 s de 70 s en Facebook; errores-pedirle-ia salió con photoCoverIndex 0)
-- Cerrar con una pregunta que se responde con una palabra sobre la vida del espectador («¿Alguna vez te sentiste como Jonás? SÍ o NO») o pedir etiquetar a alguien (métricas 2026-11-01, señal: los videos de fe que piden etiquetar sí reciben comentarios)
-- Publicar de noche, entre 19:30 y 21:30 Bogotá (métricas 2026-11-02, señal débil: portafolio, el único de IA publicado de mañana (10:00), lleva 6 vistas en YouTube en 9 h, frente a 160–226 de los publicados de noche en sus primeras 14–20 h)
+- Decir y escribir la promesa completa en los primeros 2 s; el primer fotograma es la portada en TikTok, así que debe llevar texto grande de 3–5 palabras (métricas 2026-11-03, señal con 3 videos: los del sistema retienen 2,4–4,0 s en Facebook frente a 3,1–9,2 s de los bíblicos del dueño; el mejor, Resurrección, abre con «Pensaron que todo había terminado…»)
+- Cerrar con una pregunta que se responde con una palabra sobre la vida del espectador («¿Alguna vez te sentiste como Jonás? SÍ o NO») o pedir etiquetar a alguien (métricas 2026-11-03: Resurrección y Job, que piden etiquetar, tienen el mejor engagement de la página, 8,7 % y 7,2 %, frente a 2,3 % de IA)
+- Publicar de noche, entre 19:30 y 21:30 Bogotá (métricas 2026-11-03, señal débil: portafolio, el único publicado de mañana (10:00), lleva 13 vistas en YouTube en 33 h, frente a 184–229 de los publicados de noche)
+- Preferir relatos bíblicos poco conocidos con un giro moral fuerte, o un ángulo nuevo de uno famoso, antes que el relato famoso contado «como siempre» (investigación 2026-11-03: Jefté y su hija, 38x en TikTok y 49,8x en Instagram en dos cuentas distintas; Zacarías 1, 5,6K vistas/h en YouTube)
+- En datos, traducir la Biblia a la vida de hoy con una cifra o comparación (dinero, edades, frases de uso diario) (investigación 2026-11-03: «¿Cuánto valía el dinero en tiempos bíblicos?» 2,2M en Instagram, 11,6x; «La edad que tendrían hoy los personajes» 107K en 2 días)
+- Título de YouTube = gancho emocional + nombre del relato + #shorts («Cuando todo parecía perdido… Él resucitó ✝️ | La Resurrección de Jesús»), no solo el versículo; el versículo va en pantalla y en la descripción (métricas 2026-11-03: Resurrección 1.304 vistas en YouTube frente a 15–132 de los 4 bíblicos titulados solo con el versículo, que en TikTok y FB rinden parecido)
+- Estilo de historia: escenas ilustradas cinematográficas con paneo y zoom lentos, voz narradora grave y música orquestal suave desde el segundo 0 (investigación 2026-11-03: es el estilo de los outliers sin cara de Jefté, mar Rojo y Génesis)
 
 ## Evitar
-- CTA de palabra clave para «recibir algo» (métricas 2026-11-01 y 2026-11-02: 0 comentarios en 6 publicaciones de IA con «Comenta CLAUDE/LISTA/PROMPTS»)
-- Videos de más de 60 s (métricas 2026-11-01, señal: los de IA duran 54–71 s; los de más vistas de la página duran 24–60 s)
+- CTA de palabra clave para «recibir algo» (métricas 2026-11-03: 1 comentario en 9 publicaciones de IA con «Comenta CLAUDE/LISTA/PROMPT»; errores-pedirle-ia, 597 vistas, 0 comentarios)
+- Videos de más de 60 s (métricas 2026-11-03, señal: en la Biblia, Job y David (60–65 s) retienen 15,4 % y 10,4 % en FB; Mar Rojo e Hijo pródigo (68–74 s), 4,6 % y 7,1 %; los de más vistas de la página duran 24–60 s)
 
 ## Ganchos que funcionaron (primeros 3 s)
 - Gancho de sorpresa sobre un relato conocido: «Todos conocen a David y Goliat, pero casi nadie nota esto» (patrón de lista/curiosidad de la investigación 2026-11-01, por validar en el nicho Biblia)
-- Frase emocional corta que el espectador siente propia («Quizá ya no vuelvas…», «Qué bonito fue…») (métricas 2026-11-01: los 2 videos con más vistas de la página, 1.631 y 1.317; nicho desamor: adaptar el tono a la Biblia, p. ej. «Dios no se olvidó de ti…», no el tema)
+- Frase emocional corta que el espectador siente propia («Quizá ya no vuelvas…», «Qué bonito fue…») (métricas 2026-11-03: 2 de los 3 videos con más vistas de la página, 1.634 y 1.317; nicho desamor, solo como dato: adaptar el tono a la Biblia, p. ej. «Dios no se olvidó de ti…», no el tema)
+- Giro del relato en la primera frase: «Pensaron que todo había terminado… pero al tercer día la piedra ya no estaba» (métricas 2026-11-03: Resurrección, el mejor video de la página, 1.783 vistas en 56 h)
+- Gancho que arranca dentro de la escena, sin presentación («La puerta de la casa de Jefté se abrió…») (investigación 2026-11-03: los outliers de historias en español empiezan con narración y música en el segundo 0)
 
 ## Experimentos en curso
-- **Duración 35–45 s** (única variable). Primer video de IA de la prueba: primer-agente-ia (40,5 s, 2 nov 19:30). Desde el 2026-11-02 sigue en el nicho Biblia. Línea base: errores-pedirle-ia 54 s (338 vistas) y ganar-con-claude 70 s (470 vistas; retención FB 3 %); para Biblia, los videos de fe subidos a mano (mediana 487 vistas con >72 h). Se mide con vistas totales y de TikTok a 72 h y tiempo medio visto en Facebook. Gancho, horario (noche) y CTA siguen las reglas de arriba.
+- **Duración 35–45 s** (única variable). Primer video de la prueba: primer-agente-ia (IA, 40,5 s, 2 nov 19:30; aún sin datos). Sigue en el nicho Biblia: el próximo video bíblico dura 35–45 s. Línea base Biblia: los 5 videos del dueño, 60–74 s, mediana 526 vistas (507 con >72 h), tiempo medio en FB 3,1–9,2 s (retención 9,3 %) (métricas 2026-11-03). Se mide con vistas totales y de TikTok a 72 h y tiempo medio visto en Facebook. Gancho, horario (noche) y CTA siguen las reglas de arriba.
