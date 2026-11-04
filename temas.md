@@ -1,7 +1,7 @@
 # Temas pendientes
 
 ## Nicho vigente: historias y datos de la Biblia (desde 2026-11-02)
-Alternar historias (personajes2d) y datos (motion). Cada tema debe poder citarse con libro, capítulo y versículo.
+Alternar historias y datos, todos en estilo cinematico. Cada tema debe poder citarse con libro, capítulo y versículo.
 
 ### Historias
 - David y Goliat: lo que casi nadie nota del relato (1 Samuel 17)
