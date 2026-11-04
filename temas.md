@@ -25,7 +25,7 @@ Alternar historias (personajes2d) y datos (motion). Cada tema debe poder citarse
 - Los 12 apóstoles en 60 segundos
 - 3 mujeres de la Biblia que cambiaron la historia
 - ¿Cuánto tardó en escribirse la Biblia y en cuántos idiomas?
-- ¿Cuánto valía el dinero en la Biblia? El denario, las 30 piezas de plata y la ofrenda de la viuda (Mateo 20:2; Mateo 26:15; Marcos 12:41–44) (investigación 2026-11-03: 2,2M en Instagram, 11,6x)
+- (publicado 2026-11-04) ¿Cuánto valía el dinero en la Biblia? El denario, las 30 piezas de plata y la ofrenda de la viuda (Mateo 20:2; Mateo 26:15; Marcos 12:41–44) (investigación 2026-11-03: 2,2M en Instagram, 11,6x)
 - Las 4 mujeres de la genealogía de Jesús: Tamar, Rahab, Rut y la mujer de Urías (Mateo 1:3–6) (investigación 2026-11-03: «mujeres de la biblia» +160 % en búsquedas)
 - 5 frases que usas sin saber que vienen de la Biblia (Éxodo 21:24; Mateo 27:24; Mateo 4:4; Juan 8:7; Mateo 5:14) (investigación 2026-11-03)
 
