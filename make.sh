@@ -77,6 +77,10 @@ for s in tl['scenes']: print(s['i'], round(s['s']*30), round(s['e']*30))" > rang
   ffmpeg -y -loglevel error -f concat -safe 0 -i list_c.txt -c copy video_only.mp4
   ffmpeg -y -loglevel error -i video_only.mp4 -i mix.wav -map 0:v -map 1:a -c:v copy -c:a aac -b:a 192k -ar 48000 -shortest -movflags +faststart tmp_final.mp4
   mv tmp_final.mp4 "$SLUG.mp4"
+  # GitHub no acepta archivos de más de 100 MB: si pasa de 80 MB, se recomprime (calidad visual casi igual)
+  if [ "$(stat -c %s "$SLUG.mp4")" -gt 80000000 ]; then
+    ffmpeg -y -loglevel error -i "$SLUG.mp4" -c:v libx264 -preset medium -crf 21 -maxrate 14M -bufsize 28M -pix_fmt yuv420p -c:a copy -movflags +faststart tmp_small.mp4 && mv tmp_small.mp4 "$SLUG.mp4"
+  fi
   python3 - "$G" <<'EOF'
 import json, sys
 g = json.load(open(sys.argv[1]))

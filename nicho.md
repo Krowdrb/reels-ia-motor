@@ -5,6 +5,9 @@
 **Desde:** 2026-11-02, por **decisión del dueño** («cambia el nicho a datos o historias de la Biblia, ya no consejos de IA»). Esta decisión manda sobre la regla de 1,5x. La IA queda **retirada**: no se hacen más videos de IA salvo que el dueño lo pida.
 **Subnichos dentro del vigente:** (a) historias bíblicas narradas (cinematico por defecto desde 2026-11-04; personajes2d en medición) y (b) datos y curiosidades bíblicas (motion o mezcla). Se alternan y se comparan con métricas.
 
+## Estilo obligatorio (decisión del dueño, 2026-11-04)
+**Todos los videos, historias Y datos, se hacen en estilo `cinematico`** (réplica del Short más visto, «La Resurrección de Jesús»): solo animación + subtítulos de la narración, con el título únicamente al comienzo (`title_card`). Nada de motion graphics, títulos en pantalla, tarjetas ni CTA gráfico. Los datos se cuentan narrados, con escenas que los ilustran, y las cifras van en la voz, los subtítulos y la descripción. Solo el dueño puede cambiar esto.
+
 Este archivo lo mantiene el analista de métricas. Dentro de la Biblia, se cambia de subnicho o se abre un candidato (p. ej. «personajes de la Biblia», «versículos para tu día», «profecías explicadas») solo con evidencia:
 - el nicho candidato tiene al menos 3 videos propios con más de 72 h publicados, y
 - su mediana de vistas es al menos 1,5 veces la del nicho vigente, con retención igual o mejor.

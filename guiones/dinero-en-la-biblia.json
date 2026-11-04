@@ -1,93 +1,53 @@
 {
   "slug": "dinero-en-la-biblia",
+  "style": "cinematico",
   "title": "Vendido por 30 monedas de plata… ¿cuánto era eso? 💰 | El dinero en la Biblia #shorts",
-  "voice": "ef_dora",
-  "speed": 1.2,
+  "voice": "em_santa",
+  "speed": 1.0,
   "pronunciation": {},
-  "characters": {
-    "viuda": {
-      "name": "Viuda",
-      "style": "2d",
-      "skin": "#A87650",
-      "hair": "veil",
-      "veilColor": "#6B5B4E",
-      "hairColor": "#9A948C",
-      "outfit": "dress",
-      "outfitColor": "#4A3F38",
-      "accent": "#F5C26B",
-      "accessory": "none",
-      "eyes": "#2A1A10",
-      "age": "old",
-      "blinkSeed": 2.1
-    }
-  },
+  "title_card": {"text": "Treinta monedas<br>de plata", "sub": "Mateo 26:15", "dur": 3.4},
   "scenes": [
-    {
-      "vo": "Judas entregó a Jesús por *treinta* monedas. ¿Cuánto valía *eso* de verdad?",
-      "punch": ["treinta"],
-      "beats": [
-        {"at": -0.6, "type": "icon", "icon": "hand-coins", "color": "gold", "pulse": true,
-         "title": "ENTREGADO\n*POR 30\nMONEDAS*", "titleSize": 108, "sfx": "impact"},
-        {"at": "cuánto", "type": "text", "title": "¿CUÁNTO\n*VALÍA ESO?*", "size": 150, "sfx": "whoosh"}
-      ]
-    },
-    {
-      "badge": {"text": "MATEO 20:2", "at": "viña"},
-      "vo": "Primero, el *denario*. En la parábola de la viña, el dueño acordó con los obreros un denario al día: el sueldo de *un día* de trabajo.",
-      "punch": ["denario"],
-      "beats": [
-        {"type": "icon", "icon": "coins", "color": "gold", "drop": true, "title": "1 *DENARIO*", "titleSize": 170},
-        {"at": "viña", "type": "cards", "items": [
-          {"icon": "grape", "label": "LA VIÑA", "at": "viña"},
-          {"icon": "users", "label": "OBREROS", "at": "obreros"},
-          {"icon": "sun", "label": "UN DÍA", "at": "día"}]},
-        {"at": "sueldo", "type": "text", "title": "1 DENARIO =\n*1 DÍA DE\nTRABAJO*", "size": 140, "sub": "Mateo 20:2", "sfx": "chaching"}
-      ]
-    },
-    {
-      "badge": {"text": "MATEO 26:15", "at": "judas"},
-      "vo": "A Judas le dieron *treinta* piezas de plata. Y la ley de Moisés fijaba treinta siclos por la vida de un *esclavo*.",
-      "punch": ["esclavo"],
-      "beats": [
-        {"type": "clone", "icon": "coins", "count": 30, "title": "~30~ PIEZAS\nDE *PLATA*", "sfx": "chaching"},
-        {"at": "ley", "type": "icon", "icon": "scroll-text", "color": "terra", "title": "LA LEY DE\n*MOISÉS*", "sub": "Éxodo 21:32"},
-        {"at": "esclavo", "type": "icon", "icon": "scale", "color": "red", "pulse": true,
-         "title": "LA VIDA DE\nUN !ESCLAVO!", "sub": "Éxodo 21:32", "sfx": "impact"}
-      ]
-    },
-    {
-      "vo": "Pero la ofrenda más grande fue la más *pequeña*. Una viuda pobre echó *dos blancas*: un cuadrante.",
-      "punch": ["pequeña"],
-      "beats": [
-        {"type": "icon", "icon": "landmark", "color": "gold", "title": "LA OFRENDA\nMÁS *PEQUEÑA*", "sub": "Marcos 12:41–44"},
-        {"at": "viuda", "type": "character", "character": "viuda", "place": "center", "pose": "hold", "prop": "coins",
-         "expr": "neutral", "talk": false, "size": 0.95, "title": "UNA VIUDA\n*POBRE*"},
-        {"at": "dos", "type": "counter", "icon": "coins", "from": {"n": 2, "unit": "BLANCAS"}, "to": {"n": 1, "unit": "CUADRANTE"},
-         "toAt": "cuadrante", "sub": "Marcos 12:42"}
-      ]
-    },
-    {
-      "vo": "Y Jesús dijo que ella echó *más que todos*, porque dio de su pobreza *todo* lo que tenía.",
-      "punch": ["todos"],
-      "beats": [
-        {"type": "character", "character": "viuda", "place": "center", "pose": "hold", "prop": "coins", "expr": "neutral",
-         "talk": false, "size": 0.95, "title": "Y JESÚS\n*DIJO…*",
-         "poses": [{"at": "ella", "pose": "pray", "expr": "happy"}]},
-        {"at": "más", "type": "big", "text": "MÁS QUE\nTODOS", "color": "gold", "size": 240, "sparkles": true, "strong": true, "sfx": "sparkle"},
-        {"at": "pobreza", "type": "icon", "icon": "hand-heart", "color": "gold", "pulse": true,
-         "title": "DIO *TODO*\nLO QUE TENÍA", "sub": "Marcos 12:43–44"}
-      ]
-    },
-    {
-      "bg": "terra",
-      "vo": "Dios no mira la cantidad, mira el *corazón*. ¿Conoces a alguien que da aunque tenga poco? *Etiquétalo*.",
-      "beats": [
-        {"type": "cta", "heading": "¿CONOCES A\n_ALGUIEN ASÍ?_", "keyword": "ETIQUÉTALO", "keywordAt": "etiquétalo",
-         "comment": "@ _ALGUIEN QUE DA_"}
-      ]
-    }
+    {"mood": "night", "trans": "cut",
+     "vo": "Judas entregó a Jesús por *treinta* monedas. ¿Cuánto valía *eso* de verdad?",
+     "shots": [
+       {"set": [{"el": "city", "x": 0.5}, {"el": "olive", "x": 0.18}, {"el": "olive", "x": 0.86, "depth": "near"}], "cam": "push", "focus": {"x": 0.5, "y": 0.6}, "light": {"x": 0.72, "y": 0.2},
+        "chars": [{"who": "robed", "x": 0.42, "depth": "near", "pose": "stand"}, {"who": "soldier", "x": 0.62, "depth": "near"}, {"who": "soldier", "x": 0.74, "depth": "near"}], "fx": ["fog", "dust"]}
+     ]},
+    {"mood": "dawn", "trans": "fade",
+     "vo": "Primero, el *denario*. En la parábola de la viña, el dueño acordó con los obreros un denario al día: el sueldo de *un día* de trabajo.",
+     "shots": [
+       {"set": ["hills", {"el": "olive", "x": 0.15}, {"el": "olive", "x": 0.45}, {"el": "olive", "x": 0.8}], "cam": "panR", "light": {"x": 0.7, "y": 0.4},
+        "chars": [{"who": "robed", "x": 0.3, "depth": "near", "pose": "point", "staff": true}, {"who": "crowd", "x": 0.7, "depth": "near", "n": 4}], "fx": ["fog"]}
+     ]},
+    {"mood": "night", "trans": "dip",
+     "vo": "A Judas le dieron *treinta* piezas de plata. Y la ley de Moisés fijaba treinta siclos por la vida de un *esclavo*.",
+     "shots": [
+       {"set": [{"el": "temple", "x": 0.5}, "rocks"], "cam": "tiltDown", "light": {"x": 0.5, "y": 0.22},
+        "chars": [{"who": "robed", "x": 0.3, "depth": "near", "pose": "bow"}, {"who": "king", "x": 0.68, "depth": "near", "pose": "point"}], "fx": ["dust"]},
+       {"at": "ley", "set": ["mountain", "hills"], "cam": "push", "light": {"x": 0.5, "y": 0.25}, "trans": "fade",
+        "chars": [{"who": "robed", "x": 0.5, "depth": "near", "pose": "kneel"}], "fx": ["fog"]}
+     ]},
+    {"mood": "dawn", "trans": "fade",
+     "vo": "Pero la ofrenda más grande fue la más *pequeña*. Una viuda pobre echó *dos blancas*: un cuadrante.",
+     "shots": [
+       {"set": [{"el": "temple", "x": 0.55}], "cam": "push", "focus": {"x": 0.45, "y": 0.62}, "light": {"x": 0.55, "y": 0.3},
+        "chars": [{"who": "crowd", "x": 0.78, "depth": "near", "n": 3}, {"who": "woman", "x": 0.38, "depth": "near", "pose": "pray", "at": "viuda"}], "fx": ["dust"]}
+     ]},
+    {"mood": "holy", "trans": "flare", "climax": true,
+     "vo": "Y Jesús dijo que ella echó *más que todos*, porque dio de su pobreza *todo* lo que tenía.",
+     "shots": [
+       {"set": [{"el": "temple", "x": 0.5, "depth": "far"}], "cam": "pull", "focus": {"x": 0.5, "y": 0.6}, "light": {"x": 0.5, "y": 0.35},
+        "chars": [{"who": "jesus", "x": 0.6, "depth": "near", "pose": "point", "lit": true, "sash": "#B5452F", "glow": true},
+                  {"who": "woman", "x": 0.36, "depth": "near", "pose": "pray", "lit": true, "veilColor": "#8C7A6A", "robe": "#EDE6D8", "face": false, "glow": true, "at": "pobreza"}],
+        "fx": ["rays", "dust"]}
+     ]},
+    {"mood": "golden", "trans": "fade",
+     "vo": "Dios no mira la cantidad, mira el *corazón*. ¿Conoces a alguien que da aunque tenga poco? *Etiquétalo*.",
+     "shots": [
+       {"set": ["hills", {"el": "cross", "x": 0.5, "cloth": true}], "cam": "pull", "focus": {"x": 0.5, "y": 0.5}, "light": {"x": 0.5, "y": 0.28}, "fx": ["rays", "dust"]}
+     ]}
   ],
-  "thumbnail": {"big": "30", "lines": ["MONEDAS DE", "*PLATA*", "¿CUÁNTO VALÍAN?"], "icon": "coins"},
+  "thumbnail": {"big": "30", "lines": ["MONEDAS", "*DE PLATA*"], "icon": "hand-coins"},
   "caption": "Judas entregó a Jesús por 30 monedas de plata… ¿cuánto valía eso de verdad? 💰\n\n🪙 1 denario = el sueldo de un día de trabajo (Mateo 20:2)\n⚖️ 30 piezas de plata (Mateo 26:15): la ley fijaba 30 siclos por la vida de un esclavo (Éxodo 21:32). En Zacarías 11:12 también pesan 30 piezas de plata como salario.\n🤍 La viuda echó dos blancas, un cuadrante… y Jesús dijo que dio más que todos, porque dio todo lo que tenía (Marcos 12:41-44).\n\nDios no mira la cantidad, mira el corazón. ❤️\n\n📖 Mateo 20:2 · Mateo 26:15 · Éxodo 21:32 · Zacarías 11:12 · Marcos 12:41-44\n\n👥 Etiqueta a alguien que da aunque tenga poco.",
-  "hashtags": ["biblia", "datosbiblicos", "fe", "dios", "jesus", "curiosidadesbiblicas", "laofrendadelaviuda", "cristianos"]
+  "hashtags": ["biblia", "datosbiblicos", "curiosidadesbiblicas", "fe", "dios", "jesus", "judas", "ofrendadelaviuda", "cristianos"]
 }
