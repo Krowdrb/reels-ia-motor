@@ -1,0 +1,396 @@
+{
+  "slug": "daniel-foso-leones",
+  "style": "cinematico",
+  "title": "Esa noche el rey no pudo dormir… 🦁 | Daniel en el foso de los leones #shorts",
+  "voice": "em_santa",
+  "speed": 1.0,
+  "pronunciation": {},
+  "title_card": {
+    "text": "Una noche<br>con leones",
+    "sub": "Daniel 6",
+    "dur": 3.4
+  },
+  "scenes": [
+    {
+      "mood": "night",
+      "trans": "cut",
+      "vo": "Esa noche el rey no pudo *dormir*: había condenado a Daniel a los *leones*.",
+      "shots": [
+        {
+          "set": [
+            {
+              "el": "city",
+              "x": 0.5,
+              "depth": "far"
+            },
+            {
+              "el": "palm",
+              "x": 0.86,
+              "depth": "near"
+            }
+          ],
+          "cam": "push",
+          "focus": {
+            "x": 0.45,
+            "y": 0.6
+          },
+          "light": {
+            "x": 0.72,
+            "y": 0.18
+          },
+          "chars": [
+            {
+              "who": "king",
+              "x": 0.45,
+              "depth": "near",
+              "pose": "stand"
+            }
+          ],
+          "fx": [
+            "fog",
+            "dust"
+          ]
+        }
+      ]
+    },
+    {
+      "mood": "dusk",
+      "trans": "dip",
+      "vo": "Todo fue una *trampa*: un decreto de treinta días para orar solo al *rey*.",
+      "shots": [
+        {
+          "set": [
+            {
+              "el": "city",
+              "x": 0.5,
+              "depth": "far"
+            },
+            {
+              "el": "palm",
+              "x": 0.12
+            },
+            {
+              "el": "throne",
+              "x": 0.7,
+              "depth": "mid"
+            }
+          ],
+          "cam": "panR",
+          "light": {
+            "x": 0.82,
+            "y": 0.48
+          },
+          "chars": [
+            {
+              "who": "crowd",
+              "x": 0.4,
+              "depth": "near",
+              "n": 2,
+              "pose": "point"
+            },
+            {
+              "who": "king",
+              "x": 0.7,
+              "depth": "near",
+              "pose": "stand"
+            }
+          ],
+          "fx": [
+            "dust"
+          ]
+        }
+      ]
+    },
+    {
+      "mood": "dusk",
+      "trans": "fade",
+      "vo": "Pero Daniel siguió orando *tres veces* al día, con la ventana abierta hacia *Jerusalén*.",
+      "shots": [
+        {
+          "set": [
+            "hills",
+            {
+              "el": "city",
+              "x": 0.2,
+              "depth": "far",
+              "s": 0.7
+            },
+            {
+              "el": "olive",
+              "x": 0.86,
+              "depth": "near"
+            }
+          ],
+          "cam": "push",
+          "focus": {
+            "x": 0.55,
+            "y": 0.62
+          },
+          "light": {
+            "x": 0.18,
+            "y": 0.42
+          },
+          "chars": [
+            {
+              "who": "robed",
+              "x": 0.55,
+              "depth": "near",
+              "pose": "pray",
+              "beard": true
+            },
+            {
+              "who": "crowd",
+              "x": 0.9,
+              "depth": "near",
+              "n": 2,
+              "pose": "point",
+              "at": "ventana"
+            }
+          ],
+          "fx": [
+            "rays",
+            "dust"
+          ]
+        }
+      ]
+    },
+    {
+      "mood": "night",
+      "trans": "dip",
+      "vo": "El rey se *angustió*, pero no pudo salvarlo. Lo echaron al foso, y él selló la piedra con su *anillo*.",
+      "shots": [
+        {
+          "set": [
+            {
+              "el": "throne",
+              "x": 0.5,
+              "depth": "mid"
+            }
+          ],
+          "cam": "push",
+          "focus": {
+            "x": 0.5,
+            "y": 0.62
+          },
+          "light": {
+            "x": 0.5,
+            "y": 0.3
+          },
+          "chars": [
+            {
+              "who": "king",
+              "x": 0.5,
+              "depth": "near",
+              "pose": "bow"
+            }
+          ],
+          "fx": [
+            "fog"
+          ]
+        },
+        {
+          "at": "foso",
+          "trans": "fade",
+          "set": [
+            "mountain",
+            {
+              "el": "rocks",
+              "x": 0.18,
+              "depth": "near"
+            },
+            {
+              "el": "tomb",
+              "x": 0.56
+            }
+          ],
+          "cam": "tiltDown",
+          "light": {
+            "x": 0.3,
+            "y": 0.2
+          },
+          "chars": [
+            {
+              "who": "soldier",
+              "x": 0.84,
+              "depth": "near"
+            },
+            {
+              "who": "king",
+              "x": 0.32,
+              "depth": "near",
+              "pose": "point",
+              "at": "selló"
+            }
+          ],
+          "fx": [
+            "fog",
+            "dust"
+          ]
+        }
+      ]
+    },
+    {
+      "mood": "dawn",
+      "trans": "flare",
+      "vo": "Al amanecer, corrió al foso: Daniel, ¿tu Dios te ha podido *librar*?",
+      "shots": [
+        {
+          "set": [
+            "mountain",
+            {
+              "el": "rocks",
+              "x": 0.16,
+              "depth": "near"
+            },
+            {
+              "el": "tomb",
+              "x": 0.56
+            }
+          ],
+          "cam": "push",
+          "focus": {
+            "x": 0.56,
+            "y": 0.62
+          },
+          "light": {
+            "x": 0.72,
+            "y": 0.32
+          },
+          "chars": [
+            {
+              "who": "king",
+              "x": 0.34,
+              "depth": "near",
+              "pose": "point"
+            }
+          ],
+          "fx": [
+            "fog",
+            "dust"
+          ]
+        }
+      ]
+    },
+    {
+      "mood": "holy",
+      "trans": "flare",
+      "climax": true,
+      "vo": "Y Daniel respondió: Mi Dios envió su *ángel*, y cerró la boca de los *leones*.",
+      "shots": [
+        {
+          "set": [
+            {
+              "el": "mountain",
+              "depth": "far"
+            },
+            {
+              "el": "tomb",
+              "x": 0.64,
+              "open": true
+            }
+          ],
+          "cam": "pull",
+          "focus": {
+            "x": 0.55,
+            "y": 0.6
+          },
+          "light": {
+            "x": 0.64,
+            "y": 0.55
+          },
+          "chars": [
+            {
+              "who": "king",
+              "x": 0.36,
+              "depth": "near",
+              "pose": "open",
+              "dy": 0
+            },
+            {
+              "who": "robed",
+              "x": 0.64,
+              "depth": "near",
+              "pose": "stand",
+              "beard": true,
+              "lit": true,
+              "robe": "#F4F0E6",
+              "glow": true,
+              "at": "respondió",
+              "dy": -30
+            }
+          ],
+          "fx": [
+            "rays",
+            "dust"
+          ]
+        }
+      ]
+    },
+    {
+      "mood": "golden",
+      "trans": "fade",
+      "vo": "Salió *sin daño*, porque confió en su Dios. Etiqueta a alguien que hoy está en su propio *foso*.",
+      "shots": [
+        {
+          "set": [
+            "hills",
+            {
+              "el": "city",
+              "x": 0.5,
+              "depth": "far"
+            },
+            {
+              "el": "palm",
+              "x": 0.14
+            }
+          ],
+          "cam": "rise",
+          "light": {
+            "x": 0.5,
+            "y": 0.3
+          },
+          "chars": [
+            {
+              "who": "robed",
+              "x": 0.52,
+              "depth": "near",
+              "pose": "open",
+              "beard": true,
+              "lit": true,
+              "robe": "#F4F0E6",
+              "glow": true
+            },
+            {
+              "who": "king",
+              "x": 0.32,
+              "depth": "near",
+              "pose": "stand"
+            }
+          ],
+          "fx": [
+            "rays",
+            "dust"
+          ]
+        }
+      ]
+    }
+  ],
+  "thumbnail": {
+    "big": "",
+    "lines": [
+      "UNA NOCHE",
+      "*CON LEONES*"
+    ],
+    "icon": ""
+  },
+  "caption": "Esa noche el rey no pudo dormir… había condenado a Daniel a los leones. 🦁🌙\n\n📜 Un decreto de 30 días: orar solo al rey. Daniel siguió orando tres veces al día, con las ventanas abiertas hacia Jerusalén (Daniel 6:10).\n🪨 Lo echaron al foso y el rey selló la piedra con su anillo.\n🌅 Al amanecer, el rey corrió al foso… y Daniel respondió: «Mi Dios envió su ángel, el cual cerró la boca de los leones» (Daniel 6:22).\n✨ Salió sin daño, porque había confiado en su Dios (Daniel 6:23).\n\n📖 Daniel 6:10 · Daniel 6:16-23\n\n👥 Etiqueta a alguien que hoy está en su propio foso.",
+  "hashtags": [
+    "biblia",
+    "historiasbiblicas",
+    "fe",
+    "dios",
+    "daniel",
+    "danielenelfosodelosleones",
+    "cristianos"
+  ]
+}

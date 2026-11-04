@@ -262,7 +262,7 @@ window.renderFrame=function(t){
     titleEl.style.opacity=Math.min(eo(a),o);titleEl.querySelector('.t').style.letterSpacing=ls+'em';titleEl.style.transform=`scale(${lerp(1.06,1,eo(a))})`;
     const r=titleEl.querySelector('.rule');if(r)r.style.width=(eo(P(t,.6,1.2))*520)+'px';
     titleEl.style.display=o<=0?'none':'block'}
-  renderCaps(t,S.mood);
+  if(window.NOCAPS){capsEl.innerHTML="";capKey=""}else renderCaps(t,S.mood);
   grain.src=grainSrc[Math.floor(t*30)%8];
   return true;
 };

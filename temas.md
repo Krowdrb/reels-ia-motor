@@ -5,7 +5,7 @@ Alternar historias y datos, todos en estilo cinematico. Cada tema debe poder cit
 
 ### Historias
 - David y Goliat: lo que casi nadie nota del relato (1 Samuel 17)
-- Daniel en el foso de los leones (Daniel 6)
+- (publicado 2026-11-05) Daniel en el foso de los leones (Daniel 6)
 - Jonás: el profeta que huyó de Dios (Jonás 1–3)
 - José: de esclavo a gobernador de Egipto (Génesis 37–45)
 - Jesús calma la tormenta (Marcos 4:35–41)
