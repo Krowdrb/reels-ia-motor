@@ -258,7 +258,7 @@ window.renderFrame=function(t){
   const lfo=Math.max(fl*.9,lf*.55);
   flash.style.background=`radial-gradient(circle at ${S.lx/1480*100}% ${S.ly/2420*100}%, ${fc} 0%, ${fc}cc 30%, ${fc}00 75%)`;flash.style.opacity=lfo;
   // título (solo al inicio)
-  if(TL.title_card){const a=P(t,.15,.9),o=1-P(t,(TL.title_card.dur||3.2),.7),ls=lerp(.32,.12,eo(P(t,.15,2.4)));
+  if(TL.title_card){const a=P(t,0,.35),o=1-P(t,(TL.title_card.dur||3.2),.7),ls=lerp(.32,.12,eo(P(t,.15,2.4)));
     titleEl.style.opacity=Math.min(eo(a),o);titleEl.querySelector('.t').style.letterSpacing=ls+'em';titleEl.style.transform=`scale(${lerp(1.06,1,eo(a))})`;
     const r=titleEl.querySelector('.rule');if(r)r.style.width=(eo(P(t,.6,1.2))*520)+'px';
     titleEl.style.display=o<=0?'none':'block'}

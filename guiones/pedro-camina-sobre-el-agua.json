@@ -1,0 +1,608 @@
+{
+  "slug": "pedro-camina-sobre-el-agua",
+  "style": "cinematico",
+  "title": "Caminó sobre el agua… y empezó a hundirse | Pedro camina sobre el agua 🌊 #shorts",
+  "voice": "em_santa",
+  "speed": 1.0,
+  "pronunciation": {},
+  "title_card": {
+    "text": "¡Señor,<br>sálvame!",
+    "sub": "Mateo 14:22–33",
+    "dur": 3.4
+  },
+  "scenes": [
+    {
+      "mood": "storm",
+      "trans": "cut",
+      "vo": "Pedro caminó sobre el *agua*… y de pronto empezó a *hundirse*.",
+      "shots": [
+        {
+          "set": [
+            {
+              "el": "sea",
+              "depth": "mid"
+            },
+            {
+              "el": "boat",
+              "x": 0.18,
+              "depth": "mid"
+            },
+            {
+              "el": "sea",
+              "depth": "front",
+              "y": 0.72
+            }
+          ],
+          "cam": "push",
+          "focus": {
+            "x": 0.55,
+            "y": 0.6
+          },
+          "light": {
+            "x": 0.7,
+            "y": 0.3
+          },
+          "chars": [
+            {
+              "who": "robed",
+              "x": 0.55,
+              "depth": "near",
+              "pose": "stand",
+              "beard": true,
+              "dy": 40
+            }
+          ],
+          "fx": [
+            "rain",
+            "fog"
+          ]
+        },
+        {
+          "at": "hundirse",
+          "trans": "cut",
+          "set": [
+            {
+              "el": "sea",
+              "depth": "mid"
+            },
+            {
+              "el": "boat",
+              "x": 0.18,
+              "depth": "mid"
+            },
+            {
+              "el": "sea",
+              "depth": "front",
+              "y": 0.72
+            }
+          ],
+          "cam": "push",
+          "focus": {
+            "x": 0.55,
+            "y": 0.58
+          },
+          "light": {
+            "x": 0.7,
+            "y": 0.3
+          },
+          "chars": [
+            {
+              "who": "robed",
+              "x": 0.55,
+              "depth": "near",
+              "pose": "arms",
+              "beard": true,
+              "dy": 100
+            }
+          ],
+          "fx": [
+            "rain",
+            "fog"
+          ],
+          "events": [
+            {
+              "at": "hundirse",
+              "do": "lightning"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "mood": "night",
+      "trans": "dip",
+      "vo": "Horas antes, Jesús había subido *solo* al monte a *orar*.",
+      "shots": [
+        {
+          "set": [
+            "mountain",
+            {
+              "el": "olive",
+              "x": 0.82,
+              "depth": "near"
+            }
+          ],
+          "cam": "push",
+          "focus": {
+            "x": 0.48,
+            "y": 0.62
+          },
+          "light": {
+            "x": 0.34,
+            "y": 0.22
+          },
+          "chars": [
+            {
+              "who": "jesus",
+              "x": 0.48,
+              "depth": "near",
+              "pose": "pray",
+              "dy": -40
+            }
+          ],
+          "fx": [
+            "fog",
+            "dust"
+          ]
+        }
+      ]
+    },
+    {
+      "mood": "storm",
+      "trans": "fade",
+      "vo": "De madrugada, lo vieron venir sobre el mar: ¡Es un *fantasma*!",
+      "shots": [
+        {
+          "set": [
+            {
+              "el": "sea",
+              "depth": "mid"
+            },
+            {
+              "el": "boat",
+              "x": 0.3,
+              "depth": "near"
+            },
+            {
+              "el": "sea",
+              "depth": "front",
+              "y": 0.72
+            }
+          ],
+          "cam": "push",
+          "focus": {
+            "x": 0.6,
+            "y": 0.6
+          },
+          "light": {
+            "x": 0.74,
+            "y": 0.5
+          },
+          "chars": [
+            {
+              "who": "crowd",
+              "x": 0.3,
+              "depth": "near",
+              "n": 3,
+              "pose": "point",
+              "dy": -60
+            },
+            {
+              "who": "jesus",
+              "x": 0.74,
+              "depth": "mid",
+              "pose": "stand"
+            }
+          ],
+          "fx": [
+            "rain",
+            "fog"
+          ],
+          "events": [
+            {
+              "at": "fantasma",
+              "do": "lightning"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "mood": "dawn",
+      "trans": "fade",
+      "vo": "¡Tened ánimo, *yo soy*, no temáis! Y Pedro le pidió: Señor, si eres tú, déjame ir hacia *ti*.",
+      "shots": [
+        {
+          "set": [
+            {
+              "el": "sea",
+              "depth": "mid"
+            },
+            {
+              "el": "boat",
+              "x": 0.2,
+              "depth": "mid"
+            },
+            {
+              "el": "sea",
+              "depth": "front",
+              "y": 0.72
+            }
+          ],
+          "cam": "push",
+          "focus": {
+            "x": 0.58,
+            "y": 0.58
+          },
+          "light": {
+            "x": 0.6,
+            "y": 0.42
+          },
+          "chars": [
+            {
+              "who": "jesus",
+              "x": 0.58,
+              "depth": "near",
+              "pose": "open",
+              "lit": true,
+              "sash": "#B5452F",
+              "glow": true
+            }
+          ],
+          "fx": [
+            "fog",
+            "dust"
+          ]
+        },
+        {
+          "at": "Pedro",
+          "trans": "fade",
+          "set": [
+            {
+              "el": "sea",
+              "depth": "mid"
+            },
+            {
+              "el": "boat",
+              "x": 0.45,
+              "depth": "near"
+            },
+            {
+              "el": "sea",
+              "depth": "front",
+              "y": 0.72
+            }
+          ],
+          "cam": "panR",
+          "light": {
+            "x": 0.82,
+            "y": 0.42
+          },
+          "chars": [
+            {
+              "who": "crowd",
+              "x": 0.36,
+              "depth": "near",
+              "n": 2,
+              "dy": -60
+            },
+            {
+              "who": "robed",
+              "x": 0.52,
+              "depth": "near",
+              "pose": "point",
+              "beard": true,
+              "dy": -60
+            }
+          ],
+          "fx": [
+            "fog",
+            "dust"
+          ]
+        }
+      ]
+    },
+    {
+      "mood": "dawn",
+      "trans": "fade",
+      "vo": "*Ven*. Y Pedro bajó de la barca y caminó sobre el *agua*.",
+      "shots": [
+        {
+          "set": [
+            {
+              "el": "sea",
+              "depth": "mid"
+            },
+            {
+              "el": "boat",
+              "x": 0.15,
+              "depth": "mid"
+            },
+            {
+              "el": "sea",
+              "depth": "front",
+              "y": 0.72
+            }
+          ],
+          "cam": "push",
+          "focus": {
+            "x": 0.52,
+            "y": 0.58
+          },
+          "light": {
+            "x": 0.68,
+            "y": 0.46
+          },
+          "chars": [
+            {
+              "who": "robed",
+              "x": 0.38,
+              "depth": "near",
+              "pose": "stand",
+              "beard": true
+            },
+            {
+              "who": "jesus",
+              "x": 0.68,
+              "depth": "mid",
+              "pose": "open",
+              "lit": true,
+              "sash": "#B5452F",
+              "glow": true
+            }
+          ],
+          "fx": [
+            "rays",
+            "fog",
+            "dust"
+          ]
+        }
+      ]
+    },
+    {
+      "mood": "storm",
+      "trans": "cut",
+      "vo": "Pero al ver el viento, tuvo *miedo*, empezó a hundirse y gritó: ¡Señor, *sálvame*!",
+      "shots": [
+        {
+          "set": [
+            {
+              "el": "sea",
+              "depth": "mid"
+            },
+            {
+              "el": "sea",
+              "depth": "front",
+              "y": 0.72
+            }
+          ],
+          "cam": "panL",
+          "light": {
+            "x": 0.3,
+            "y": 0.3
+          },
+          "chars": [
+            {
+              "who": "robed",
+              "x": 0.55,
+              "depth": "near",
+              "pose": "stand",
+              "beard": true,
+              "dy": 40
+            }
+          ],
+          "fx": [
+            "rain",
+            "fog"
+          ],
+          "events": [
+            {
+              "at": "miedo",
+              "do": "lightning"
+            }
+          ]
+        },
+        {
+          "at": "gritó",
+          "trans": "cut",
+          "set": [
+            {
+              "el": "sea",
+              "depth": "mid"
+            },
+            {
+              "el": "sea",
+              "depth": "front",
+              "y": 0.72
+            }
+          ],
+          "cam": "push",
+          "focus": {
+            "x": 0.55,
+            "y": 0.58
+          },
+          "light": {
+            "x": 0.3,
+            "y": 0.3
+          },
+          "chars": [
+            {
+              "who": "robed",
+              "x": 0.55,
+              "depth": "near",
+              "pose": "arms",
+              "beard": true,
+              "dy": 140
+            }
+          ],
+          "fx": [
+            "rain",
+            "fog"
+          ]
+        }
+      ]
+    },
+    {
+      "mood": "holy",
+      "trans": "flare",
+      "climax": true,
+      "vo": "Al momento, Jesús extendió la *mano* y lo sostuvo: Hombre de poca fe, ¿por qué *dudaste*?",
+      "shots": [
+        {
+          "set": [
+            {
+              "el": "sea",
+              "depth": "mid"
+            },
+            {
+              "el": "sea",
+              "depth": "front",
+              "y": 0.72
+            }
+          ],
+          "cam": "pull",
+          "focus": {
+            "x": 0.53,
+            "y": 0.56
+          },
+          "light": {
+            "x": 0.52,
+            "y": 0.3
+          },
+          "chars": [
+            {
+              "who": "jesus",
+              "x": 0.4,
+              "depth": "near",
+              "pose": "point",
+              "lit": true,
+              "sash": "#B5452F",
+              "glow": true
+            },
+            {
+              "who": "robed",
+              "x": 0.66,
+              "depth": "near",
+              "pose": "arms",
+              "beard": true,
+              "dy": 140
+            }
+          ],
+          "fx": [
+            "rays",
+            "dust"
+          ]
+        }
+      ]
+    },
+    {
+      "mood": "golden",
+      "trans": "fade",
+      "vo": "Al subir a la barca, el viento se *calmó*, y todos lo adoraron como el *Hijo de Dios*. Etiqueta a alguien que hoy se está *hundiendo*.",
+      "shots": [
+        {
+          "set": [
+            {
+              "el": "sea",
+              "depth": "mid"
+            },
+            {
+              "el": "boat",
+              "x": 0.5,
+              "depth": "near"
+            },
+            {
+              "el": "sea",
+              "depth": "front",
+              "y": 0.72
+            }
+          ],
+          "cam": "rise",
+          "light": {
+            "x": 0.5,
+            "y": 0.32
+          },
+          "chars": [
+            {
+              "who": "jesus",
+              "x": 0.5,
+              "depth": "near",
+              "pose": "stand",
+              "lit": true,
+              "sash": "#B5452F",
+              "glow": true,
+              "dy": -60
+            },
+            {
+              "who": "crowd",
+              "x": 0.33,
+              "depth": "near",
+              "n": 2,
+              "pose": "bow",
+              "dy": -60
+            },
+            {
+              "who": "crowd",
+              "x": 0.67,
+              "depth": "near",
+              "n": 2,
+              "pose": "bow",
+              "dy": -60
+            }
+          ],
+          "fx": [
+            "rays",
+            "dust"
+          ]
+        },
+        {
+          "at": "Etiqueta",
+          "trans": "fade",
+          "set": [
+            {
+              "el": "sea",
+              "depth": "mid"
+            },
+            {
+              "el": "boat",
+              "x": 0.5,
+              "depth": "mid"
+            }
+          ],
+          "cam": "pull",
+          "focus": {
+            "x": 0.5,
+            "y": 0.55
+          },
+          "light": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "fx": [
+            "rays",
+            "dust"
+          ]
+        }
+      ]
+    }
+  ],
+  "thumbnail": {
+    "big": "",
+    "lines": [
+      "¡SEÑOR,",
+      "*SÁLVAME!*"
+    ],
+    "icon": ""
+  },
+  "caption": "Pedro caminó sobre el agua… y de pronto empezó a hundirse. 🌊⛈️\n\n🙏 Jesús despidió a la multitud y subió solo al monte a orar, mientras la barca era azotada por las olas con el viento en contra (Mateo 14:23–24).\n👻 De madrugada fue hacia ellos andando sobre el mar, y los discípulos gritaron de miedo: «¡Es un fantasma!» (Mateo 14:25–26).\n🌅 «¡Tened ánimo; yo soy, no temáis!» (Mateo 14:27). Pedro le pidió ir hacia Él, y Jesús le dijo: «Ven».\n🌬️ Pero al ver el fuerte viento tuvo miedo, comenzó a hundirse y gritó: «¡Señor, sálvame!» (Mateo 14:30).\n✋ Al momento Jesús extendió la mano y lo sostuvo: «Hombre de poca fe, ¿por qué dudaste?» (Mateo 14:31).\n✨ Al subir a la barca se calmó el viento, y los de la barca lo adoraron reconociéndolo como el Hijo de Dios (Mateo 14:33).\n\n📖 Mateo 14:22–33 · Mateo 14:27 · Mateo 14:30–31\n\n👥 Etiqueta a alguien que hoy se está hundiendo.",
+  "hashtags": [
+    "biblia",
+    "historiasbiblicas",
+    "fe",
+    "dios",
+    "jesus",
+    "pedro",
+    "jesuscaminasobreelagua",
+    "cristianos"
+  ]
+}

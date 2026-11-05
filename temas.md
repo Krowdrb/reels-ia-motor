@@ -10,7 +10,7 @@ Alternar historias y datos, todos en estilo cinematico. Cada tema debe poder cit
 - José: de esclavo a gobernador de Egipto (Génesis 37–45)
 - Jesús calma la tormenta (Marcos 4:35–41)
 - Los tres jóvenes en el horno de fuego (Daniel 3)
-- Pedro camina sobre el agua (Mateo 14:22–33)
+- (publicado 2026-11-06) Pedro camina sobre el agua (Mateo 14:22–33)
 - Rut: la lealtad que cambió una familia (Rut 1–4)
 - Ester: la reina que arriesgó su vida (Ester 4–7)
 - El buen samaritano (Lucas 10:25–37)
