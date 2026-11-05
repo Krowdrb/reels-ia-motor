@@ -35,6 +35,14 @@ for s in scenes:
     moods.append((s['s'], s['e'], m))
 clim = [s['s'] for s in scenes if s.get('climax')]
 TC = clim[0] if clim else DUR * 0.6
+# videos largos: la armonía sigue el ambiente de cada escena y hay varios clímax
+LONG = DUR > 120
+BRIGHT = ('golden', 'holy', 'day', 'dawn')
+def mood_at(t):
+    for a, b, m in moods:
+        if a <= t < b: return m
+    return moods[-1][2]
+LIGHT_SPANS = [(s['s'], s['e']) for s in scenes if s.get('climax') or (s.get('mood') == 'holy')]
 
 # ---------- pads y acordes ----------
 MINOR = [[50, 53, 57, 62], [46, 50, 53, 58], [53, 57, 60, 65], [48, 52, 55, 60]]     # Dm Bb F C
@@ -51,9 +59,13 @@ def pad(notes, d, bright):
 CH = 4.0
 t = 0.0; k = 0
 while t < DUR:
-    major = t >= TC - 0.5
+    major = (mood_at(t + 0.5) in BRIGHT) if LONG else t >= TC - 0.5
     prog = MAJOR if major else MINOR
     add(music, pad(prog[k % 4], CH + 1.6, 1.0 if major else 0.25), t, 0.22 if major else 0.17)
+    if LONG and mood_at(t + 0.5) == 'storm':   # pulso grave de tensión
+        for st in np.arange(0, CH, 1.0):
+            tt = t_(0.9); f = 46 + 30 * np.exp(-tt / 0.05)
+            add(music, np.sin(2 * np.pi * np.cumsum(f) / SR) * np.exp(-tt / 0.35), t + st, 0.25)
     # piano: arpegio suave
     if t > 1.5:
         for j, st in enumerate(np.arange(0, CH, 0.75 if major else 1.0)):
@@ -64,27 +76,40 @@ while t < DUR:
     t += CH; k += 1
 # dron grave (re) todo el tiempo, más fuerte en el clímax
 tt = t_(DUR + 1)
-drone = (np.sin(2 * np.pi * midi(38) * tt) + 0.5 * np.sin(2 * np.pi * midi(26) * tt)) * (0.10 + 0.08 * (tt > TC))
+lit = np.zeros(len(tt), bool)
+if LONG:
+    for a, b in LIGHT_SPANS: lit[int(a * SR):int(b * SR)] = True
+else:
+    lit = tt > TC
+drone = (np.sin(2 * np.pi * midi(38) * tt) + 0.5 * np.sin(2 * np.pi * midi(26) * tt)) * (0.10 + 0.08 * lit)
 drone *= np.minimum(1, tt / 3)
 add(music, drone, 0, 1)
 # crescendo de cuerdas hacia el clímax
-rise_d = min(5.0, TC)
-tt = t_(rise_d); x = np.zeros(len(tt))
-for m in (50, 57, 62, 69):
-    f = midi(m) * (1 + 0.04 * tt / rise_d)
-    x += 2 * ((np.cumsum(np.full(len(tt), f)) / SR) % 1) - 1
-x = lp(x, 900 + 2500 * (tt.mean() / rise_d)) * (tt / rise_d) ** 2
-add(music, x, TC - rise_d, 0.10)
-# coro tras el clímax ("aah": sierras con formantes)
-cd = DUR - TC
-if cd > 0.5:
+def rise(T):
+    rise_d = min(5.0, T)
+    if rise_d < 1: return
+    tt = t_(rise_d); x = np.zeros(len(tt))
+    for m in (50, 57, 62, 69):
+        f = midi(m) * (1 + 0.04 * tt / rise_d)
+        x += 2 * ((np.cumsum(np.full(len(tt), f)) / SR) % 1) - 1
+    x = lp(x, 900 + 2500 * (tt.mean() / rise_d)) * (tt / rise_d) ** 2
+    add(music, x, T - rise_d, 0.10)
+# coro ("aah": sierras con formantes)
+def choir_at(a, b):
+    cd = b - a
+    if cd <= 0.5: return
     tt = t_(cd); x = np.zeros(len(tt))
     for m in (62, 66, 69, 74):
         for det in (-0.3, 0.3):
             f = midi(m) * (1 + det / 100) * (1 + 0.004 * np.sin(2 * np.pi * 5 * tt))
             x += 2 * ((np.cumsum(f) / SR) % 1) - 1
     choir = bp(x, 600, 900) + 0.6 * bp(x, 1100, 1400)
-    add(music, choir * env_ar(len(tt), 1.2, 2.0), TC, 0.05)
+    add(music, choir * env_ar(len(tt), 1.2, 2.0), a, 0.05)
+if LONG:
+    for a in clim: rise(a)
+    for a, b in LIGHT_SPANS: choir_at(a, b + 1.0)
+else:
+    rise(TC); choir_at(TC, DUR)
 # corte final suave
 fade = int(1.2 * SR); end = int(DUR * SR)
 music[end - fade:end] *= np.linspace(1, 0, fade); music[end:] = 0
@@ -104,7 +129,7 @@ def wind(d):
 def thunder():
     t = t_(3.0); n = lp(rng.standard_normal(len(t)), 300) * np.exp(-t / 1.1); c = hp(rng.standard_normal(len(t)), 2000) * np.exp(-t / 0.05)
     return n * 1.4 + c * 0.4
-add(fx, boom(), TC, 0.55)
+for a in (clim if LONG and clim else [TC]): add(fx, boom(), a, 0.55)
 for s0, s1, m in moods:
     if m in ('night', 'storm'):
         add(fx, wind(s1 - s0 + 0.5), s0, 0.12 if m == 'night' else 0.22)

@@ -5,7 +5,9 @@ const path = require('path');
 (async () => {
   const [mode, out, ...rest] = process.argv.slice(2);
   const browser = await chromium.launch({ args: ['--allow-file-access-from-files'] });
-  const page = await browser.newPage({ viewport: { width: 1080, height: 1920 }, deviceScaleFactor: 1 });
+  let land = false;
+  try { land = JSON.parse(require('fs').readFileSync(path.resolve(process.cwd(), 'timeline.json'))).format === '16:9'; } catch (e) {}
+  const page = await browser.newPage({ viewport: land ? { width: 1920, height: 1080 } : { width: 1080, height: 1920 }, deviceScaleFactor: 1 });
   const errs = [];
   page.on('console', m => { if (m.type() === 'error' || m.type() === 'warning') errs.push(m.text()) });
   page.on('pageerror', e => errs.push('PAGEERROR ' + e.message));

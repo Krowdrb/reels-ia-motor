@@ -48,11 +48,13 @@ for s in tl['scenes']:
     for sh in s.get('shots',[]): ts.append(s['s']+sh.get('t',0)+1.2)
     ts.append(s['e']-0.3)
 print(' '.join(f'{min(t,tl[\"total\"]-0.05):.2f}' for t in sorted(set(round(x,2) for x in ts))))")
+  LAND=$(python3 -c "import json;print(1 if json.load(open('timeline.json')).get('format')=='16:9' else 0)")
+  if [ "$LAND" = 1 ]; then TILE="scale=480:270"; COLS=5; else TILE="scale=270:480"; COLS=6; fi
   rm -rf prev && mkdir prev
   node render.js stills prev $TS
   ls prev/*.jpg | sort -t_ -k2 -g | sed "s|^|file '$W/|;s|$|'|" > prev/l.txt
-  NF=$(wc -l < prev/l.txt); COLS=6; ROWS=$(( (NF + COLS - 1) / COLS ))
-  ffmpeg -y -loglevel error -f concat -safe 0 -i prev/l.txt -vf "scale=270:480,tile=${COLS}x${ROWS}:padding=6:color=white" -frames:v 1 preview.jpg
+  NF=$(wc -l < prev/l.txt); ROWS=$(( (NF + COLS - 1) / COLS ))
+  ffmpeg -y -loglevel error -f concat -safe 0 -i prev/l.txt -vf "$TILE,tile=${COLS}x${ROWS}:padding=6:color=white" -frames:v 1 preview.jpg
   echo "OK preview: $W/preview.jpg ($NF fotogramas: $TS)"
   exit 0
 fi
@@ -70,8 +72,9 @@ for s in tl['scenes']: print(s['i'], round(s['s']*30), round(s['e']*30))" > rang
   # Portada: el fotograma más llamativo (cover.jpg) y además el PRIMER fotograma del video,
   # para que ninguna red tome un destello blanco como portada.
   cp "$R/engine/cover.py" "$W/" && python3 cover.py video_only.mp4
+  WH=$(python3 -c "import json;print('1920:1080' if json.load(open('timeline.json')).get('format')=='16:9' else '1080:1920')")
   F0=$(head -1 ranges.txt | awk '{print $1}')
-  ffmpeg -y -loglevel error -i "parts/s$F0.mp4" -loop 1 -i cover.jpg -filter_complex "[1]scale=1080:1920,format=yuv420p[c];[0][c]overlay=enable='eq(n\,0)':shortest=1" \
+  ffmpeg -y -loglevel error -i "parts/s$F0.mp4" -loop 1 -i cover.jpg -filter_complex "[1]scale=$WH,format=yuv420p[c];[0][c]overlay=enable='eq(n\,0)':shortest=1" \
     -c:v libx264 -preset veryfast -crf 18 -pix_fmt yuv420p -r 30 parts/tmp_cover.mp4 && mv parts/tmp_cover.mp4 "parts/s${F0}c.mp4"
   sed "s|parts/s$F0.mp4|parts/s${F0}c.mp4|" list.txt > list_c.txt
   ffmpeg -y -loglevel error -f concat -safe 0 -i list_c.txt -c copy video_only.mp4

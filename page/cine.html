@@ -20,6 +20,16 @@ html,body{margin:0;background:#000;overflow:hidden}
   -webkit-text-stroke:7px rgba(0,0,0,.55);paint-order:stroke fill;will-change:transform,filter,opacity}
 #caps .k{background:linear-gradient(180deg,#FFF3C4 0%,#F7CF73 40%,#D98F3A 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-stroke:0}
 #caps .kw{display:inline-block;position:relative}
+.land #title{top:280px;width:1920px}
+.land #title .t{font-size:108px;padding:0 160px}
+.land #caps{top:842px;width:1920px;height:200px}
+.land #caps .w{font-size:78px;margin:0 16px;-webkit-text-stroke:6px rgba(0,0,0,.55)}
+.land #caps .k{-webkit-text-stroke:0}
+#chap{background:radial-gradient(ellipse 50% 60% at 50% 50%,rgba(0,0,0,.38),rgba(0,0,0,0) 70%);padding:30px 0;position:absolute;z-index:4;left:0;top:300px;width:1080px;text-align:center;pointer-events:none;display:none}
+.land #chap{top:120px;width:1920px}
+#chap .n{font-family:"CZ";font-weight:800;font-size:40px;letter-spacing:.42em;color:#FFE3A0;text-shadow:0 0 6px rgba(0,0,0,.9),0 0 22px rgba(0,0,0,.7),0 3px 12px rgba(0,0,0,.9)}
+#chap .c{font-family:"PF";font-style:italic;font-weight:600;font-size:84px;color:#FFF6E2;margin-top:10px;text-shadow:0 0 8px rgba(0,0,0,.85),0 0 34px rgba(0,0,0,.6),0 5px 18px rgba(0,0,0,.9)}
+#chap .rule{height:2px;margin:18px auto 0;background:linear-gradient(90deg,transparent,#F5C26B,transparent)}
 #vig{background:radial-gradient(ellipse at 50% 45%,rgba(0,0,0,0) 45%,rgba(0,0,0,.55) 100%)}
 </style></head>
 <body>
@@ -29,12 +39,18 @@ html,body{margin:0;background:#000;overflow:hidden}
   <div id="vig" class="full" style="z-index:2"></div>
   <div id="flash" class="full" style="opacity:0;z-index:3"></div>
   <div id="title"></div>
+  <div id="chap"></div>
   <div id="caps"></div>
   <img id="grain" class="full" style="width:1080px;height:1920px;opacity:.07;mix-blend-mode:overlay;image-rendering:pixelated;z-index:6">
 </div>
 <script src="tl.js"></script>
 <script>
 // =================== utilidades ===================
+const LAND=TL.format==='16:9';
+const SW=LAND?1920:1080, SH=LAND?1080:1920, VW=LAND?2320:1480, VH=2420, OX=-200, OY=LAND?-900:-250;
+const Y=f=>LAND?(-OY+f*SH):f*VH;   // fracción vertical del cuadro -> coordenada de capa
+if(LAND)document.body.classList.add('land');
+(()=>{const st=document.getElementById('stage');st.style.width=SW+'px';st.style.height=SH+'px';const g=document.getElementById('grain');g.style.width=SW+'px';g.style.height=SH+'px'})();
 const clamp=(x,a=0,b=1)=>Math.min(b,Math.max(a,x)), P=(t,s,d)=>clamp((t-s)/d), lerp=(a,b,k)=>a+(b-a)*k;
 const eio=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2, eo=x=>1-Math.pow(1-x,3);
 const back=(x,c1=2)=>{const c3=c1+1;return x<=0?0:x>=1?1:1+c3*Math.pow(x-1,3)+c1*Math.pow(x-1,2)};
@@ -56,11 +72,11 @@ const DEPTH={sky:{f:0,d:.04},far:{f:.32,d:.22},mid:{f:.6,d:.5},near:{f:.86,d:.85
 const GROUND={far:1380,mid:1520,near:1720,front:1980};
 
 // =================== elementos (siluetas planas) ===================
-function hillPath(seed,y,amp,w=1480){let d=`M-40 ${y}`;for(let x=-40;x<=w+40;x+=40){const v=Math.sin(x*.004+seed)*amp+Math.sin(x*.011+seed*2.3)*amp*.35;d+=` L${x} ${y+v}`}return d+` L${w+40} 2500 L-40 2500 Z`}
+function hillPath(seed,y,amp,w=VW){let d=`M-40 ${y}`;for(let x=-40;x<=w+40;x+=40){const v=Math.sin(x*.004+seed)*amp+Math.sin(x*.011+seed*2.3)*amp*.35;d+=` L${x} ${y+v}`}return d+` L${w+40} 2500 L-40 2500 Z`}
 const EL={
   hills:(o,c)=>`<path d="${hillPath(o.seed||1,o.gy-40,o.amp||60)}" fill="${c}"/>`,
   dunes:(o,c)=>`<path d="${hillPath(o.seed||3,o.gy-30,o.amp||45)}" fill="${c}"/>`,
-  ground:(o,c)=>`<rect x="-40" y="${o.gy}" width="1560" height="900" fill="${c}"/>`,
+  ground:(o,c)=>`<rect x="-40" y="${o.gy}" width="${VW+80}" height="900" fill="${c}"/>`,
   mountain:(o,c)=>{const x=o.x,s=o.s;return `<path d="M${x-620*s} ${o.gy} C${x-380*s} ${o.gy-260*s} ${x-200*s} ${o.gy-640*s} ${x} ${o.gy-680*s} C${x+200*s} ${o.gy-640*s} ${x+380*s} ${o.gy-260*s} ${x+620*s} ${o.gy} Z" fill="${c}"/>`},
   calvary:(o,c)=>{const x=o.x,s=o.s,top=o.gy-330*s;const cr=(cx,h,w)=>`<rect x="${cx-9*s}" y="${top-h}" width="${18*s}" height="${h+20}" fill="${c}"/><rect x="${cx-w/2}" y="${top-h*.78}" width="${w}" height="${16*s}" fill="${c}"/>`;
     return `<path d="M${x-560*s} ${o.gy+40} C${x-300*s} ${o.gy-150*s} ${x-160*s} ${top} ${x} ${top} C${x+160*s} ${top} ${x+300*s} ${o.gy-150*s} ${x+560*s} ${o.gy+40} Z" fill="${c}"/>`+cr(x,260*s,140*s)+cr(x-150*s,190*s,110*s)+cr(x+150*s,190*s,110*s)},
@@ -81,19 +97,45 @@ const EL={
     for(let i=0;i<6;i++)d+=`<rect x="${x-270*s+i*108*s-18*s}" y="${g-400*s}" width="${36*s}" height="${320*s}" fill="${c}"/>`;return d},
   sea:(o,c,L,t)=>{let d='';for(let i=0;i<5;i++){const y=o.gy+i*70;d+=`<path d="${hillPath(i*1.7+(t||0)*.6*(i%2?1:-1),y,18+i*4)}" fill="${mix(c,L.light,.08*(4-i))}"/>`}return d},
   boat:(o,c,L,t)=>{const x=o.x,s=o.s,g=o.gy+Math.sin((t||0)*1.8)*14*s,r=Math.sin((t||0)*1.3)*3;return `<g transform="rotate(${r} ${x} ${g})"><path d="M${x-260*s} ${g-60*s} L${x+260*s} ${g-60*s} L${x+180*s} ${g+40*s} L${x-180*s} ${g+40*s} Z" fill="${c}"/><rect x="${x-8*s}" y="${g-420*s}" width="${16*s}" height="${370*s}" fill="${c}"/><path d="M${x+12*s} ${g-400*s} Q${x+200*s} ${g-250*s} ${x+12*s} ${g-90*s} Z" fill="${c}"/></g>`},
-  tent:(o,c)=>`<path d="M${o.x-200*o.s} ${o.gy} L${o.x} ${o.gy-260*o.s} L${o.x+200*o.s} ${o.gy} Z" fill="${c}"/><path d="M${o.x-30*o.s} ${o.gy} L${o.x} ${o.gy-120*o.s} L${o.x+30*o.s} ${o.gy} Z" fill="#000" opacity=".5"/>`,
+  tent:(o,c)=>{const x=o.x,s=o.s,g=o.gy;return `<path d="M${x-290*s} ${g} L${x-250*s} ${g-130*s} L${x-110*s} ${g-200*s} L${x-20*s} ${g-165*s} L${x+90*s} ${g-210*s} L${x+250*s} ${g-135*s} L${x+290*s} ${g} Z" fill="${c}"/><path d="M${x-110*s} ${g-200*s} L${x-110*s} ${g} M${x+90*s} ${g-210*s} L${x+90*s} ${g}" stroke="#000" stroke-opacity=".25" stroke-width="${6*s}"/><rect x="${x-50*s}" y="${g-110*s}" width="${100*s}" height="${110*s}" fill="#000" opacity=".45"/>`},
   well:(o,c)=>`<rect x="${o.x-110*o.s}" y="${o.gy-120*o.s}" width="${220*o.s}" height="${120*o.s}" rx="${20*o.s}" fill="${c}"/><rect x="${o.x-100*o.s}" y="${o.gy-300*o.s}" width="${14*o.s}" height="${190*o.s}" fill="${c}"/><rect x="${o.x+86*o.s}" y="${o.gy-300*o.s}" width="${14*o.s}" height="${190*o.s}" fill="${c}"/><rect x="${o.x-120*o.s}" y="${o.gy-310*o.s}" width="${240*o.s}" height="${18*o.s}" fill="${c}"/>`,
   sheep:(o,c)=>[0,1,2,3].map(i=>{const x=o.x+(i-1.5)*120*o.s+rnd(i)*30,y=o.gy-10;return `<ellipse cx="${x}" cy="${y-40*o.s}" rx="${55*o.s}" ry="${38*o.s}" fill="${c}"/><circle cx="${x+50*o.s}" cy="${y-60*o.s}" r="${20*o.s}" fill="${c}"/>`}).join(''),
   rocks:(o,c)=>[0,1,2].map(i=>`<ellipse cx="${o.x+(i-1)*160*o.s}" cy="${o.gy-20*o.s}" rx="${(90-i*20)*o.s}" ry="${(50-i*8)*o.s}" fill="${c}"/>`).join(''),
   throne:(o,c,L)=>`<rect x="${o.x-150*o.s}" y="${o.gy-520*o.s}" width="${300*o.s}" height="${520*o.s}" rx="${30*o.s}" fill="${c}"/><circle cx="${o.x}" cy="${o.gy-560*o.s}" r="${60*o.s}" fill="${L.light}" opacity=".85"/>`,
   ark:(o,c)=>`<rect x="${o.x-420*o.s}" y="${o.gy-220*o.s}" width="${840*o.s}" height="${180*o.s}" fill="${c}"/><path d="M${o.x-480*o.s} ${o.gy-40*o.s} L${o.x+480*o.s} ${o.gy-40*o.s} L${o.x+400*o.s} ${o.gy+60*o.s} L${o.x-400*o.s} ${o.gy+60*o.s} Z" fill="${c}"/><path d="M${o.x-300*o.s} ${o.gy-220*o.s} L${o.x} ${o.gy-360*o.s} L${o.x+300*o.s} ${o.gy-220*o.s} Z" fill="${c}"/>`,
   manger:(o,c,L)=>`<path d="M${o.x-160*o.s} ${o.gy-140*o.s} L${o.x+160*o.s} ${o.gy-140*o.s} L${o.x+110*o.s} ${o.gy-40*o.s} L${o.x-110*o.s} ${o.gy-40*o.s} Z" fill="${c}"/><path d="M${o.x-120*o.s} ${o.gy} L${o.x-90*o.s} ${o.gy-140*o.s} M${o.x+120*o.s} ${o.gy} L${o.x+90*o.s} ${o.gy-140*o.s}" stroke="${c}" stroke-width="${16*o.s}"/><ellipse cx="${o.x}" cy="${o.gy-150*o.s}" rx="${70*o.s}" ry="${26*o.s}" fill="${L.light}" opacity=".95"/>`,
-  star:(o,c,L)=>{const x=o.x,y=o.y||420,s=o.s;return `<path d="M${x} ${y-60*s} L${x+14*s} ${y-14*s} L${x+60*s} ${y} L${x+14*s} ${y+14*s} L${x} ${y+60*s} L${x-14*s} ${y+14*s} L${x-60*s} ${y} L${x-14*s} ${y-14*s} Z" fill="${L.light}"/>`},
+  pyramid:(o,c,L)=>{const x=o.x,s=o.s,g=o.gy;return `<path d="M${x-460*s} ${g} L${x} ${g-520*s} L${x+460*s} ${g} Z" fill="${c}"/><path d="M${x} ${g-520*s} L${x+460*s} ${g} L${x+120*s} ${g} Z" fill="${mix(c,L.light,.14)}"/>`},
+  obelisk:(o,c,L)=>{const x=o.x,s=o.s,g=o.gy;return `<path d="M${x-34*s} ${g} L${x-24*s} ${g-520*s} L${x} ${g-570*s} L${x+24*s} ${g-520*s} L${x+34*s} ${g} Z" fill="${c}"/><path d="M${x} ${g-570*s} L${x+24*s} ${g-520*s} L${x} ${g-520*s} Z" fill="${L.light}" opacity=".7"/>`},
+  pit:(o,c,L)=>{const x=o.x,s=o.s,g=o.gy;let d=`<ellipse cx="${x}" cy="${g-30*s}" rx="${210*s}" ry="${70*s}" fill="${mix(c,L.light,.28)}"/><ellipse cx="${x}" cy="${g-36*s}" rx="${150*s}" ry="${44*s}" fill="#000" opacity=".92"/>`;
+    for(let i=0;i<9;i++){const a=i/9*Math.PI*2;d+=`<ellipse cx="${x+Math.cos(a)*185*s}" cy="${g-30*s+Math.sin(a)*58*s}" rx="${34*s}" ry="${20*s}" fill="${mix(c,L.light,.15)}"/>`}return d},
+  prison:(o,c,L)=>{const x=o.x,s=o.s,g=o.gy,wx=x+(o.wx||0)*s,wy=g-600*s;let d=`<rect x="${x-1500*s}" y="${g-1100*s}" width="${3000*s}" height="${1140*s}" fill="${c}"/>`;
+    for(let r=0;r<9;r++)for(let k=0;k<12;k++)d+=`<rect x="${x-1500*s+k*260*s+(r%2)*130*s}" y="${g-1100*s+r*126*s}" width="${250*s}" height="${118*s}" fill="${mix(c,'#000000',.12+.1*rnd(r*7+k))}"/>`;
+    d+=`<rect x="${wx-120*s}" y="${wy-110*s}" width="${240*s}" height="${220*s}" fill="${L.light}" opacity=".92"/>`;for(let k=0;k<4;k++)d+=`<rect x="${wx-120*s+k*72*s+20*s}" y="${wy-110*s}" width="${16*s}" height="${220*s}" fill="${c}"/>`;
+    return d+`<path d="M${wx-120*s} ${wy+110*s} L${wx+120*s} ${wy+110*s} L${wx+340*s} ${g} L${wx-60*s} ${g} Z" fill="${L.light}" opacity=".13"/>`},
+  wheat:(o,c,L)=>{const x=o.x,s=o.s,g=o.gy,n=o.n||16,th=o.thin;let d='';for(let i=0;i<n;i++){const xx=x+(i-(n-1)/2)*(o.gap||46)*s+rnd(i)*14*s,h=(th?150:230+rnd(i*3)*60)*s,lean=th?55*s:(rnd(i*5)-.5)*30*s;
+    d+=`<path d="M${xx} ${g} Q${xx+lean*.3} ${g-h*.6} ${xx+lean} ${g-h}" stroke="${c}" stroke-width="${(th?4:6)*s}" fill="none"/><ellipse cx="${xx+lean}" cy="${g-h-(th?4:26)*s}" rx="${(th?7:13)*s}" ry="${(th?14:34)*s}" transform="rotate(${th?60:lean/s*.6} ${xx+lean} ${g-h})" fill="${o.lit&&!th?'#E8B54F':c}"/>`}return d},
+  sheaves:(o,c,L)=>{const n=o.n||12,s=o.s,g=o.gy;let d='';for(let i=0;i<n;i++){const k=i-(n-1)/2,mid=Math.abs(k)<.6&&n%2===1,xx=o.x+k*(o.gap||110)*s,rot=mid?0:(o.bow?(k<0?24:-24):0);
+    const col=mid&&o.lit?'#F2C35E':c;d+=`<g transform="rotate(${rot} ${xx} ${g})"><path d="M${xx-34*s} ${g} L${xx-14*s} ${g-150*s} L${xx-52*s} ${g-250*s} L${xx+52*s} ${g-250*s} L${xx+14*s} ${g-150*s} L${xx+34*s} ${g} Z" fill="${col}"/><rect x="${xx-20*s}" y="${g-162*s}" width="${40*s}" height="${16*s}" fill="${mix(col,'#000000',.3)}"/></g>`}return d},
+  granary:(o,c,L)=>{const s=o.s,g=o.gy;let d=`<rect x="${o.x-520*s}" y="${g-60*s}" width="${1040*s}" height="${80*s}" fill="${c}"/>`;[-340,0,340].forEach((dx,i)=>{const x=o.x+dx*s,h=(260+i%2*40)*s;d+=`<rect x="${x-120*s}" y="${g-h}" width="${240*s}" height="${h}" fill="${c}"/><circle cx="${x}" cy="${g-h}" r="${120*s}" fill="${c}"/><rect x="${x-26*s}" y="${g-h*.55}" width="${52*s}" height="${70*s}" fill="${L.light}" opacity="${o.lit?.8:.18}"/>`});return d},
+  camels:(o,c,L,t)=>{let d='';const n=o.n||3;for(let i=0;i<n;i++){const s=o.s*(1-.06*i),x=o.x+i*(o.gap||300)*o.s*(o.dir||1)+((t||0)*(o.speed||0)),g=o.gy-6*i,b=Math.sin((t||0)*3+i)*4*s,f=o.dir===-1?-1:1;
+    d+=`<g transform="translate(${x} ${g+b}) scale(${f*s} ${s})"><ellipse cx="0" cy="-200" rx="120" ry="60" fill="${c}"/><ellipse cx="-10" cy="-250" rx="60" ry="45" fill="${c}"/><path d="M100 -220 Q170 -260 160 -330 L200 -350 L215 -330 L190 -320 Q195 -250 120 -180 Z" fill="${c}"/>`+
+    [-80,-50,60,90].map((lx,j)=>`<rect x="${lx}" y="-160" width="16" height="${160+Math.sin((t||0)*5+j+i)*8}" fill="${c}"/>`).join('')+(o.rider?`<rect x="-30" y="-330" width="44" height="90" rx="14" fill="${c}"/><circle cx="-8" cy="-352" r="24" fill="${c}"/>`:'')+`</g>`}return d},
+  cows:(o,c,L,t)=>{let d='';const n=o.n||7;for(let i=0;i<n;i++){const s=o.s*(.9+rnd(i)*.15),x=o.x+(i-(n-1)/2)*(o.gap||170)*o.s,g=o.gy-(i%2)*14,th=o.thin,ry=th?26:50,lw=th?7:14;
+    d+=`<g transform="translate(${x} ${g}) scale(${s})"><ellipse cx="0" cy="-${120+(th?10:0)}" rx="${th?78:92}" ry="${ry}" fill="${c}"/><path d="M70 -${150+(th?5:0)} L120 -${175} L132 -150 L118 -125 L80 -${115+(th?6:0)} Z" fill="${c}"/><path d="M112 -172 L102 -196 M124 -170 L134 -192" stroke="${c}" stroke-width="5"/>`+
+    [-60,-38,46,66].map(lx=>`<rect x="${lx}" y="-${100-(th?0:10)}" width="${lw}" height="${100-(th?0:10)}" fill="${c}"/>`).join('')+(th?[-30,-10,10,30].map(rx=>`<path d="M${rx} -140 L${rx} -104" stroke="${mix(c,'#000000',.4)}" stroke-width="3"/>`).join(''):'')+`</g>`}return d},
+  sacks:(o,c,L)=>{const s=o.s,g=o.gy;let d='';[[-120,0,1],[0,-8,1.15],[120,0,1],[-60,-120,.95],[60,-118,.95]].forEach(([dx,dy,k],i)=>{const x=o.x+dx*s,y=g+dy*s;d+=`<path d="M${x-55*s*k} ${y} C${x-70*s*k} ${y-80*s*k} ${x-40*s*k} ${y-120*s*k} ${x-20*s*k} ${y-130*s*k} L${x+20*s*k} ${y-130*s*k} C${x+40*s*k} ${y-120*s*k} ${x+70*s*k} ${y-80*s*k} ${x+55*s*k} ${y} Z" fill="${c}"/><path d="M${x-22*s*k} ${y-128*s*k} L${x} ${y-150*s*k} L${x+22*s*k} ${y-128*s*k}" stroke="${c}" stroke-width="${6*s}" fill="none"/>`});
+    if(o.lit)d+=`<g>${[0,1,2,3,4,5].map(i=>`<circle cx="${o.x+(i-2.5)*22*s}" cy="${g-140*s-rnd(i)*20*s}" r="${11*s}" fill="#F2D27A"/>`).join('')}</g>`;return d},
+  palace:(o,c,L)=>{const x=o.x,s=o.s,g=o.gy;let d=`<rect x="${x-560*s}" y="${g-300*s}" width="${1120*s}" height="${320*s}" fill="${c}"/><rect x="${x-600*s}" y="${g-330*s}" width="${1200*s}" height="${40*s}" fill="${c}"/>`;
+    [-1,1].forEach(k=>{d+=`<path d="M${x+k*640*s-150*s} ${g} L${x+k*640*s-120*s} ${g-480*s} L${x+k*640*s+120*s} ${g-480*s} L${x+k*640*s+150*s} ${g} Z" fill="${c}"/>`});
+    for(let i=0;i<8;i++)d+=`<rect x="${x-470*s+i*134*s-20*s}" y="${g-290*s}" width="${40*s}" height="${290*s}" fill="${mix(c,'#000000',.25)}"/>`;
+    return d+`<rect x="${x-60*s}" y="${g-220*s}" width="${120*s}" height="${220*s}" fill="${L.light}" opacity="${o.lit?.75:.25}"/>`},
+  coat:(o,c,L)=>{const x=o.x,s=o.s,g=o.gy;return `<path d="M${x-150*s} ${g} C${x-120*s} ${g-60*s} ${x-60*s} ${g-90*s} ${x} ${g-80*s} C${x+80*s} ${g-95*s} ${x+130*s} ${g-50*s} ${x+170*s} ${g} Z" fill="url(#coatG)"/><ellipse cx="${x+40*s}" cy="${g-40*s}" rx="${50*s}" ry="${18*s}" fill="#6B0F12" opacity=".75"/>`},
+  star:(o,c,L)=>{const x=o.x,y=o.sy!=null?o.sy:Y(LAND?.12:.17),s=o.s;return `<path d="M${x} ${y-60*s} L${x+14*s} ${y-14*s} L${x+60*s} ${y} L${x+14*s} ${y+14*s} L${x} ${y+60*s} L${x-14*s} ${y+14*s} L${x-60*s} ${y} L${x-14*s} ${y-14*s} Z" fill="${L.light}"/>`},
 };
 // figuras humanas en silueta (opcionalmente iluminadas)
 function figure(f,c,L,t){
   const s=f.s,x=f.x,g=f.gy,lit=f.lit,sway=Math.sin(t*1.2+x*.01)*1.5;
-  const robe=lit?(f.robe||'#F7F1E3'):c, skin=lit?(f.skin||'#C99A72'):c, hair=lit?(f.hair||'#4A2E1A'):c;
+  const robe=lit?(f.coat?'url(#coatG)':(f.robe||(f.who==='pharaoh'?'#D8AE55':'#F7F1E3'))):c, skin=lit?(f.skin||'#C99A72'):c, hair=lit?(f.hair||'#4A2E1A'):c;
   let H=420*s, kneel=f.pose==='kneel', bow=f.pose==='bow'||f.pose==='mourn';
   if(kneel)H*=.66; if(f.who==='child')H*=.62;
   const top=g-H, hr=34*s*(f.who==='child'?.85:1), hx=x+(bow?18*s:0), hy=top+hr+(bow?26*s:0);
@@ -119,31 +161,33 @@ function figure(f,c,L,t){
   if(lit&&f.face!==false)d+=`<path d="M${hx-hr*.42} ${hy-hr*.02} q${hr*.16} ${hr*.12} ${hr*.32} 0 M${hx+hr*.1} ${hy-hr*.02} q${hr*.16} ${hr*.12} ${hr*.32} 0" stroke="#3A2414" stroke-width="${3*s}" fill="none" stroke-linecap="round"/>`;
   if(f.who==='soldier')d+=`<path d="M${hx-hr*1.05} ${hy-hr*.1} C${hx-hr} ${hy-hr*1.5} ${hx+hr} ${hy-hr*1.5} ${hx+hr*1.05} ${hy-hr*.1} Z" fill="${c}"/><path d="M${hx-hr*.9} ${hy-hr*1.2} C${hx-hr*.3} ${hy-hr*2.2} ${hx+hr*.6} ${hy-hr*2} ${hx+hr*1.1} ${hy-hr*1.4}" stroke="${c}" stroke-width="${16*s}" fill="none"/>`;
   if(f.who==='king'||f.crown)d+=`<path d="M${hx-hr*.7} ${hy-hr*.8} L${hx-hr*.7} ${hy-hr*1.5} L${hx-hr*.35} ${hy-hr*1.15} L${hx} ${hy-hr*1.6} L${hx+hr*.35} ${hy-hr*1.15} L${hx+hr*.7} ${hy-hr*1.5} L${hx+hr*.7} ${hy-hr*.8} Z" fill="${lit?'#F5C26B':c}"/>`;
+  if(f.who==='pharaoh'||f.nemes)d+=`<path d="M${hx-hr*1.0} ${hy-hr*.55} C${hx-hr*.9} ${hy-hr*1.5} ${hx+hr*.9} ${hy-hr*1.5} ${hx+hr*1.0} ${hy-hr*.55} L${hx+hr*1.35} ${hy+hr*1.9} L${hx+hr*.75} ${hy+hr*1.9} L${hx+hr*.7} ${hy+hr*.2} L${hx-hr*.7} ${hy+hr*.2} L${hx-hr*.75} ${hy+hr*1.9} L${hx-hr*1.35} ${hy+hr*1.9} Z" fill="${lit?'#E9C46A':c}"/>`+(lit?`<path d="M${hx-hr*1.1} ${hy+hr*.6} L${hx-hr*1.3} ${hy+hr*1.7} M${hx+hr*1.1} ${hy+hr*.6} L${hx+hr*1.3} ${hy+hr*1.7}" stroke="#2F5E8C" stroke-width="${6*s}"/>`:'');
+  if(lit&&(f.collar||f.who==='pharaoh'))d+=`<path d="M${x-62*s} ${top+hr*2.15} C${x-40*s} ${top+hr*3.4} ${x+40*s} ${top+hr*3.4} ${x+62*s} ${top+hr*2.15} C${x+30*s} ${top+hr*2.7} ${x-30*s} ${top+hr*2.7} ${x-62*s} ${top+hr*2.15} Z" fill="#E9B949"/>`;
   if(f.halo)d+=`<circle cx="${hx}" cy="${hy}" r="${hr*1.9}" fill="none" stroke="${L.light}" stroke-width="${5*s}" opacity=".85"/>`;
   return d+'</g>';
 }
-function crowd(o,c,L,t){let d='';const n=o.n||5;for(let i=0;i<n;i++){const k=i/(n-1)-.5;d+=figure({x:o.x+k*o.s*130*n/2.2,gy:o.gy+((i%2)*14),s:o.s*(.85+rnd(i+o.x)*.25),pose:o.pose||(i%3?'stand':'bow'),who:i%3===1?'woman':'robed'},c,L,t)}return d}
+function crowd(o,c,L,t){let d='';const n=o.n||5;for(let i=0;i<n;i++){const k=i/(n-1)-.5;d+=figure({x:o.x+(LAND?(i-(n-1)/2)*118*o.s:k*o.s*130*n/2.2),gy:o.gy+((i%2)*14),s:o.s*(.85+rnd(i+o.x)*.25),pose:o.pose||(i%3?'stand':'bow'),who:i%3===1?'woman':'robed'},c,L,t)}return d}
 
 // =================== construcción de planos ===================
 const world=document.getElementById('world'),fxEl=document.getElementById('fx'),flash=document.getElementById('flash'),titleEl=document.getElementById('title'),capsEl=document.getElementById('caps'),grain=document.getElementById('grain');
 const SHOTS=[];
-const DEF={hills:'mid',dunes:'mid',ground:'near',mountain:'far',calvary:'mid',cross:'near',tomb:'near',olive:'mid',palm:'mid',cypress:'mid',city:'far',temple:'mid',sea:'near',boat:'near',tent:'mid',well:'near',sheep:'near',rocks:'front',throne:'near',ark:'mid',manger:'near',star:'sky'};
+const DEF={hills:'mid',dunes:'mid',ground:'near',mountain:'far',calvary:'mid',cross:'near',tomb:'near',olive:'mid',palm:'mid',cypress:'mid',city:'far',temple:'mid',sea:'near',boat:'near',tent:'mid',well:'near',sheep:'near',rocks:'front',throne:'near',ark:'mid',manger:'near',star:'sky',pyramid:'far',obelisk:'mid',pit:'near',prison:'mid',wheat:'near',sheaves:'near',granary:'mid',camels:'mid',cows:'near',sacks:'near',palace:'mid',coat:'near'};
 function norm(it){if(typeof it==='string'){const [n,...fl]=it.split(':');return {el:n,flags:fl}}return Object.assign({flags:[]},it)}
 function buildShot(sc,sh,idx){
   const L=MOODS[sh.mood||sc.mood||'night'];
   const div=document.createElement('div');div.className='shot';world.appendChild(div);
   const layers={};
-  for(const k of ['sky','far','mid','near','front']){const l=document.createElement('div');l.className='layer';div.appendChild(l);layers[k]=l}
+  for(const k of ['sky','far','mid','near','front']){const l=document.createElement('div');l.className='layer';Object.assign(l.style,{left:OX+'px',top:OY+'px',width:VW+'px',height:VH+'px'});div.appendChild(l);layers[k]=l}
   // cielo
-  const sunKind=L.sun, lx=(sh.light&&sh.light.x!=null?sh.light.x:.62)*1480, ly=(sh.light&&sh.light.y!=null?sh.light.y:.36)*2420;
-  let sky=`<svg viewBox="0 0 1480 2420" width="1480" height="2420"><defs><linearGradient id="g${idx}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${L.top}"/><stop offset=".62" stop-color="${L.hor}"/><stop offset="1" stop-color="${mix(L.hor,L.base,.4)}"/></linearGradient>
+  const sunKind=L.sun, lx=(sh.light&&sh.light.x!=null?sh.light.x:.62)*VW, ly=Y(sh.light&&sh.light.y!=null?sh.light.y:(LAND?.2:.36));
+  let sky=`<svg viewBox="0 0 ${VW} ${VH}" width="${VW}" height="${VH}"><defs><linearGradient id="g${idx}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${L.top}"/><stop offset=".62" stop-color="${L.hor}"/><stop offset="1" stop-color="${mix(L.hor,L.base,.4)}"/></linearGradient>
     <radialGradient id="r${idx}"><stop offset="0" stop-color="${L.glow}" stop-opacity=".9"/><stop offset=".35" stop-color="${L.glow}" stop-opacity=".35"/><stop offset="1" stop-color="${L.glow}" stop-opacity="0"/></radialGradient></defs>
-    <rect width="1480" height="2420" fill="url(#g${idx})"/>`;
-  if(['night','storm','dusk','dawn'].includes(sh.mood||sc.mood)){for(let i=0;i<70;i++)sky+=`<circle class="tw" cx="${rnd(i*3+idx)*1480}" cy="${rnd(i*7+idx)*1100}" r="${1+rnd(i)*2.4}" fill="#fff" opacity="${(sh.mood||sc.mood)==='night'?.8:.35}"/>`}
+    <rect width="${VW}" height="${VH}" fill="url(#g${idx})"/>`;
+  if(['night','storm','dusk','dawn'].includes(sh.mood||sc.mood)){for(let i=0;i<70;i++)sky+=`<circle class="tw" cx="${rnd(i*3+idx)*VW}" cy="${LAND?900+rnd(i*7+idx)*520:rnd(i*7+idx)*1100}" r="${1+rnd(i)*2.4}" fill="#fff" opacity="${(sh.mood||sc.mood)==='night'?.8:.35}"/>`}
   sky+=`<circle cx="${lx}" cy="${ly}" r="620" fill="url(#r${idx})"/>`;
   if(sunKind==='moon')sky+=`<circle cx="${lx}" cy="${ly}" r="70" fill="#F4F1E6"/>`;
   if(sunKind==='sun'||sunKind==='sunrise'||sunKind==='sunlow')sky+=`<circle cx="${lx}" cy="${ly}" r="${sunKind==='sun'?90:120}" fill="${L.light}" opacity=".95"/>`;
-  sky+=`<g class="clouds">${[0,1,2].map(i=>`<ellipse cx="${300+i*420}" cy="${520+i*170}" rx="${260+i*40}" ry="${46+i*8}" fill="${mix(L.hor,L.top,.5)}" opacity=".45"/>`).join('')}</g></svg>`;
+  sky+=`<g class="clouds">${[0,1,2].map(i=>`<ellipse cx="${LAND?300+i*800:300+i*420}" cy="${LAND?990+i*90:520+i*170}" rx="${260+i*40}" ry="${46+i*8}" fill="${mix(L.hor,L.top,.5)}" opacity=".45"/>`).join('')}</g></svg>`;
   layers.sky.innerHTML=sky;
   // capas con elementos
   const bucket={far:[],mid:[],near:[],front:[]};
@@ -159,26 +203,26 @@ function buildShot(sc,sh,idx){
     const col=mix(L.hor,L.base,DEPTH[k].f), gy=GROUND[k];
     const items=bucket[k];
     const stat=[],dyn=[];
-    items.forEach((e,i)=>{const o=Object.assign({},e,{x:(e.x!=null?e.x:.5)*1480,gy:(e.y!=null?e.y*2420:gy),s:(e.s||1)*({far:.7,mid:.85,near:1,front:1.3}[k]),seed:e.seed||(i+1)*1.3,open:e.flags.includes('open')||e.open,lit:e.flags.includes('lit')||e.lit,cloth:e.flags.includes('cloth')||e.cloth});
-      (['sea','boat'].includes(e.el)?dyn:stat).push(o)});
-    let svgS=`<svg viewBox="0 0 1480 2420" width="1480" height="2420">`+stat.map(o=>(EL[o.el]||EL.hills)(o,col,L,0)).join('')+`</svg>`;
-    layers[k].innerHTML=svgS+`<svg class="dyn" viewBox="0 0 1480 2420" width="1480" height="2420"></svg><svg class="chars" viewBox="0 0 1480 2420" width="1480" height="2420"></svg>`;
-    const cs=chars.filter(c=>(c.depth||'near')===k).map(c=>Object.assign({},c,{x:(c.x!=null?c.x:.5)*1480,gy:gy+(c.dy||0),s:(c.s||1)*({far:.45,mid:.7,near:1,front:1.35}[k])}));
+    items.forEach((e,i)=>{const o=Object.assign({},e,{x:(e.x!=null?e.x:.5)*VW,gy:(e.y!=null?Y(e.y):gy),sy:(e.sy!=null?Y(e.sy):null),s:(e.s||1)*({far:.7,mid:.85,near:1,front:1.3}[k]),seed:e.seed||(i+1)*1.3,open:e.flags.includes('open')||e.open,lit:e.flags.includes('lit')||e.lit,cloth:e.flags.includes('cloth')||e.cloth});
+      (['sea','boat','camels'].includes(e.el)?dyn:stat).push(o)});
+    let svgS=`<svg viewBox="0 0 ${VW} ${VH}" width="${VW}" height="${VH}">`+stat.map(o=>(EL[o.el]||EL.hills)(o,col,L,0)).join('')+`</svg>`;
+    layers[k].innerHTML=svgS+`<svg class="dyn" viewBox="0 0 ${VW} ${VH}" width="${VW}" height="${VH}"></svg><svg class="chars" viewBox="0 0 ${VW} ${VH}" width="${VW}" height="${VH}"></svg>`;
+    const cs=chars.filter(c=>(c.depth||'near')===k).map(c=>Object.assign({},c,{x:(c.x!=null?c.x:.5)*VW,gy:gy+(c.dy||0),s:(c.s||1)*({far:.45,mid:.7,near:1,front:1.35}[k])*(LAND?.74:1)}));
     dynamic.push({k,col,dyn,cs,svgDyn:layers[k].querySelector('.dyn'),svgCh:layers[k].querySelector('.chars')});
   }
   // efectos
   const fx=(sh.fx||sc.fx||[]);
   const fxDiv=document.createElement('div');fxDiv.className='full';fxDiv.style.mixBlendMode='screen';div.appendChild(fxDiv);
   const raysOn=fx.includes('rays')||L.rays>.5;
-  let fxs=`<svg viewBox="0 0 1080 1920" width="1080" height="1920" style="position:absolute;inset:0"><defs><linearGradient id="ray${idx}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${L.light}" stop-opacity=".55"/><stop offset="1" stop-color="${L.light}" stop-opacity="0"/></linearGradient>
+  let fxs=`<svg viewBox="0 0 ${SW} ${SH}" width="${SW}" height="${SH}" style="position:absolute;inset:0"><defs><linearGradient id="ray${idx}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${L.light}" stop-opacity=".55"/><stop offset="1" stop-color="${L.light}" stop-opacity="0"/></linearGradient>
     <filter id="bl${idx}"><feGaussianBlur stdDeviation="30"/></filter></defs>`;
   if(raysOn)fxs+=`<g class="rays" opacity="${Math.max(.35,L.rays)}">`+[...Array(9)].map((_,i)=>{const a=-60+i*15+rnd(i+idx)*8,w=3+rnd(i)*5;return `<path d="M0 0 L${Math.tan((a-w/2)*Math.PI/180)*2600} 2600 L${Math.tan((a+w/2)*Math.PI/180)*2600} 2600 Z" fill="url(#ray${idx})" opacity="${.35+rnd(i*5)*.5}"/>`}).join('')+`</g>`;
-  if(fx.includes('fog')||(sh.mood||sc.mood)==='dawn')fxs+=`<g class="fog" filter="url(#bl${idx})">${[0,1,2].map(i=>`<ellipse cx="${200+i*400}" cy="${1350+i*120}" rx="520" ry="${80+i*20}" fill="${L.fog}" opacity=".45"/>`).join('')}</g>`;
+  if(fx.includes('fog')||(sh.mood||sc.mood)==='dawn')fxs+=`<g class="fog" filter="url(#bl${idx})">${[0,1,2].map(i=>`<ellipse cx="${LAND?300+i*700:200+i*400}" cy="${LAND?760+i*80:1350+i*120}" rx="${LAND?820:520}" ry="${80+i*20}" fill="${L.fog}" opacity="${LAND?.3:.45}"/>`).join('')}</g>`;
   fxs+=`<g class="dust">${[...Array(fx.includes('dust')||raysOn?70:25)].map((_,i)=>`<circle r="${1.5+rnd(i*9+idx)*3.5}" fill="${L.light}"/>`).join('')}</g>`;
   if(fx.includes('rain')||(sh.mood||sc.mood)==='storm')fxs+=`<g class="rain" opacity=".35">${[...Array(90)].map((_,i)=>`<path d="M0 0 l-14 70" stroke="#C8D6F0" stroke-width="2.5"/>`).join('')}</g>`;
   fxs+=`<path class="bolt" d="" stroke="#EAF0FF" stroke-width="7" fill="none" opacity="0"/></svg>`;
   fxDiv.innerHTML=fxs;
-  return {div,layers,dynamic,L,sh,sc,fxDiv,lx:lx-200,ly:ly-250,raysOn,events:sh.events||[],mood:sh.mood||sc.mood||'night'};
+  return {div,layers,dynamic,L,sh,sc,fxDiv,lx:lx+OX,ly:ly+OY,raysOn,events:sh.events||[],mood:sh.mood||sc.mood||'night'};
 }
 const CAM={push:[1,1.17,0,0,0,0],pull:[1.17,1,0,0,0,0],panL:[1.1,1.1,150,-150,0,0],panR:[1.1,1.1,-150,150,0,0],tiltDown:[1.1,1.1,0,0,-200,60],tiltUp:[1.1,1.1,0,0,120,-160],still:[1.05,1.08,0,0,0,0],rise:[1.2,1.05,0,0,180,-40]};
 function updateShot(S,t,tl){
@@ -186,12 +230,12 @@ function updateShot(S,t,tl){
   const z=lerp(c[0],c[1],p),cx=lerp(c[2],c[3],p)+Math.sin(t*.7)*6,cy=lerp(c[4],c[5],p)+Math.cos(t*.5)*5;
   const fxp=S.sh.focus||{x:.5,y:.55};
   for(const k of ['sky','far','mid','near','front']){const d=DEPTH[k].d,sc=1+(z-1)*(.25+.75*d);
-    S.layers[k].style.transformOrigin=`${fxp.x*1480}px ${fxp.y*2420}px`;
+    S.layers[k].style.transformOrigin=`${fxp.x*VW}px ${Y(fxp.y)}px`;
     S.layers[k].style.transform=`translate(${cx*d}px,${cy*d}px) scale(${sc})`}
   S.layers.sky.querySelectorAll('.tw').forEach((e,i)=>{if(i%3===0)e.setAttribute('opacity',(.3+.5*Math.abs(Math.sin(t*1.5+i))).toFixed(2))});
   const cl=S.layers.sky.querySelector('.clouds');if(cl)cl.setAttribute('transform',`translate(${(t*12)%200-100},0)`);
   for(const D of S.dynamic){
-    if(D.dyn.length)D.svgDyn.innerHTML=D.dyn.map(o=>(EL[o.el])(o,D.col,S.L,t)).join('');
+    if(D.dyn.length)D.svgDyn.innerHTML=D.dyn.map(o=>(EL[o.el])(o,D.col,S.L,t-S.t0)).join('');
     if(D.cs.length)D.svgCh.innerHTML=D.cs.map(f=>{const app=f.at!=null?f.at:0;const k=P(t-S.t0,app,.6);if(k<=0)return '';
       const g=f.glow||f.lit?`<circle cx="${f.x}" cy="${f.gy-200*f.s}" r="${300*f.s*(1+.04*Math.sin(t*2))}" fill="${S.L.glow}" opacity="${.35*k}" filter="url(#bl0)"/>`:'';
       return `<g opacity="${k}">`+g+(f.who==='crowd'||f.who==='mourners'?crowd(f,D.col,S.L,t):figure(f,D.col,S.L,t))+`</g>`}).join('');
@@ -200,14 +244,14 @@ function updateShot(S,t,tl){
   const r=S.fxDiv.querySelector('.rays');
   if(r){const sx=(S.lx+cx*.04)*1080/1080,sy=S.ly;r.setAttribute('transform',`translate(${S.lx+cx*.1},${S.ly-150}) rotate(${Math.sin(t*.25)*4})`);r.style.opacity=(Math.max(.35,S.L.rays)*(0.75+.25*Math.sin(t*1.1)))}
   const fg=S.fxDiv.querySelector('.fog');if(fg)fg.setAttribute('transform',`translate(${Math.sin(t*.15)*120},0)`);
-  S.fxDiv.querySelectorAll('.dust circle').forEach((e,i)=>{const sp=10+rnd(i)*30,x=(rnd(i*3)*1080+Math.sin(t*.4+i)*40),y=(1920-((t*sp+rnd(i*5)*1920)%1920));e.setAttribute('cx',x.toFixed(1));e.setAttribute('cy',y.toFixed(1));e.setAttribute('opacity',(.25+.6*Math.abs(Math.sin(t*1.7+i))).toFixed(2))});
-  const rn=S.fxDiv.querySelector('.rain');if(rn)[...rn.children].forEach((e,i)=>{const y=((t*1400+rnd(i)*1920)%2000)-80,x=rnd(i*7)*1180;e.setAttribute('transform',`translate(${x},${y})`)});
+  S.fxDiv.querySelectorAll('.dust circle').forEach((e,i)=>{const sp=10+rnd(i)*30,x=(rnd(i*3)*SW+Math.sin(t*.4+i)*40),y=(SH-((t*sp+rnd(i*5)*SH)%SH));e.setAttribute('cx',x.toFixed(1));e.setAttribute('cy',y.toFixed(1));e.setAttribute('opacity',(.25+.6*Math.abs(Math.sin(t*1.7+i))).toFixed(2))});
+  const rn=S.fxDiv.querySelector('.rain');if(rn)[...rn.children].forEach((e,i)=>{const y=((t*1400+rnd(i)*SH)%(SH+80))-80,x=rnd(i*7)*(SW+100);e.setAttribute('transform',`translate(${x},${y})`)});
   // relámpagos (eventos o al azar en tormenta)
   let lf=0;const bolt=S.fxDiv.querySelector('.bolt');
   const evs=S.events.filter(e=>e.do==='lightning').map(e=>S.t0+e.t);
   if(S.mood==='storm')for(let k=0;k<8;k++)evs.push(S.t0+1.3+k*2.7+rnd(k)*.8);
   for(const te of evs){const d=t-te;if(d>=0&&d<.35){lf=Math.max(lf,d<.06?1:d<.12?.3:d<.18?.8:1-(d-.18)/.17)}}
-  if(lf>0){let x=200+rnd(Math.floor(t))*680,y=0,pth=`M${x} ${y}`;for(let k=0;k<8;k++){x+=(rnd(k+Math.floor(t*3))-.5)*160;y+=120;pth+=` L${x} ${y}`}bolt.setAttribute('d',pth);bolt.setAttribute('opacity',lf)}else bolt.setAttribute('opacity',0);
+  if(lf>0){let x=200+rnd(Math.floor(t))*(SW-400),y=0,pth=`M${x} ${y}`;for(let k=0;k<8;k++){x+=(rnd(k+Math.floor(t*3))-.5)*160;y+=120;pth+=` L${x} ${y}`}bolt.setAttribute('d',pth);bolt.setAttribute('opacity',lf)}else bolt.setAttribute('opacity',0);
   return lf;
 }
 
@@ -218,14 +262,24 @@ function buildAll(){
   if(TL.title_card){const tc=TL.title_card;titleEl.innerHTML=`<div class="t">${tc.text||''}</div>${tc.sub?`<div class="s">${tc.sub}</div>`:''}<div class="rule"></div>`}
 }
 const TD={fade:.7,flare:.9,cut:.001,dip:1.0};
+const chapEl=document.getElementById('chap');let chapKey=-1;
+function renderChapter(t){
+  const sc=TL.scenes.find(x=>x.chapter&&t>=x.s&&t<x.s+(x.chapter.dur||3.6));
+  if(!sc||window.NOCAPS){chapEl.style.display='none';return}
+  if(chapKey!==sc.i){chapKey=sc.i;chapEl.innerHTML=`<div class="n">${sc.chapter.n||''}</div><div class="c">${sc.chapter.text||''}</div><div class="rule"></div>`}
+  const d=sc.chapter.dur||3.6,a=eo(P(t,sc.s+.25,.8)),o=1-P(t,sc.s+d-.7,.7);
+  chapEl.style.display='block';chapEl.style.opacity=Math.min(a,o);chapEl.style.transform=`translateY(${(1-a)*18}px)`;
+  chapEl.querySelector('.c').style.letterSpacing=lerp(.08,.01,eo(P(t,sc.s+.25,2.2)))+'em';
+  chapEl.querySelector('.rule').style.width=(eo(P(t,sc.s+.6,1.0))*(LAND?560:420))+'px';
+}
 // =================== subtítulos dinámicos ===================
 let capKey='';
 function renderCaps(t,mood){
   const cap=TL.caps.find(c=>t>=c.s-0.05&&t<c.e+0.12);
   if(!cap){capsEl.innerHTML='';capKey='';return}
   if(capKey!==String(cap.s)){capKey=String(cap.s);
-    capsEl.innerHTML='<div class="row" style="position:absolute;left:540px;top:0;white-space:nowrap;transform-origin:0 50%">'+cap.words.map(w=>`<span class="w ${w.key?'k':''}">${w.w.replace(/[.,:;*]$/g,'').replace(/\*/g,'')}</span>`).join('')+'</div>';
-    const row=capsEl.firstChild,wd=row.offsetWidth,k=Math.min(1,960/wd);row.dataset.k=k;row.dataset.w=wd}
+    capsEl.innerHTML='<div class="row" style="position:absolute;left:'+SW/2+'px;top:0;white-space:nowrap;transform-origin:0 50%">'+cap.words.map(w=>`<span class="w ${w.key?'k':''}">${w.w.replace(/[.,:;*]$/g,'').replace(/\*/g,'')}</span>`).join('')+'</div>';
+    const row=capsEl.firstChild,wd=row.offsetWidth,k=Math.min(1,(SW-120)/wd);row.dataset.k=k;row.dataset.w=wd}
   const row=capsEl.firstChild,k=+row.dataset.k,wd=+row.dataset.w;
   const out=P(t,cap.e,.12);
   row.style.transform=`translateX(${-wd*k/2}px) scale(${k})`;row.style.opacity=1-out;
@@ -256,19 +310,20 @@ window.renderFrame=function(t){
   // destello (transición o relámpago); al cierre de un clímax, luz dorada
   const fc=S.trans==='flare'?S.L.light:'#FFFFFF';
   const lfo=Math.max(fl*.9,lf*.55);
-  flash.style.background=`radial-gradient(circle at ${S.lx/1480*100}% ${S.ly/2420*100}%, ${fc} 0%, ${fc}cc 30%, ${fc}00 75%)`;flash.style.opacity=lfo;
+  flash.style.background=`radial-gradient(circle at ${S.lx/SW*100}% ${S.ly/SH*100}%, ${fc} 0%, ${fc}cc 30%, ${fc}00 75%)`;flash.style.opacity=lfo;
   // título (solo al inicio)
   if(TL.title_card){const a=P(t,0,.35),o=1-P(t,(TL.title_card.dur||3.2),.7),ls=lerp(.32,.12,eo(P(t,.15,2.4)));
     titleEl.style.opacity=Math.min(eo(a),o);titleEl.querySelector('.t').style.letterSpacing=ls+'em';titleEl.style.transform=`scale(${lerp(1.06,1,eo(a))})`;
     const r=titleEl.querySelector('.rule');if(r)r.style.width=(eo(P(t,.6,1.2))*520)+'px';
     titleEl.style.display=o<=0?'none':'block'}
-  if(window.NOCAPS){capsEl.innerHTML="";capKey=""}else renderCaps(t,S.mood);
+  if(window.NOCAPS){capsEl.innerHTML='';capKey=''}else renderCaps(t,S.mood);
+  renderChapter(t);
   grain.src=grainSrc[Math.floor(t*30)%8];
   return true;
 };
 window.ready=Promise.all([document.fonts.load('900 80px CZ'),document.fonts.load('italic 500 40px PF')]).then(()=>document.fonts.ready).then(()=>{buildAll();
   // filtro de desenfoque compartido para halos de personajes
-  const s=document.createElementNS('http://www.w3.org/2000/svg','svg');s.setAttribute('width',0);s.setAttribute('height',0);s.style.position='absolute';s.innerHTML='<filter id="bl0" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="40"/></filter>';document.body.appendChild(s);
+  const s=document.createElementNS('http://www.w3.org/2000/svg','svg');s.setAttribute('width',0);s.setAttribute('height',0);s.style.position='absolute';s.innerHTML='<filter id="bl0" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="40"/></filter><linearGradient id="coatG" x1="0" y1="0" x2="1" y2="1">'+['#B8322A','#E3A33B','#2F6E9E','#3F8A4E','#7E3F8F','#D9732E','#B8322A','#E3A33B','#2F6E9E'].map((c,i,a)=>`<stop offset="${i/a.length}" stop-color="${c}"/><stop offset="${(i+1)/a.length}" stop-color="${c}"/>`).join('')+'</linearGradient>';document.body.appendChild(s);
   return Promise.all(grainSrc.map(src=>new Promise(r=>{const im=new Image();im.onload=r;im.onerror=r;im.src=src})))});
 </script>
 </body></html>

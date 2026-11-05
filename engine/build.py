@@ -199,7 +199,7 @@ def main(gpath, W):
                     chars[cid] = json.load(open(f'{root}/personajes/{cid}.json'))
                 else:
                     raise SystemExit(f'ERROR: personaje "{cid}" no está en "characters" del guion ni en personajes/{cid}.json')
-    tl = dict(total=t0, scenes=scenes_out, caps=caps, characters=chars, style=G.get('style', 'motion'), title_card=G.get('title_card'))
+    tl = dict(total=t0, scenes=scenes_out, caps=caps, characters=chars, style=G.get('style', 'motion'), title_card=G.get('title_card'), format=G.get('format', '9:16'))
     json.dump(tl, open(f'{W}/timeline.json', 'w'), ensure_ascii=False, indent=1)
     open(f'{W}/tl.js', 'w').write('const TL=' + json.dumps(tl, ensure_ascii=False) + ';\n')
 

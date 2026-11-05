@@ -31,10 +31,17 @@ for s in tl['scenes']:
                 cands.append((t, bonus))
 if tl.get('title_card'):
     cands = [c for c in cands if c[0] > tl['title_card'].get('dur', 3.2) + 0.8]
+# los rótulos de capítulo tampoco sirven de portada
+for s in tl['scenes']:
+    if s.get('chapter'):
+        cands = [c for c in cands if not (s['s'] <= c[0] < s['s'] + s['chapter'].get('dur', 3.6))]
 cands = [c for c in cands if 0.5 < c[0] < tl['total'] - 1]
 
 
-def grab(t, w=270, h=480):
+LAND = tl.get('format') == '16:9'
+
+
+def grab(t, w=480 if LAND else 270, h=270 if LAND else 480):
     raw = subprocess.run(['ffmpeg', '-loglevel', 'error', '-ss', f'{t:.3f}', '-i', video, '-frames:v', '1',
                           '-vf', f'scale={w}:{h}', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-'], capture_output=True).stdout
     return np.frombuffer(raw, np.uint8).reshape(h, w, 3).astype(np.float32) if len(raw) == w * h * 3 else None
