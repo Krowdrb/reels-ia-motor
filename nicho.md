@@ -14,31 +14,33 @@ Este archivo lo mantiene el analista de métricas. Dentro de la Biblia, se cambi
 Con menos datos se anota como «nicho candidato en prueba» y se le dedica 1 de cada 3 videos.
 
 ## Ranking de subnichos y tipos de tema (de los videos de todas las páginas conectadas)
-Actualizado 2026-11-05 00:08 UTC (4 nov 19:08 Bogotá), últimos 90 días (detalle en metricas/2026-11-05.md). Vistas = TikTok + Facebook + YouTube. Retención = tiempo medio visto en Facebook / duración (TikTok no da retención, alcance ni fuentes; % de video completo sin dato en todas las redes). jesus-calma-la-tormenta entra con 23,6 h (561 vistas). dinero-en-la-biblia y daniel-foso-leones siguen PENDING (4 nov 19:30 y 5 nov 19:30 Bogotá): **0 videos `cinematico` y 0 de datos con métricas**.
+Actualizado 2026-11-06 00:10 UTC (5 nov 19:10 Bogotá), últimos 90 días (detalle en metricas/2026-11-06.md). Vistas = TikTok + Facebook + YouTube. Retención = tiempo medio visto en Facebook / duración (TikTok no da retención, alcance ni fuentes; % de video completo sin dato en todas las redes). **dinero-en-la-biblia (primer `cinematico` y primer dato) entra con 23,6 h: 1.002 vistas.** La tormenta, 571 a 47,6 h. daniel-foso-leones sale el 5 nov 19:30 Bogotá (sin datos aún).
 
 | Subnicho / tipo de tema | Videos (>72 h) | Mediana de vistas | Retención media | Engagement | Veredicto |
 |---|---|---|---|---|---|
-| **Biblia: historias** (total) | 6 (5) | 532 | 9,3 % | 5,5 % | **Prioridad.** Único subnicho con datos |
-| · Vida de Jesús | 2 (1) | 1.189 | 9,2 % | 4,9 % | Resurrección 1.816 (3,71x AT); la tormenta, 561 a 24 h, ya supera la mediana del AT con la misma retención (9,3 %), pero 0,9 % de engagement → **candidato en prueba** |
-| · Parábolas | 1 (1) | 532 | 7,1 % | 4,3 % | 1,09x frente a AT: no destaca |
-| · Antiguo Testamento | 3 (3) | 489 | 10,1 % | 4,8 % | Línea base (Daniel, 5 nov, es el 4.º) |
-| **Biblia: datos** (total) | 0 | — | — | — | Sin datos: dinero-en-la-biblia sale el 4 nov 19:30 |
-| Desamor (fuera de nicho, solo dato) | 6 (6) | 549 | 12,2 % | 3,9 % | 1,03x frente a Biblia: historias; no se produce |
-| IA (fuera de nicho, retirada, solo dato) | 4 (3) | 507 | 6,1 % | 2,4 % | ~⅔ de la retención y ~½ del engagement de la Biblia |
+| **Biblia: datos** (total) | 1 (0) | **1.002** (a 24 h) | **10,8 %** | 5,1 % | Mejor señal: 1,86x historias y 2,05x AT a menor edad, con más retención. 1 solo video → **candidato en prueba** |
+| · Curiosidades (dinero y cifras) | 1 (0) | 1.002 | 10,8 % | 5,1 % | Único tipo de datos probado |
+| **Biblia: historias** (total) | 6 (5) | 538 | 9,3 % | 4,7 % | **Prioridad por la regla** (único subnicho con videos de >72 h) |
+| · Vida de Jesús | 2 (1) | 1.195 | 9,3 % | 4,9 % | Resurrección 1.818 (3,72x AT); la tormenta se frenó en 571 a 48 h (1,17x AT), 0,9 % de engagement → **candidato en prueba** (Pedro, 6 nov, es el 3.º) |
+| · Parábolas | 1 (1) | 534 | 7,0 % | 4,3 % | 1,09x frente a AT: no destaca |
+| · Antiguo Testamento | 3 (3) | 489 | 10,1 % | 4,7 % | Línea base (Daniel, 5 nov, es el 4.º) |
+| Desamor (fuera de nicho, solo dato) | 6 (6) | 549 | 12,2 % | 3,9 % | 1,02x frente a Biblia: historias; no se produce |
+| IA (fuera de nicho, retirada, solo dato) | 4 (3) | 515 | 6,1 % | 2,4 % | ~⅔ de la retención y ~½ del engagement de la Biblia |
 
 ## Subnicho y tema a priorizar
-- **Priorizar «Biblia: historias».** Ningún tipo de tema cumple la regla (solo el Antiguo Testamento tiene 3 videos de >72 h y es la línea base).
-- **Candidato en prueba: «Vida de Jesús»** (1 de cada 3 videos), desde 2026-11-03. Evidencia: Resurrección 1.816 a >72 h = 3,71x la mediana del AT (489); la tormenta, 2.º video, 561 a 24 h (mejor arranque del sistema), retención 9,3 % frente a 10,1 % del AT. Falta un 3.er video y que los 3 pasen de 72 h.
-- **Abrir «Biblia: datos»:** al menos 1 de cada 3 videos hasta tener 3 de >72 h (sigue en 0; el primero, dinero-en-la-biblia, sale el 4 nov 19:30).
+- **Prioridad formal: «Biblia: historias».** Ningún subnicho ni tipo cumple la regla (3+ videos de >72 h, ≥1,5x, retención igual o mejor).
+- **Candidato en prueba: «Biblia: datos» (curiosidades con cifras)**, 1 de cada 3 videos. Evidencia: dinero-en-la-biblia, 1.002 vistas a 23,6 h = 1,86x la mediana de historias (538) y mejor arranque del sistema (la tormenta, 561 a 24 h); retención 10,8 % (4,4 s en FB, máximo del sistema) frente a 9,3 %. Pasa a prioridad si llega a 3 videos de >72 h con mediana ≥ ~800 (1,5x 534) y retención ≥ 9,3 %. El próximo de datos toca el 7 nov.
+- **Candidato en prueba: «Vida de Jesús»** (1 de cada 3), desde 2026-11-03. Evidencia: Resurrección 1.818 = 3,72x AT; la tormenta, 571 a 48 h (1,17x AT), se frenó. Pedro (6 nov) es el 3.er video.
+- **Rotación:** datos → Antiguo Testamento u otra historia → Vida de Jesús.
 - **IA (todo): retirada el 2026-11-02 por decisión del dueño.** primeros-clientes queda como borrador.
 
 ## Estilo recomendado por subnicho
-Por decisión del dueño (2026-11-04), **todos los subnichos van en `cinematico`**; no se comparan estilos, solo se anotan como dato. Publicados en la Biblia hasta el 4 nov 19:08 Bogotá: 5 «otro» (subidos a mano, incluida la Resurrección, referencia de cinematico; mediana 532, retención 9,3 %, engagement 5,5 %) y 1 personajes2d (jesus-calma-la-tormenta: 561 a 24 h, retención 9,3 %, engagement 0,9 %). cinematico: 0 publicados; el primero es dinero-en-la-biblia (4 nov 19:30) y el segundo daniel-foso-leones (5 nov 19:30).
+Por decisión del dueño (2026-11-04), **todos los subnichos van en `cinematico`**; no se comparan estilos, solo se anotan como dato. Hasta el 5 nov 19:10 Bogotá: **cinematico 1 publicado** (dinero-en-la-biblia: 1.002 a 24 h, retención 10,8 %, engagement 5,1 %; mezclado con el subnicho datos); 5 «otro» del dueño (mediana 534, retención 9,3 %, engagement 5,5 %; la Resurrección, referencia, 1.384 a 24 h); 1 personajes2d (la tormenta: 561 a 24 h, 571 a 48 h, 9,7 %, 0,9 %). El 2.º `cinematico` es daniel-foso-leones (5 nov 19:30).
 
 | Subnicho | Estilo | Evidencia |
 |---|---|---|
 | Biblia: historias | **cinematico** (escenas ilustradas cinematográficas, paneo y zoom lentos, narración grave, música orquestal desde el segundo 0; título solo en el `title_card` inicial) | Decisión del dueño. Dato de apoyo: la Resurrección, «cortometraje animado» cinematográfico, hizo 1.816 vistas frente a 415–541 de los otros 4 bíblicos |
-| Biblia: datos | **cinematico** (los datos se narran sobre escenas que los ilustran; cifras en la voz, los subtítulos y la descripción) | Decisión del dueño. Sin datos propios todavía (primer video el 4 nov 19:30) |
+| Biblia: datos | **cinematico** (los datos se narran sobre escenas que los ilustran; cifras en la voz, los subtítulos y la descripción) | Decisión del dueño. Dato propio: dinero-en-la-biblia, 1.002 vistas a 24 h, 4,4 s en FB (máximo del sistema) |
 | IA (retirado) / desamor | — | Fuera de nicho |
 
 ## Historial de cambios
@@ -50,3 +52,4 @@ Por decisión del dueño (2026-11-04), **todos los subnichos van en `cinematico`
 - 2026-11-04: sin cambio de subnicho ni de candidato (Vida de Jesús 1.816 a 80 h = 3,71x AT, 489, pero 1 solo video; «Biblia: datos» sigue en 0). **Cambio de estilo por defecto en historias: personajes2d → cinematico** (réplica de la Resurrección: 1.816 vistas frente a 415–541 de los otros 4 bíblicos); personajes2d sigue en medición con jesus-calma-la-tormenta.
 - 2026-11-04 (madrugada): sin cambio de subnicho ni de candidato. Por el «Estilo obligatorio» del dueño, la tabla de estilos pasa a `cinematico` en historias y datos (ya no se mide personajes2d ni se usa motion). jesus-calma-la-tormenta publicado: 162 vistas en YouTube a ~6,5 h (27 vistas/h, mejor arranque del canal); TikTok y FB sin sincronizar.
 - 2026-11-05 (4 nov 19:08 Bogotá): sin cambio de subnicho ni de candidato. La tormenta (Vida de Jesús) hace 561 vistas a 24 h (mejor arranque del sistema; mediana AT 489) con retención 9,3 % pero 0,9 % de engagement; Vida de Jesús sigue con 1 solo video de >72 h. dinero-en-la-biblia aún PENDING (no publicado): 0 videos `cinematico` y 0 de datos con métricas.
+- 2026-11-06 (5 nov 19:10 Bogotá): sin cambio de prioridad (ningún subnicho cumple la regla). **Se abre «Biblia: datos» (curiosidades con cifras) como candidato en prueba** junto a «Vida de Jesús»: dinero-en-la-biblia, primer `cinematico` y primer dato, hace 1.002 vistas a 23,6 h (1,86x la mediana de historias, 538; mejor arranque del sistema) con retención 10,8 % frente a 9,3 %. La tormenta (Vida de Jesús) se frena en 571 a 48 h.
