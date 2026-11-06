@@ -21,7 +21,7 @@ Alternar historias y datos, todos en estilo cinematico. Cada tema debe poder cit
 ### Datos y curiosidades
 - 5 datos de la Biblia que casi nadie sabe (idiomas, autores, capítulo más largo y más corto, años de escritura)
 - ¿Por qué la Biblia católica tiene más libros que la evangélica? (explicado sin polémica)
-- El hombre que más vivió según la Biblia: Matusalén (Génesis 5:27)
+- (publicado 2026-11-07) El hombre que más vivió según la Biblia: Matusalén y las edades bíblicas (Génesis 5:27; Salmo 90:10–12)
 - Los 12 apóstoles en 60 segundos
 - 3 mujeres de la Biblia que cambiaron la historia
 - ¿Cuánto tardó en escribirse la Biblia y en cuántos idiomas?

@@ -1,0 +1,607 @@
+{
+ "slug": "edades-en-la-biblia",
+ "style": "cinematico",
+ "title": "Matusalén vivió 969 años… ¿y los demás? ⏳ | Las edades en la Biblia #shorts",
+ "voice": "em_santa",
+ "speed": 1.0,
+ "pronunciation": {
+  "969": "novecientos sesenta y nueve",
+  "930": "novecientos treinta",
+  "950": "novecientos cincuenta",
+  "175": "ciento setenta y cinco",
+  "120": "ciento veinte",
+  "90": "noventa"
+ },
+ "title_card": {
+  "text": "¿Cuánto vivió<br>Matusalén?",
+  "sub": "Génesis 5:27 · Salmo 90:12",
+  "dur": 3.4
+ },
+ "scenes": [
+  {
+   "mood": "night",
+   "trans": "cut",
+   "vo": "Matusalén vivió *969* años, más que nadie en la Biblia. ¿Y cuánto vivieron los *demás*?",
+   "shots": [
+    {
+     "set": [
+      "hills",
+      {
+       "el": "cypress",
+       "x": 0.16,
+       "depth": "mid"
+      },
+      {
+       "el": "cypress",
+       "x": 0.86,
+       "depth": "near"
+      },
+      {
+       "el": "rocks",
+       "x": 0.5
+      }
+     ],
+     "cam": "push",
+     "focus": {
+      "x": 0.46,
+      "y": 0.6
+     },
+     "light": {
+      "x": 0.66,
+      "y": 0.22
+     },
+     "chars": [
+      {
+       "who": "robed",
+       "x": 0.46,
+       "depth": "near",
+       "pose": "stand",
+       "beard": true,
+       "staff": true
+      }
+     ],
+     "fx": [
+      "fog",
+      "dust"
+     ]
+    },
+    {
+     "at": "demás",
+     "trans": "fade",
+     "set": [
+      "hills",
+      {
+       "el": "cypress",
+       "x": 0.12,
+       "depth": "near"
+      }
+     ],
+     "cam": "panR",
+     "light": {
+      "x": 0.7,
+      "y": 0.22
+     },
+     "chars": [
+      {
+       "who": "crowd",
+       "x": 0.5,
+       "depth": "mid",
+       "n": 5,
+       "pose": "stand"
+      }
+     ],
+     "fx": [
+      "fog",
+      "dust"
+     ]
+    }
+   ]
+  },
+  {
+   "mood": "dusk",
+   "trans": "fade",
+   "vo": "Adán, el primer hombre, vivió *930* años.",
+   "shots": [
+    {
+     "set": [
+      "dunes",
+      {
+       "el": "palm",
+       "x": 0.18,
+       "depth": "near"
+      },
+      {
+       "el": "palm",
+       "x": 0.8,
+       "depth": "mid",
+       "s": 0.8
+      },
+      {
+       "el": "sheep",
+       "x": 0.72,
+       "depth": "mid"
+      }
+     ],
+     "cam": "panR",
+     "light": {
+      "x": 0.7,
+      "y": 0.5
+     },
+     "chars": [
+      {
+       "who": "robed",
+       "x": 0.42,
+       "depth": "near",
+       "pose": "stand",
+       "beard": true
+      }
+     ],
+     "fx": [
+      "dust"
+     ]
+    },
+    {
+     "at": "vivió",
+     "trans": "fade",
+     "set": [
+      "mountain",
+      "hills",
+      {
+       "el": "palm",
+       "x": 0.25,
+       "depth": "mid"
+      }
+     ],
+     "cam": "rise",
+     "light": {
+      "x": 0.55,
+      "y": 0.52
+     },
+     "fx": [
+      "fog",
+      "dust"
+     ]
+    }
+   ]
+  },
+  {
+   "mood": "storm",
+   "trans": "dip",
+   "vo": "Noé sobrevivió al *diluvio* y vivió *950* años.",
+   "shots": [
+    {
+     "set": [
+      {
+       "el": "sea",
+       "depth": "mid"
+      },
+      {
+       "el": "ark",
+       "x": 0.62,
+       "depth": "mid"
+      },
+      {
+       "el": "rocks",
+       "x": 0.3,
+       "depth": "near"
+      }
+     ],
+     "cam": "push",
+     "focus": {
+      "x": 0.5,
+      "y": 0.62
+     },
+     "light": {
+      "x": 0.55,
+      "y": 0.2
+     },
+     "chars": [
+      {
+       "who": "robed",
+       "x": 0.42,
+       "depth": "near",
+       "pose": "kneel",
+       "beard": true
+      }
+     ],
+     "fx": [
+      "rain",
+      "fog"
+     ],
+     "events": [
+      {
+       "at": "diluvio",
+       "do": "lightning"
+      }
+     ]
+    },
+    {
+     "at": "vivió",
+     "trans": "fade",
+     "set": [
+      {
+       "el": "sea",
+       "depth": "mid"
+      },
+      {
+       "el": "ark",
+       "x": 0.62,
+       "depth": "mid"
+      },
+      {
+       "el": "rocks",
+       "x": 0.3,
+       "depth": "near"
+      }
+     ],
+     "cam": "tiltUp",
+     "light": {
+      "x": 0.55,
+      "y": 0.1
+     },
+     "chars": [
+      {
+       "who": "robed",
+       "x": 0.42,
+       "depth": "near",
+       "pose": "arms",
+       "beard": true
+      }
+     ],
+     "fx": [
+      "rays",
+      "rain",
+      "fog"
+     ]
+    }
+   ]
+  },
+  {
+   "mood": "night",
+   "trans": "fade",
+   "vo": "Abraham vivió *175* años. Las vidas se iban *acortando*.",
+   "shots": [
+    {
+     "set": [
+      "dunes",
+      {
+       "el": "tent",
+       "x": 0.72,
+       "depth": "mid"
+      },
+      {
+       "el": "star",
+       "x": 0.3,
+       "sy": 0.12,
+       "s": 0.6
+      },
+      {
+       "el": "star",
+       "x": 0.6,
+       "sy": 0.07,
+       "s": 0.9
+      },
+      {
+       "el": "star",
+       "x": 0.82,
+       "sy": 0.18,
+       "s": 0.5
+      }
+     ],
+     "cam": "tiltUp",
+     "light": {
+      "x": 0.25,
+      "y": 0.2
+     },
+     "chars": [
+      {
+       "who": "robed",
+       "x": 0.4,
+       "depth": "near",
+       "pose": "stand",
+       "beard": true,
+       "staff": true
+      }
+     ],
+     "fx": [
+      "dust"
+     ]
+    }
+   ]
+  },
+  {
+   "mood": "dawn",
+   "trans": "fade",
+   "vo": "Moisés murió a los *120*, y sus ojos nunca se *oscurecieron*.",
+   "shots": [
+    {
+     "set": [
+      {
+       "el": "rocks",
+       "x": 0.28,
+       "depth": "front"
+      },
+      "hills",
+      {
+       "el": "palm",
+       "x": 0.68,
+       "depth": "far"
+      },
+      {
+       "el": "palm",
+       "x": 0.78,
+       "depth": "far",
+       "s": 0.8
+      }
+     ],
+     "cam": "panR",
+     "light": {
+      "x": 0.8,
+      "y": 0.42
+     },
+     "chars": [
+      {
+       "who": "robed",
+       "x": 0.32,
+       "depth": "near",
+       "pose": "stand",
+       "beard": true,
+       "staff": true,
+       "dy": -120
+      }
+     ],
+     "fx": [
+      "fog",
+      "dust"
+     ]
+    },
+    {
+     "at": "ojos",
+     "trans": "fade",
+     "set": [
+      {
+       "el": "rocks",
+       "x": 0.28,
+       "depth": "front"
+      },
+      "hills",
+      {
+       "el": "palm",
+       "x": 0.7,
+       "depth": "far"
+      }
+     ],
+     "cam": "push",
+     "focus": {
+      "x": 0.34,
+      "y": 0.52
+     },
+     "light": {
+      "x": 0.72,
+      "y": 0.4
+     },
+     "chars": [
+      {
+       "who": "robed",
+       "x": 0.34,
+       "depth": "near",
+       "pose": "stand",
+       "beard": true,
+       "staff": true,
+       "dy": -120
+      }
+     ],
+     "fx": [
+      "rays",
+      "dust"
+     ]
+    }
+   ]
+  },
+  {
+   "mood": "dawn",
+   "trans": "fade",
+   "vo": "El Salmo 90 habla de *setenta* u *ochenta* años. Y la pregunta no es cuántos vives… sino qué haces con *ellos*.",
+   "shots": [
+    {
+     "set": [
+      "hills",
+      {
+       "el": "olive",
+       "x": 0.15,
+       "depth": "mid"
+      },
+      {
+       "el": "olive",
+       "x": 0.86,
+       "depth": "near"
+      }
+     ],
+     "cam": "panR",
+     "light": {
+      "x": 0.72,
+      "y": 0.44
+     },
+     "chars": [
+      {
+       "who": "robed",
+       "x": 0.34,
+       "depth": "near",
+       "pose": "stand",
+       "beard": true,
+       "staff": true
+      },
+      {
+       "who": "woman",
+       "x": 0.5,
+       "depth": "near",
+       "pose": "stand"
+      },
+      {
+       "who": "child",
+       "x": 0.62,
+       "depth": "near",
+       "pose": "stand"
+      }
+     ],
+     "fx": [
+      "fog",
+      "dust"
+     ]
+    },
+    {
+     "at": "pregunta",
+     "trans": "fade",
+     "set": [
+      "hills",
+      {
+       "el": "olive",
+       "x": 0.82,
+       "depth": "near"
+      }
+     ],
+     "cam": "push",
+     "focus": {
+      "x": 0.5,
+      "y": 0.6
+     },
+     "light": {
+      "x": 0.5,
+      "y": 0.42
+     },
+     "chars": [
+      {
+       "who": "robed",
+       "x": 0.5,
+       "depth": "near",
+       "pose": "stand"
+      }
+     ],
+     "fx": [
+      "fog",
+      "dust"
+     ]
+    }
+   ]
+  },
+  {
+   "mood": "holy",
+   "trans": "flare",
+   "climax": true,
+   "vo": "*Enséñanos* a contar nuestros días, para que traigamos al corazón *sabiduría*.",
+   "shots": [
+    {
+     "set": [
+      "hills",
+      {
+       "el": "olive",
+       "x": 0.14,
+       "depth": "near"
+      },
+      {
+       "el": "olive",
+       "x": 0.86,
+       "depth": "mid"
+      }
+     ],
+     "cam": "pull",
+     "focus": {
+      "x": 0.5,
+      "y": 0.58
+     },
+     "light": {
+      "x": 0.5,
+      "y": 0.2
+     },
+     "chars": [
+      {
+       "who": "robed",
+       "x": 0.5,
+       "depth": "near",
+       "pose": "open",
+       "lit": true,
+       "robe": "#F4F0E6",
+       "glow": true
+      }
+     ],
+     "fx": [
+      "rays",
+      "dust"
+     ]
+    }
+   ]
+  },
+  {
+   "mood": "golden",
+   "trans": "fade",
+   "vo": "Etiqueta a alguien con quien quieres aprovechar cada *día*.",
+   "shots": [
+    {
+     "set": [
+      "hills",
+      {
+       "el": "olive",
+       "x": 0.16,
+       "depth": "mid"
+      },
+      {
+       "el": "palm",
+       "x": 0.84,
+       "depth": "mid"
+      }
+     ],
+     "cam": "pull",
+     "focus": {
+      "x": 0.5,
+      "y": 0.56
+     },
+     "light": {
+      "x": 0.5,
+      "y": 0.3
+     },
+     "chars": [
+      {
+       "who": "robed",
+       "x": 0.4,
+       "depth": "near",
+       "pose": "stand"
+      },
+      {
+       "who": "woman",
+       "x": 0.6,
+       "depth": "near",
+       "pose": "stand"
+      },
+      {
+       "who": "child",
+       "x": 0.5,
+       "depth": "near",
+       "pose": "arms"
+      }
+     ],
+     "fx": [
+      "rays",
+      "dust"
+     ]
+    }
+   ]
+  }
+ ],
+ "thumbnail": {
+  "big": "",
+  "lines": [],
+  "icon": ""
+ },
+ "caption": "Matusalén vivió 969 años… ¿y cuánto vivieron los demás? ⏳\n\n🌙 Matusalén: 969 años, el que más vivió según la Biblia (Génesis 5:27)\n🌄 Adán, el primer hombre: 930 años (Génesis 5:5)\n🌊 Noé, el del diluvio: 950 años (Génesis 9:29)\n⭐ Abraham: 175 años (Génesis 25:7)\n⛰️ Moisés: 120 años, y sus ojos nunca se oscurecieron (Deuteronomio 34:7)\n🌅 Hoy: «setenta años, y en los más robustos, ochenta» (Salmo 90:10)\n\nLa pregunta no es cuántos años vives, sino qué haces con ellos.\n✨ «Enséñanos a contar nuestros días, para que traigamos al corazón sabiduría» (Salmo 90:12)\n\n📖 Génesis 5:5 · Génesis 5:27 · Génesis 9:29 · Génesis 25:7 · Deuteronomio 34:7 · Salmo 90:10 · Salmo 90:12\n\n👥 Etiqueta a alguien con quien quieres aprovechar cada día.",
+ "hashtags": [
+  "biblia",
+  "historiasbiblicas",
+  "datosbiblicos",
+  "curiosidadesbiblicas",
+  "matusalen",
+  "fe",
+  "dios",
+  "salmo90",
+  "cristianos"
+ ]
+}
