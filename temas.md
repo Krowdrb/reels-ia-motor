@@ -17,7 +17,7 @@ Alternar historias y datos, todos en estilo cinematico. Cada tema debe poder cit
 - El hijo pródigo (Lucas 15:11–32; guion listo en guiones/hijo-prodigo.json, el dueño lo canceló el 1 nov: revisarlo antes de reusarlo)
 - La hija de Jefté: la promesa que nunca debió hacer (Jueces 11:29–40) (investigación 2026-11-03: outlier 38x en TikTok y 49,8x en Instagram)
 - El profeta que vio jinetes recorrer la Tierra (Zacarías 1:7–17) (investigación 2026-11-03: Short bíblico en español que más rápido crece, 5,6K vistas/h)
-- Mefiboset: el hijo del enemigo que comió en la mesa del rey (2 Samuel 4:4; 9:1–13) (investigación 2026-11-07: 12x y 15x en dos canales distintos, 12 % de engagement)
+- (publicado 2026-11-08) Mefiboset: el hijo del enemigo que comió en la mesa del rey (2 Samuel 4:4; 9:1–13) (investigación 2026-11-07: 12x y 15x en dos canales distintos, 12 % de engagement)
 - La mujer de Lot: ¿por qué miró atrás? (Génesis 19:15–26; Lucas 17:32) (investigación 2026-11-07: 41x con título en pregunta)
 - Las tres tentaciones de Jesús en el desierto (Mateo 4:1–11; Lucas 4:1–13) (investigación 2026-11-07: 429x y 407,5K en otro canal; Vida de Jesús)
 

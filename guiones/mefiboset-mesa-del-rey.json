@@ -1,0 +1,501 @@
+{
+  "slug": "mefiboset-mesa-del-rey",
+  "style": "cinematico",
+  "title": "¿Por qué el nieto del enemigo de David comió en su mesa? 👑 | Mefiboset y la mesa del rey #shorts",
+  "voice": "em_santa",
+  "speed": 1.0,
+  "pronunciation": {
+    "Mefiboset": "Mefibosét",
+    "Lodebar": "Lodebár",
+    "Maquir": "Maquír",
+    "Siba": "Síba"
+  },
+  "title_card": {
+    "text": "A la mesa<br>del rey",
+    "sub": "2 Samuel 9",
+    "dur": 3.4
+  },
+  "scenes": [
+    {
+      "mood": "night",
+      "trans": "cut",
+      "vo": "Era nieto del *enemigo* de David. ¿Por qué terminó comiendo en su *mesa*?",
+      "shots": [
+        {
+          "set": [
+            {
+              "el": "palace",
+              "x": 0.55,
+              "depth": "far"
+            },
+            {
+              "el": "palm",
+              "x": 0.86,
+              "depth": "near"
+            }
+          ],
+          "cam": "push",
+          "focus": {
+            "x": 0.45,
+            "y": 0.6
+          },
+          "light": {
+            "x": 0.7,
+            "y": 0.18
+          },
+          "chars": [
+            {
+              "who": "robed",
+              "x": 0.42,
+              "depth": "near",
+              "pose": "bow",
+              "staff": true
+            }
+          ],
+          "fx": [
+            "fog",
+            "dust"
+          ]
+        },
+        {
+          "at": "mesa",
+          "trans": "fade",
+          "set": [
+            {
+              "el": "throne",
+              "x": 0.62,
+              "depth": "mid"
+            }
+          ],
+          "cam": "push",
+          "focus": {
+            "x": 0.6,
+            "y": 0.6
+          },
+          "light": {
+            "x": 0.62,
+            "y": 0.3
+          },
+          "chars": [
+            {
+              "who": "king",
+              "x": 0.62,
+              "depth": "near",
+              "pose": "stand"
+            }
+          ],
+          "fx": [
+            "fog",
+            "dust"
+          ]
+        }
+      ]
+    },
+    {
+      "mood": "night",
+      "trans": "dip",
+      "vo": "*Mefiboset*, hijo de Jonatán, quedó *cojo* de los pies a los cinco años, cuando su nodriza huyó.",
+      "shots": [
+        {
+          "set": [
+            "hills",
+            {
+              "el": "city",
+              "x": 0.25,
+              "depth": "far",
+              "s": 0.7
+            }
+          ],
+          "cam": "panL",
+          "light": {
+            "x": 0.56,
+            "y": 0.62
+          },
+          "chars": [
+            {
+              "who": "woman",
+              "x": 0.52,
+              "depth": "near",
+              "pose": "stand"
+            },
+            {
+              "who": "child",
+              "x": 0.6,
+              "depth": "near",
+              "pose": "stand"
+            }
+          ],
+          "fx": [
+            "dust"
+          ]
+        },
+        {
+          "at": "huyó",
+          "trans": "fade",
+          "set": [
+            "hills"
+          ],
+          "cam": "tiltDown",
+          "light": {
+            "x": 0.5,
+            "y": 0.6
+          },
+          "chars": [
+            {
+              "who": "woman",
+              "x": 0.42,
+              "depth": "near",
+              "pose": "kneel"
+            },
+            {
+              "who": "child",
+              "x": 0.57,
+              "depth": "near",
+              "pose": "kneel"
+            }
+          ],
+          "fx": [
+            "dust"
+          ]
+        }
+      ]
+    },
+    {
+      "mood": "dusk",
+      "trans": "fade",
+      "vo": "Creció en *Lodebar*, en casa de Maquir, lejos del *palacio*.",
+      "shots": [
+        {
+          "set": [
+            "dunes",
+            {
+              "el": "tent",
+              "x": 0.66,
+              "depth": "mid"
+            },
+            {
+              "el": "palm",
+              "x": 0.15,
+              "depth": "near"
+            }
+          ],
+          "cam": "panR",
+          "light": {
+            "x": 0.78,
+            "y": 0.5
+          },
+          "chars": [
+            {
+              "who": "robed",
+              "x": 0.42,
+              "depth": "near",
+              "pose": "stand",
+              "staff": true
+            }
+          ],
+          "fx": [
+            "dust"
+          ]
+        }
+      ]
+    },
+    {
+      "mood": "dusk",
+      "trans": "fade",
+      "vo": "Después, David buscó a alguien de Saúl, para mostrarle *bondad*, por amor a *Jonatán*. Siba le dijo dónde estaba.",
+      "shots": [
+        {
+          "set": [
+            {
+              "el": "palace",
+              "x": 0.5,
+              "depth": "far"
+            },
+            {
+              "el": "throne",
+              "x": 0.68,
+              "depth": "mid"
+            }
+          ],
+          "cam": "push",
+          "focus": {
+            "x": 0.6,
+            "y": 0.6
+          },
+          "light": {
+            "x": 0.82,
+            "y": 0.45
+          },
+          "chars": [
+            {
+              "who": "king",
+              "x": 0.66,
+              "depth": "near",
+              "pose": "stand"
+            }
+          ],
+          "fx": [
+            "rays",
+            "dust"
+          ]
+        },
+        {
+          "at": "Siba",
+          "trans": "fade",
+          "set": [
+            {
+              "el": "palace",
+              "x": 0.5,
+              "depth": "far"
+            },
+            {
+              "el": "palm",
+              "x": 0.12,
+              "depth": "near"
+            }
+          ],
+          "cam": "panR",
+          "light": {
+            "x": 0.8,
+            "y": 0.45
+          },
+          "chars": [
+            {
+              "who": "robed",
+              "x": 0.36,
+              "depth": "near",
+              "pose": "point"
+            },
+            {
+              "who": "king",
+              "x": 0.64,
+              "depth": "near",
+              "pose": "stand"
+            }
+          ],
+          "fx": [
+            "dust"
+          ]
+        }
+      ]
+    },
+    {
+      "mood": "dawn",
+      "trans": "fade",
+      "vo": "Lo llevaron ante el rey. Se postró: ¿Quién soy yo? Soy como un *perro muerto*.",
+      "shots": [
+        {
+          "set": [
+            {
+              "el": "palace",
+              "x": 0.5,
+              "depth": "far"
+            },
+            {
+              "el": "throne",
+              "x": 0.7,
+              "depth": "mid"
+            }
+          ],
+          "cam": "push",
+          "focus": {
+            "x": 0.45,
+            "y": 0.62
+          },
+          "light": {
+            "x": 0.72,
+            "y": 0.35
+          },
+          "chars": [
+            {
+              "who": "king",
+              "x": 0.68,
+              "depth": "near",
+              "pose": "stand"
+            },
+            {
+              "who": "robed",
+              "x": 0.36,
+              "depth": "near",
+              "pose": "bow",
+              "at": "postró"
+            }
+          ],
+          "fx": [
+            "fog",
+            "dust"
+          ]
+        }
+      ]
+    },
+    {
+      "mood": "holy",
+      "trans": "flare",
+      "climax": true,
+      "vo": "Pero David le dijo: *No tengas miedo*. Te devolveré las tierras de Saúl, y comerás siempre a mi *mesa*.",
+      "shots": [
+        {
+          "set": [
+            {
+              "el": "palace",
+              "x": 0.5,
+              "depth": "far"
+            },
+            {
+              "el": "throne",
+              "x": 0.7,
+              "depth": "mid"
+            }
+          ],
+          "cam": "pull",
+          "focus": {
+            "x": 0.5,
+            "y": 0.6
+          },
+          "light": {
+            "x": 0.6,
+            "y": 0.35
+          },
+          "chars": [
+            {
+              "who": "king",
+              "x": 0.62,
+              "depth": "near",
+              "pose": "open",
+              "lit": true,
+              "robe": "#F4F0E6",
+              "glow": true
+            },
+            {
+              "who": "robed",
+              "x": 0.36,
+              "depth": "near",
+              "pose": "kneel"
+            }
+          ],
+          "fx": [
+            "rays",
+            "dust"
+          ]
+        },
+        {
+          "at": "comerás",
+          "trans": "fade",
+          "set": [
+            {
+              "el": "palace",
+              "x": 0.5,
+              "depth": "far"
+            }
+          ],
+          "cam": "push",
+          "focus": {
+            "x": 0.5,
+            "y": 0.6
+          },
+          "light": {
+            "x": 0.5,
+            "y": 0.3
+          },
+          "chars": [
+            {
+              "who": "king",
+              "x": 0.66,
+              "depth": "near",
+              "pose": "open",
+              "lit": true,
+              "robe": "#F4F0E6"
+            },
+            {
+              "who": "robed",
+              "x": 0.34,
+              "depth": "near",
+              "pose": "stand",
+              "staff": true,
+              "lit": true,
+              "robe": "#E8DCC4"
+            }
+          ],
+          "fx": [
+            "rays",
+            "dust"
+          ]
+        }
+      ]
+    },
+    {
+      "mood": "golden",
+      "trans": "fade",
+      "vo": "Comió como uno de sus *hijos*. Así nos sienta la *gracia* de Dios. Etiqueta a alguien que necesita un lugar en la *mesa*.",
+      "shots": [
+        {
+          "set": [
+            "hills",
+            {
+              "el": "palace",
+              "x": 0.5,
+              "depth": "far"
+            },
+            {
+              "el": "olive",
+              "x": 0.14,
+              "depth": "mid"
+            },
+            {
+              "el": "palm",
+              "x": 0.86,
+              "depth": "mid"
+            }
+          ],
+          "cam": "rise",
+          "light": {
+            "x": 0.5,
+            "y": 0.3
+          },
+          "chars": [
+            {
+              "who": "king",
+              "x": 0.62,
+              "depth": "near",
+              "pose": "stand"
+            },
+            {
+              "who": "robed",
+              "x": 0.46,
+              "depth": "near",
+              "pose": "stand",
+              "staff": true
+            },
+            {
+              "who": "crowd",
+              "x": 0.25,
+              "depth": "mid",
+              "n": 3,
+              "pose": "stand",
+              "at": "gracia"
+            }
+          ],
+          "fx": [
+            "rays",
+            "dust"
+          ]
+        }
+      ]
+    }
+  ],
+  "thumbnail": {
+    "big": "",
+    "lines": [],
+    "icon": ""
+  },
+  "caption": "Era nieto del enemigo de David… ¿por qué terminó comiendo en su mesa? 👑🍞\n\n🌙 Mefiboset, hijo de Jonatán y nieto de Saúl, quedó cojo de los pies a los cinco años: su nodriza huyó con él al llegar la noticia de la muerte de Saúl, y en la prisa el niño cayó (2 Samuel 4:4).\n🏜️ Creció en Lodebar, en casa de Maquir, lejos del palacio.\n💛 Años después, David preguntó si quedaba alguien de la casa de Saúl para mostrarle bondad por amor a Jonatán, su amigo. Siba, siervo de Saúl, le dijo dónde estaba (2 Samuel 9:1-4).\n🙇 Mefiboset se postró con miedo y se llamó a sí mismo «un perro muerto» (2 Samuel 9:8).\n✨ Pero David le dijo que no tuviera miedo, le devolvió todas las tierras de Saúl y le dio un lugar fijo en su mesa. Y comió siempre a la mesa del rey como uno de sus hijos (2 Samuel 9:7-13).\n\nAsí nos sienta la gracia de Dios: no por lo que merecemos, sino por amor.\n\n📖 2 Samuel 4:4 · 2 Samuel 9:1-13\n\n👥 Etiqueta a alguien que necesita un lugar en la mesa.",
+  "hashtags": [
+    "biblia",
+    "historiasbiblicas",
+    "fe",
+    "dios",
+    "jesus",
+    "mefiboset",
+    "reydavid"
+  ]
+}
