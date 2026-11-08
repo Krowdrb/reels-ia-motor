@@ -1,0 +1,605 @@
+{
+  "slug": "tentaciones-de-jesus",
+  "style": "cinematico",
+  "title": "40 días sin comer… ¿por qué no convirtió la piedra en pan? | Las tentaciones de Jesús 🙏 #shorts",
+  "voice": "em_santa",
+  "speed": 1.0,
+  "pronunciation": {},
+  "title_card": {
+    "text": "Escrito<br>está",
+    "sub": "Mateo 4:1–11",
+    "dur": 3.4
+  },
+  "scenes": [
+    {
+      "mood": "night",
+      "trans": "cut",
+      "vo": "Llevaba *cuarenta días* sin comer. ¿Por qué Jesús no convirtió una *piedra* en *pan*?",
+      "shots": [
+        {
+          "set": [
+            "dunes",
+            {
+              "el": "rocks",
+              "x": 0.8,
+              "depth": "near"
+            }
+          ],
+          "cam": "push",
+          "focus": {
+            "x": 0.48,
+            "y": 0.62
+          },
+          "light": {
+            "x": 0.34,
+            "y": 0.2
+          },
+          "chars": [
+            {
+              "who": "jesus",
+              "x": 0.48,
+              "depth": "near",
+              "pose": "pray"
+            }
+          ],
+          "fx": [
+            "fog",
+            "dust"
+          ]
+        },
+        {
+          "at": "piedra",
+          "trans": "cut",
+          "set": [
+            "dunes",
+            {
+              "el": "rocks",
+              "x": 0.5,
+              "depth": "front"
+            }
+          ],
+          "cam": "push",
+          "focus": {
+            "x": 0.5,
+            "y": 0.7
+          },
+          "light": {
+            "x": 0.62,
+            "y": 0.22
+          },
+          "chars": [
+            {
+              "who": "jesus",
+              "x": 0.6,
+              "depth": "near",
+              "pose": "stand"
+            }
+          ],
+          "fx": [
+            "fog",
+            "dust"
+          ]
+        }
+      ]
+    },
+    {
+      "mood": "night",
+      "trans": "fade",
+      "vo": "Tenía *hambre*. Y entonces llegó el *tentador*.",
+      "shots": [
+        {
+          "set": [
+            "dunes",
+            {
+              "el": "rocks",
+              "x": 0.85,
+              "depth": "front"
+            }
+          ],
+          "cam": "push",
+          "light": {
+            "x": 0.28,
+            "y": 0.24
+          },
+          "chars": [
+            {
+              "who": "jesus",
+              "x": 0.6,
+              "depth": "mid",
+              "pose": "kneel"
+            },
+            {
+              "who": "robed",
+              "x": 0.38,
+              "depth": "mid",
+              "pose": "stand",
+              "at": "tentador"
+            }
+          ],
+          "fx": [
+            "fog",
+            "dust"
+          ],
+          "focus": {
+            "x": 0.5,
+            "y": 0.6
+          }
+        }
+      ]
+    },
+    {
+      "mood": "dusk",
+      "trans": "fade",
+      "vo": "Si eres Hijo de Dios, haz que estas piedras se conviertan en *pan*. *Escrito está*: no solo de pan vivirá el *hombre*.",
+      "shots": [
+        {
+          "set": [
+            "dunes",
+            {
+              "el": "rocks",
+              "x": 0.5,
+              "depth": "near"
+            },
+            {
+              "el": "palm",
+              "x": 0.9,
+              "depth": "far"
+            }
+          ],
+          "cam": "panR",
+          "light": {
+            "x": 0.52,
+            "y": 0.42
+          },
+          "chars": [
+            {
+              "who": "robed",
+              "x": 0.36,
+              "depth": "near",
+              "pose": "point"
+            },
+            {
+              "who": "jesus",
+              "x": 0.64,
+              "depth": "near",
+              "pose": "stand"
+            }
+          ],
+          "fx": [
+            "fog",
+            "dust"
+          ]
+        },
+        {
+          "at": "Escrito",
+          "trans": "fade",
+          "set": [
+            "dunes",
+            {
+              "el": "rocks",
+              "x": 0.2,
+              "depth": "front"
+            }
+          ],
+          "cam": "push",
+          "focus": {
+            "x": 0.5,
+            "y": 0.58
+          },
+          "light": {
+            "x": 0.5,
+            "y": 0.34
+          },
+          "chars": [
+            {
+              "who": "jesus",
+              "x": 0.5,
+              "depth": "near",
+              "pose": "stand",
+              "glow": true
+            }
+          ],
+          "fx": [
+            "rays",
+            "dust"
+          ]
+        }
+      ]
+    },
+    {
+      "mood": "dusk",
+      "trans": "dip",
+      "vo": "Lo puso en lo alto del templo: *Échate abajo*. Escrito está: no tentarás al Señor tu *Dios*.",
+      "shots": [
+        {
+          "set": [
+            {
+              "el": "city",
+              "x": 0.5,
+              "depth": "far"
+            },
+            {
+              "el": "temple",
+              "x": 0.5,
+              "depth": "mid"
+            }
+          ],
+          "cam": "tiltUp",
+          "light": {
+            "x": 0.7,
+            "y": 0.4
+          },
+          "chars": [
+            {
+              "who": "jesus",
+              "x": 0.5,
+              "depth": "mid",
+              "pose": "stand",
+              "dy": -476
+            }
+          ],
+          "fx": [
+            "fog",
+            "dust"
+          ]
+        },
+        {
+          "at": "Escrito",
+          "trans": "cut",
+          "set": [
+            {
+              "el": "city",
+              "x": 0.5,
+              "depth": "far"
+            },
+            {
+              "el": "temple",
+              "x": 0.5,
+              "depth": "near"
+            }
+          ],
+          "cam": "push",
+          "focus": {
+            "x": 0.5,
+            "y": 0.42
+          },
+          "light": {
+            "x": 0.5,
+            "y": 0.26
+          },
+          "chars": [
+            {
+              "who": "jesus",
+              "x": 0.5,
+              "depth": "near",
+              "pose": "stand",
+              "glow": true,
+              "dy": -560
+            }
+          ],
+          "fx": [
+            "rays",
+            "dust"
+          ]
+        }
+      ]
+    },
+    {
+      "mood": "dawn",
+      "trans": "fade",
+      "vo": "Desde un monte alto le mostró los *reinos* del mundo: Todo esto te daré, si me *adoras*.",
+      "shots": [
+        {
+          "set": [
+            {
+              "el": "mountain",
+              "x": 0.5,
+              "depth": "near"
+            }
+          ],
+          "cam": "pull",
+          "focus": {
+            "x": 0.5,
+            "y": 0.42
+          },
+          "light": {
+            "x": 0.3,
+            "y": 0.3
+          },
+          "chars": [
+            {
+              "who": "jesus",
+              "x": 0.42,
+              "depth": "near",
+              "pose": "stand",
+              "glow": true,
+              "dy": -675
+            },
+            {
+              "who": "robed",
+              "x": 0.6,
+              "depth": "near",
+              "pose": "stand",
+              "dy": -655
+            }
+          ],
+          "fx": [
+            "fog",
+            "dust"
+          ]
+        },
+        {
+          "at": "reinos",
+          "trans": "fade",
+          "set": [
+            "hills",
+            {
+              "el": "city",
+              "x": 0.35,
+              "depth": "far"
+            },
+            {
+              "el": "palace",
+              "x": 0.72,
+              "depth": "mid",
+              "lit": true
+            },
+            {
+              "el": "rocks",
+              "x": 0.5,
+              "depth": "front"
+            }
+          ],
+          "cam": "panR",
+          "light": {
+            "x": 0.6,
+            "y": 0.36
+          },
+          "chars": [
+            {
+              "who": "robed",
+              "x": 0.34,
+              "depth": "near",
+              "pose": "point"
+            },
+            {
+              "who": "jesus",
+              "x": 0.67,
+              "depth": "near",
+              "pose": "stand",
+              "glow": true
+            }
+          ],
+          "fx": [
+            "rays",
+            "fog",
+            "dust"
+          ]
+        }
+      ]
+    },
+    {
+      "mood": "holy",
+      "trans": "flare",
+      "climax": true,
+      "vo": "*Vete, Satanás*. Al Señor tu Dios adorarás, y a él *solo* servirás.",
+      "shots": [
+        {
+          "set": [
+            "dunes",
+            {
+              "el": "rocks",
+              "x": 0.42,
+              "depth": "near"
+            }
+          ],
+          "cam": "push",
+          "focus": {
+            "x": 0.45,
+            "y": 0.55
+          },
+          "light": {
+            "x": 0.42,
+            "y": 0.22
+          },
+          "chars": [
+            {
+              "who": "jesus",
+              "x": 0.4,
+              "depth": "near",
+              "pose": "point",
+              "dy": -40,
+              "lit": true,
+              "sash": "#B5452F",
+              "glow": true
+            },
+            {
+              "who": "robed",
+              "x": 0.68,
+              "depth": "mid",
+              "pose": "stand"
+            }
+          ],
+          "fx": [
+            "rays",
+            "fog",
+            "dust"
+          ]
+        },
+        {
+          "at": "Señor",
+          "trans": "fade",
+          "set": [
+            "dunes",
+            {
+              "el": "rocks",
+              "x": 0.5,
+              "depth": "near"
+            }
+          ],
+          "cam": "pull",
+          "focus": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "light": {
+            "x": 0.5,
+            "y": 0.22
+          },
+          "chars": [
+            {
+              "who": "jesus",
+              "x": 0.5,
+              "depth": "near",
+              "pose": "pray",
+              "dy": -40,
+              "lit": true,
+              "sash": "#B5452F",
+              "glow": true
+            }
+          ],
+          "fx": [
+            "rays",
+            "dust"
+          ]
+        }
+      ]
+    },
+    {
+      "mood": "golden",
+      "trans": "fade",
+      "vo": "El diablo lo dejó, y vinieron *ángeles* y le *servían*.",
+      "shots": [
+        {
+          "set": [
+            "dunes",
+            {
+              "el": "palm",
+              "x": 0.14,
+              "depth": "mid"
+            },
+            {
+              "el": "palm",
+              "x": 0.88,
+              "depth": "mid"
+            }
+          ],
+          "cam": "rise",
+          "light": {
+            "x": 0.5,
+            "y": 0.3
+          },
+          "chars": [
+            {
+              "who": "jesus",
+              "x": 0.5,
+              "depth": "near",
+              "pose": "stand",
+              "lit": true,
+              "sash": "#B5452F",
+              "glow": true
+            },
+            {
+              "who": "robed",
+              "x": 0.3,
+              "depth": "near",
+              "pose": "bow",
+              "lit": true,
+              "robe": "#F4F0E6",
+              "face": false,
+              "glow": true,
+              "at": "ángeles"
+            },
+            {
+              "who": "robed",
+              "x": 0.7,
+              "depth": "near",
+              "pose": "bow",
+              "lit": true,
+              "robe": "#F4F0E6",
+              "face": false,
+              "glow": true,
+              "at": "ángeles"
+            }
+          ],
+          "fx": [
+            "rays",
+            "dust"
+          ]
+        }
+      ]
+    },
+    {
+      "mood": "golden",
+      "trans": "fade",
+      "vo": "Venció con la *Palabra*. ¿Cuál de las tres te cuesta *más*? Respóndelo en una palabra.",
+      "shots": [
+        {
+          "set": [
+            "dunes",
+            {
+              "el": "mountain",
+              "x": 0.78,
+              "depth": "far",
+              "s": 0.8
+            },
+            {
+              "el": "temple",
+              "x": 0.22,
+              "depth": "far",
+              "s": 0.7
+            },
+            {
+              "el": "rocks",
+              "x": 0.5,
+              "depth": "front"
+            }
+          ],
+          "cam": "pull",
+          "focus": {
+            "x": 0.5,
+            "y": 0.55
+          },
+          "light": {
+            "x": 0.5,
+            "y": 0.3
+          },
+          "chars": [
+            {
+              "who": "jesus",
+              "x": 0.5,
+              "depth": "mid",
+              "pose": "stand",
+              "lit": true,
+              "sash": "#B5452F",
+              "glow": true
+            }
+          ],
+          "fx": [
+            "rays",
+            "dust"
+          ]
+        }
+      ]
+    }
+  ],
+  "thumbnail": {
+    "big": "",
+    "lines": [
+      "ESCRITO",
+      "*ESTÁ*"
+    ],
+    "icon": ""
+  },
+  "caption": "Llevaba cuarenta días sin comer. ¿Por qué Jesús no convirtió una piedra en pan? 🏜️🍞\n\n🕊️ El Espíritu llevó a Jesús al desierto; ayunó cuarenta días y cuarenta noches, y tuvo hambre (Mateo 4:1–2).\n🪨 El tentador le pidió convertir piedras en pan. Jesús respondió con la Escritura: «No solo de pan vivirá el hombre, sino de toda palabra que sale de la boca de Dios» (Mateo 4:3–4; Deuteronomio 8:3).\n🏛️ En lo alto del templo le pidió lanzarse al vacío, citando el Salmo 91. Jesús respondió que no se debe poner a prueba a Dios (Mateo 4:5–7; Deuteronomio 6:16).\n⛰️ Desde un monte muy alto le ofreció todos los reinos del mundo a cambio de adorarlo (Mateo 4:8–9).\n✨ Jesús lo rechazó: solo a Dios se adora y solo a Él se sirve (Mateo 4:10; Deuteronomio 6:13).\n👼 Entonces el diablo se fue, y los ángeles vinieron a servirle (Mateo 4:11).\n\n📖 Mateo 4:1–11 · Lucas 4:1–13\n\n💬 ¿Cuál de las tres te cuesta más? Respóndelo en una palabra.",
+  "hashtags": [
+    "biblia",
+    "historiasbiblicas",
+    "fe",
+    "dios",
+    "jesus",
+    "tentaciones",
+    "desierto",
+    "escritoesta"
+  ]
+}
