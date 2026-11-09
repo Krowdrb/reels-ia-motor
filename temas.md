@@ -32,7 +32,7 @@ Alternar historias y datos, todos en estilo cinematico. Cada tema debe poder cit
 - Las 4 mujeres de la genealogía de Jesús: Tamar, Rahab, Rut y la mujer de Urías (Mateo 1:3–6) (investigación 2026-11-03: «mujeres de la biblia» +160 % en búsquedas)
 - 5 frases que usas sin saber que vienen de la Biblia (Éxodo 21:24; Mateo 27:24; Mateo 4:4; Juan 8:7; Mateo 5:14) (investigación 2026-11-03)
 - Matusalén y el diluvio: la cuenta que casi nadie hace (187 + 182 + 600 = 969) (Génesis 5:25–29; 7:6) (investigación 2026-11-07: 264,4K en un canal de 4K; no antes del 14 nov, para separarlo del video de las edades)
-- Los gigantes de la Biblia, con sus medidas: Goliat, la cama de Og y los espías «como langostas» (1 Samuel 17:4; Deuteronomio 3:11; Números 13:33) (investigación 2026-11-07: 366,8K; sin teorías sobre los nefilim)
+- (publicado 2026-11-09) Los gigantes de la Biblia, con sus medidas: Goliat, la cama de Og y los espías «como langostas» (1 Samuel 17:4; Deuteronomio 3:11; Números 13:33) (investigación 2026-11-07: 366,8K; sin teorías sobre los nefilim)
 
 ## Archivado: IA (retirado el 2026-11-02, no usar)
 Nicho: cómo usar IA (sobre todo Claude) para ganar dinero, conseguir clientes y trabajar mejor, sin saber programar. Público: creadores y emprendedores de Latinoamérica.
