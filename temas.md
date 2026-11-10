@@ -1,7 +1,7 @@
 # Temas pendientes
 
 ## Nicho vigente: historias y datos de la Biblia (desde 2026-11-02)
-Alternar historias y datos, todos en estilo cinematico. Cada tema debe poder citarse con libro, capítulo y versículo.
+Alternar historias y datos, todos en estilo clawd-papel (obligatorio desde 2026-11-08). Cada tema debe poder citarse con libro, capítulo y versículo.
 
 ### Historias
 - David y Goliat: lo que casi nadie nota del relato (1 Samuel 17)
@@ -13,7 +13,7 @@ Alternar historias y datos, todos en estilo cinematico. Cada tema debe poder cit
 - (publicado 2026-11-06) Pedro camina sobre el agua (Mateo 14:22–33)
 - Rut: la lealtad que cambió una familia (Rut 1–4)
 - Ester: la reina que arriesgó su vida (Ester 4–7)
-- El buen samaritano (Lucas 10:25–37)
+- (video de prueba 2026-11-10, no publicado) El buen samaritano (Lucas 10:25–37)
 - El hijo pródigo (Lucas 15:11–32; guion listo en guiones/hijo-prodigo.json, el dueño lo canceló el 1 nov: revisarlo antes de reusarlo)
 - La hija de Jefté: la promesa que nunca debió hacer (Jueces 11:29–40) (investigación 2026-11-03: outlier 38x en TikTok y 49,8x en Instagram)
 - El profeta que vio jinetes recorrer la Tierra (Zacarías 1:7–17) (investigación 2026-11-03: Short bíblico en español que más rápido crece, 5,6K vistas/h)
