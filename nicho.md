@@ -3,7 +3,10 @@
 **Nicho vigente:** historias y datos de la Biblia, animados y contados con respeto y fidelidad al texto.
 **Público:** creyentes y curiosos de Latinoamérica (católicos y evangélicos), de 18 a 55 años.
 **Desde:** 2026-11-02, por **decisión del dueño** («cambia el nicho a datos o historias de la Biblia, ya no consejos de IA»). Esta decisión manda sobre la regla de 1,5x. La IA queda **retirada**: no se hacen más videos de IA salvo que el dueño lo pida.
-**Subnichos dentro del vigente:** (a) historias bíblicas narradas y (b) datos y curiosidades bíblicas, **ambos en estilo `cinematico`** (ver «Estilo obligatorio»). Se alternan y se comparan con métricas.
+**Subnichos dentro del vigente:** (a) historias bíblicas narradas y (b) datos y curiosidades bíblicas, **ambos en estilo `clawd-papel`** (ver «Estilo obligatorio vigente»). Se alternan y se comparan con métricas.
+
+## Estilo obligatorio vigente (decisión del dueño, 2026-11-08): `clawd-papel`
+**Desde el 2026-11-08 el estilo obligatorio es `clawd-papel`, no `cinematico`:** Clawd narra en primera persona desde dentro de la escena, en papel recortado iluminado (lemo-opuscar, plantilla de la skill). La sección de abajo, del 2026-11-04, queda **reemplazada** por esta decisión y se conserva solo como registro. tentaciones-de-jesus y gigantes-de-la-biblia (hechos el 8 y 9 nov) son los últimos `cinematico`.
 
 ## Estilo obligatorio (decisión del dueño, 2026-11-04)
 **Todos los videos, historias Y datos, se hacen en estilo `cinematico`** (réplica del Short más visto, «La Resurrección de Jesús»): solo animación + subtítulos de la narración, con el título únicamente al comienzo (`title_card`). Nada de motion graphics, títulos en pantalla, tarjetas ni CTA gráfico. Los datos se cuentan narrados, con escenas que los ilustran, y las cifras van en la voz, los subtítulos y la descripción. Solo el dueño puede cambiar esto.
@@ -14,34 +17,34 @@ Este archivo lo mantiene el analista de métricas. Dentro de la Biblia, se cambi
 Con menos datos se anota como «nicho candidato en prueba» y se le dedica 1 de cada 3 videos.
 
 ## Ranking de subnichos y tipos de tema (de los videos de todas las páginas conectadas)
-Actualizado 2026-11-09 00:08 UTC (8 nov 19:08 Bogotá), últimos 90 días (detalle en metricas/2026-11-09.md). Vistas = TikTok + Facebook + YouTube. Retención = tiempo medio visto en Facebook / duración (TikTok no da retención, alcance ni fuentes; % de video completo sin dato en todas las redes). edades (2.º de datos) hace el mejor arranque de la página: 1.289 vistas a 24 h y 6,4 s en FB (14,5 %). mefiboset sale el 8 nov 19:30 y tentaciones el 9 nov 19:30 Bogotá. jose-el-sonador (largo 16:9, solo YouTube) no entra: 6 vistas en 67 h.
+Actualizado 2026-11-10 00:08 UTC (9 nov 19:08 Bogotá), últimos 90 días (detalle en metricas/2026-11-10.md). Vistas = TikTok + Facebook + YouTube. Retención = tiempo medio visto en Facebook / duración (TikTok no da retención, alcance ni fuentes, y sus datos están congelados desde el 9 nov; % de video completo sin dato en todas las redes). «×» = frente a la mediana de «Biblia: historias» con >72 h (545, 7 videos).
 
 | Subnicho / tipo de tema | Videos (>72 h) | Mediana de vistas | Retención media | Engagement | Veredicto |
 |---|---|---|---|---|---|
-| **Biblia: datos** (total) | 2 (1) | **1.219** | **12,5 %** | 4,7 % | **El que mejor rinde: 2,26× historias** con más retención, pero 1 solo video de >72 h → **candidato en prueba principal** |
-| · Curiosidades con cifras (dinero, edades) | 2 (1) | 1.219 | 12,5 % | 4,7 % | Los dos mejores arranques del sistema (1.289 y 1.002 a 24 h) |
-| **Biblia: historias** (total) | 8 (6) | 561 (540 a >72 h) | 9,6 % | 4,7 % | **Prioridad formal por la regla** |
-| · **Vida de Jesús** | 3 (2) | **1.056** | **9,8 %** | **5,7 %** | 1,96× historias con retención igual o mejor; **aún no cumple formalmente** (Pedro pasa 72 h el 10 nov 00:31 UTC). Cumple ese día si Pedro mantiene ≥4,3 s en FB (hoy 4,6 s) |
-| · Antiguo Testamento | 4 (3) | 518 (490 a >72 h) | 10,2 % | 4,1 % | Línea base; Daniel (`cinematico`) 868 a 72 h = 1,77× el AT pero 2,1 % de engagement |
-| · Parábolas | 1 (1) | 535 | 7,0 % | 4,3 % | 1,0x: no destaca |
-| Desamor (fuera de nicho, solo dato) | 6 (6) | 549 | 12,2 % | 3,9 % | 1,02x frente a Biblia: historias; no se produce |
+| **Biblia: datos** (total) | 2 (1) | **1.265** | **12,3 %** | 4,8 % | **El que mejor rinde: 2,32× historias**, pero 1 solo video de >72 h → **candidato en prueba principal** |
+| · Curiosidades con cifras (dinero, edades) | 2 (1) | 1.265 | 12,3 % | 4,8 % | Los dos mejores del sistema (edades 1.382 a 48 h; dinero 1.148) |
+| **Biblia: historias** (total) | 10 (7) | 540 (545 a >72 h) | 9,6 % | 4,2 % | Prioridad formal |
+| · **Vida de Jesús** | 3 (2→3 a las 00:31 UTC) | **1.059** | **9,8 %** | **5,7 %** | **Cumple la regla** al pasar Pedro las 72 h (10 nov 00:31 UTC; congelado en 1.059 y 4,6 s en FB): 1,94× con retención ≥ → **tipo prioritario dentro de historias** |
+| · Antiguo Testamento | 6 (4) | 455 (518 a >72 h) | 10,1 % | 3,4 % | Por debajo de historias; mefiboset 387 y Jonás 182 a ~24 h |
+| · Parábolas | 1 (1) | 535 | 7,0 % | 4,3 % | 1,0×: no destaca |
+| Desamor (fuera de nicho, solo dato) | 6 (6) | 549 | 12,2 % | 3,9 % | 1,01× historias; no se produce |
 | IA (fuera de nicho, retirada, solo dato) | 4 (4) | 525 | 6,1 % | 2,4 % | Solo dato |
 
 ## Subnicho y tema a priorizar
-- **Prioridad formal: «Biblia: historias».** Ningún subnicho ni tipo cumple todavía la regla (3+ videos de >72 h, ≥1,5x, retención igual o mejor).
-- **Vida de Jesús (candidato en prueba, a un paso de la regla):** Resurrección 1.823, Pedro 1.056 (a 48 h) y la tormenta 576 → mediana 1.056 = 1,96x la de historias (540), retención 9,8 % frente a 9,6 %, engagement 5,7 % frente a 4,7 %. El **10 nov 00:31 UTC**, si Pedro mantiene ≥4,3 s en FB, **pasa a tipo prioritario de «Biblia: historias»** (las historias que no sean de datos se reparten 2 de Vida de Jesús por 1 de otro tipo).
-- **Candidato en prueba principal: «Biblia: datos» (curiosidades con cifras)**, 1 de cada 3 videos. Es el subnicho que mejor rinde: dinero 1.149 (>72 h) y edades 1.289 a 24 h → mediana 1.219 = 2,26x historias, retención 12,5 % frente a 9,6 %. Pasa a prioridad con 3 videos de >72 h, mediana ≥ ~820 (1,5x 545) y retención ≥ 9,6 %. edades cumple 72 h el 11 nov; el 3.º video de datos es el de hoy.
-- **Rotación:** datos → Antiguo Testamento u otra historia → Vida de Jesús. Último ciclo: edades (datos, 7 nov) → mefiboset (AT, 8 nov) → tentaciones-de-jesus (Vida de Jesús, hecho el 8 nov, sale el 9 nov 19:30) → **HOY (9 nov) TOCA «BIBLIA: DATOS»** (propuesta: los gigantes de la Biblia con sus medidas, 1 Samuel 17:4; Deuteronomio 3:11; Números 13:33, con el molde de edades: personaje + cifra + pregunta en el segundo 0). Después: Vida de Jesús → otra historia (AT).
+- **Prioridad dentro de «Biblia: historias»: Vida de Jesús** (cumple la regla hoy: Resurrección 1.824, Pedro 1.059, la tormenta 576 → mediana 1.059 = 1,94× de 545; retención 9,8 % ≥ 9,6 %; engagement 5,7 % frente a 4,2 %). Las historias se reparten 2 de Vida de Jesús por 1 de otro tipo; en el Antiguo Testamento, solo personajes famosos con cifra o giro (Daniel 868 frente a mefiboset 387 y Jonás 182).
+- **Candidato en prueba principal: «Biblia: datos» (curiosidades con cifras), 1 de cada 3 videos como mínimo.** Es el subnicho que mejor rinde (1.265 = 2,32× historias, retención 12,3 % frente a 9,6 %), pero con 1 video de >72 h. Pasa a prioridad con 3 videos de >72 h (edades cumple el 11 nov, gigantes el 13 nov), mediana ≥ ~820 y retención ≥ 9,6 %.
+- **Rotación:** datos → Vida de Jesús → otra historia (AT con personaje famoso). Último ciclo: tentaciones (Vida de Jesús, sale 9 nov 19:30 Bogotá) → gigantes (datos, sale 10 nov 19:30 Bogotá) → **el próximo video (el primero del sistema en `clawd-papel`) toca Vida de Jesús**; después, datos.
 - **IA (todo): retirada el 2026-11-02 por decisión del dueño.** primeros-clientes queda como borrador.
 
-## Estilo recomendado por subnicho
-Por decisión del dueño (2026-11-04), **todos los subnichos van en `cinematico`**; no se comparan estilos, solo se anotan como dato. Hasta el 8 nov 19:08 Bogotá: **cinematico, 4 Shorts** (edades 1.289 a 24 h, dinero 1.149 a 96 h, Pedro 1.056 a 48 h, Daniel 868 a 72 h; mediana 1.103 = 2,06x los 5 bíblicos del dueño, 535; retención 11,5 % frente a 9,3 %; engagement 4,8 % frente a 5,5 %); 1 personajes2d (la tormenta, 576, 9,8 %, 0,9 %). El largo 16:9 `cinematico` (José, solo YouTube) hizo 6 vistas: problema de formato y de red, no del estilo.
+## Estilo por subnicho
+Por decisión del dueño (2026-11-08), **todos los subnichos van en `clawd-papel`**; los demás estilos solo se anotan como dato.
 
-| Subnicho | Estilo | Evidencia |
-|---|---|---|
-| Biblia: historias | **cinematico** (escenas ilustradas cinematográficas, paneo y zoom lentos, un plano nuevo cada ~3,5 s, narración grave, música orquestal desde el segundo 0; título solo en el `title_card` inicial) | Decisión del dueño. Dato de apoyo: Pedro, 12 planos, 4,6 s en FB y 1.056 a 48 h; Daniel, 8 planos, 4,1 s; la Resurrección, «cortometraje animado», 1.823 |
-| Biblia: datos | **cinematico** (los datos se narran sobre escenas que los ilustran; cifras en la voz, los subtítulos y la descripción) | Decisión del dueño. Dato propio: edades, 13 planos, 1.289 a 24 h y 6,4 s en FB (máximo del sistema); dinero, 7 planos, 1.149 y 4,3 s |
-| IA (retirado) / desamor | — | Fuera de nicho |
+| Estilo | Videos (>72 h) | Vistas | Retención FB | Engagement | Nota |
+|---|---|---|---|---|---|
+| **clawd-papel** | 1 (0) | 182 a 22 h (YT 180, FB 2, sin TikTok) | sin dato | 0,5 % | Jonás, del dueño, 58 s. En YouTube igual que mefiboset (180 frente a 198 a ~23 h); falla la distribución en FB y TikTok. 1 video: sin conclusiones |
+| cinematico (Shorts, anterior) | 5 (2) | mediana 1.059 | 11,1 % | 4,6 % | Dato. tentaciones y gigantes son los últimos |
+| otro (dueño) en la Biblia | 5 (5) | mediana 535 | 9,3 % | 5,5 % | Dato (Resurrección 1.824) |
+| personajes2d / motion | 1 / 4 | 576 / 525 | 9,8 % / 6,1 % | 0,9 % / 2,4 % | Dato |
 
 ## Historial de cambios
 - 2026-10-31: nicho inicial.
@@ -56,3 +59,4 @@ Por decisión del dueño (2026-11-04), **todos los subnichos van en `cinematico`
 - 2026-11-07 (6 nov 19:07 Bogotá): sin cambio de prioridad ni de candidatos (ningún subnicho cumple la regla). «Biblia: datos» queda como candidato principal: dinero 1.120 a 48 h = 2,09x la mediana de historias (535) con retención 10,6 % frente a 9,5 %. Daniel (2.º `cinematico`, AT) arranca con 734 a 24 h (1,50x la mediana final del AT) pero 1,9 % de engagement; la tormenta se congela en 575 a 72 h.
 - 2026-11-08 (7 nov 19:07 Bogotá): sin cambio de prioridad (ningún tipo cumple aún la regla). **«Vida de Jesús» queda a un paso de cumplirla**: 3 videos (Resurrección 1.819, Pedro 946 a 24 h, la tormenta 575), mediana 946 = 1,75x historias (540) y retención 10,1 % ≥ 9,7 %; solo falta que Pedro pase 72 h (10 nov). «Biblia: datos» sigue como candidato principal (dinero 1.142 a 72 h = 2,11x, 1 video). Experimento de duración 35–45 s cerrado con resultado asegurado → regla.
 - 2026-11-09 (8 nov 19:08 Bogotá): sin cambio de prioridad (ningún tipo cumple aún la regla). **«Biblia: datos» se confirma como el subnicho que mejor rinde**: edades hace 1.289 vistas a 24 h (mejor arranque de la página; YouTube 953, outlier 127) con 6,4 s en FB (14,5 %, máximo del sistema); datos = 2,26x historias (1.219 frente a 540) con retención 12,5 % frente a 9,6 %, pero 1 solo video de >72 h. «Vida de Jesús» llega a 1,96x (Pedro 1.056 a 48 h, 4,6 s en FB) y retención 9,8 % ≥ 9,6 %: se decide el 10 nov 00:31 UTC. Hoy toca datos en la rotación.
+- 2026-11-10 (9 nov 19:08 Bogotá): **«Vida de Jesús» cumple la regla y pasa a tipo prioritario dentro de «Biblia: historias»** al pasar Pedro las 72 h (10 nov 00:31 UTC): 3 videos, mediana 1.059 = 1,94× la de historias (545) y retención 9,8 % ≥ 9,6 %. «Biblia: datos» sigue como candidato principal (1.265 = 2,32×, 12,3 %, 1 video de >72 h). Se deja constancia de que **el estilo obligatorio desde el 2026-11-08 es `clawd-papel`** (primer video: Jonás, del dueño, 182 vistas a 22 h, YouTube 180 igual que mefiboset, FB 2 y sin TikTok). TikTok en Metricool congelado desde el 9 nov.
