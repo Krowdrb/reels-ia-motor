@@ -20,6 +20,10 @@ Alternar historias y datos, todos en estilo clawd-papel (obligatorio desde 2026-
 - (publicado 2026-11-08) Mefiboset: el hijo del enemigo que comió en la mesa del rey (2 Samuel 4:4; 9:1–13) (investigación 2026-11-07: 12x y 15x en dos canales distintos, 12 % de engagement)
 - La mujer de Lot: ¿por qué miró atrás? (Génesis 19:15–26; Lucas 17:32) (investigación 2026-11-07: 41x con título en pregunta)
 - Las tres tentaciones de Jesús en el desierto (Mateo 4:1–11; Lucas 4:1–13) (investigación 2026-11-07: 429x y 407,5K en otro canal; Vida de Jesús)
+- La samaritana: el desconocido del pozo que conocía su vida (Juan 4:1–42) (investigación 2026-11-11: outlier en dos canales, 63x y 5,8M/27x; Vida de Jesús)
+- El único que se quedó: el discípulo amado al pie de la cruz (Juan 19:25–27; Mateo 26:56) (investigación 2026-11-11: 755,3K, 172x, 1,3K vistas/h; Vida de Jesús; decir «que la tradición identifica con Juan»)
+- Agar: la esclava a la que Dios vio (Génesis 16:1–13; 21:14–19) (investigación 2026-11-11: 293K, 144x, 10 % de engagement; poco conocida: gancho con giro)
+- ¿Por qué Abraham, con 99 años, corrió hacia tres desconocidos? (Génesis 17:24; 18:1–15) (investigación 2026-11-11: 671,8K, 40x, en 45 s con título «¿Por qué…?»)
 
 ### Datos y curiosidades
 - 5 datos de la Biblia que casi nadie sabe (idiomas, autores, capítulo más largo y más corto, años de escritura)
@@ -33,6 +37,7 @@ Alternar historias y datos, todos en estilo clawd-papel (obligatorio desde 2026-
 - 5 frases que usas sin saber que vienen de la Biblia (Éxodo 21:24; Mateo 27:24; Mateo 4:4; Juan 8:7; Mateo 5:14) (investigación 2026-11-03)
 - Matusalén y el diluvio: la cuenta que casi nadie hace (187 + 182 + 600 = 969) (Génesis 5:25–29; 7:6) (investigación 2026-11-07: 264,4K en un canal de 4K; no antes del 14 nov, para separarlo del video de las edades)
 - (publicado 2026-11-09) Los gigantes de la Biblia, con sus medidas: Goliat, la cama de Og y los espías «como langostas» (1 Samuel 17:4; Deuteronomio 3:11; Números 13:33) (investigación 2026-11-07: 366,8K; sin teorías sobre los nefilim)
+- Salomón en cifras: 3.000 proverbios, 1.005 cantares, 700 esposas… y un corazón desviado (1 Reyes 3:9–12; 4:32; 6:38; 11:3–4) (investigación 2026-11-11: 421,9K, 123x en 57 s; sin morbo y sin mencionar los 666 talentos)
 
 ## Archivado: IA (retirado el 2026-11-02, no usar)
 Nicho: cómo usar IA (sobre todo Claude) para ganar dinero, conseguir clientes y trabajar mejor, sin saber programar. Público: creadores y emprendedores de Latinoamérica.
