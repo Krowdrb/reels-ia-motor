@@ -1,0 +1,19 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Portada · La mujer samaritana</title>
+<style>
+@font-face { font-family: Cinzel; src: url(../fonts/Cinzel-VF.ttf); font-weight: 400 900; }
+@font-face { font-family: Playfair; src: url(../fonts/PlayfairDisplay-Italic-VF.ttf); font-weight: 400 900; font-style: italic; }
+html, body { margin: 0; background: #000; overflow: hidden; }
+#root { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; transform-origin: 0 0; overflow: hidden; }
+#c { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+#t { position: absolute; left: 40px; right: 40px; top: 270px; text-align: center; font-family: Cinzel; color: #fff4dc; text-shadow: 0 0 4px rgba(20,8,0,.95), 0 5px 20px rgba(20,8,0,.9), 0 0 54px rgba(20,8,0,.7); }
+#t .a { font-weight: 900; font-size: 118px; line-height: 1.04; color: #ffd27a; white-space: nowrap; }
+#t .b { font-weight: 900; font-size: 118px; line-height: 1.04; white-space: nowrap; }
+#t .c { font-family: Playfair; font-style: italic; font-weight: 600; font-size: 56px; margin-top: 18px; }
+</style>
+<script type="importmap">{ "imports": { "three": "/node_modules/three/build/three.module.js", "three/addons/": "/node_modules/three/examples/jsm/" } }</script>
+</head><body><div id="root"><canvas id="c"></canvas>
+<div id="t"><div class="a">NUNCA LA VIO.</div><div class="b">¿CÓMO SABÍA?</div><div class="c">Juan 4</div></div></div>
+<script>document.getElementById('root').style.transform = `scale(${innerWidth / 1080})`;</script>
+<script type="module" src="cover.js"></script>
+</body></html>

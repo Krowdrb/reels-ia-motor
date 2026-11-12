@@ -20,7 +20,7 @@ Alternar historias y datos, todos en estilo clawd-papel (obligatorio desde 2026-
 - (publicado 2026-11-08) Mefiboset: el hijo del enemigo que comió en la mesa del rey (2 Samuel 4:4; 9:1–13) (investigación 2026-11-07: 12x y 15x en dos canales distintos, 12 % de engagement)
 - La mujer de Lot: ¿por qué miró atrás? (Génesis 19:15–26; Lucas 17:32) (investigación 2026-11-07: 41x con título en pregunta)
 - Las tres tentaciones de Jesús en el desierto (Mateo 4:1–11; Lucas 4:1–13) (investigación 2026-11-07: 429x y 407,5K en otro canal; Vida de Jesús)
-- La samaritana: el desconocido del pozo que conocía su vida (Juan 4:1–42) (investigación 2026-11-11: outlier en dos canales, 63x y 5,8M/27x; Vida de Jesús)
+- (hecho 2026-11-12, prueba SOLO VIDEO, no publicado) La samaritana: el desconocido del pozo que conocía su vida (Juan 4:1–42) (investigación 2026-11-11: outlier en dos canales, 63x y 5,8M/27x; Vida de Jesús)
 - El único que se quedó: el discípulo amado al pie de la cruz (Juan 19:25–27; Mateo 26:56) (investigación 2026-11-11: 755,3K, 172x, 1,3K vistas/h; Vida de Jesús; decir «que la tradición identifica con Juan»)
 - Agar: la esclava a la que Dios vio (Génesis 16:1–13; 21:14–19) (investigación 2026-11-11: 293K, 144x, 10 % de engagement; poco conocida: gancho con giro)
 - ¿Por qué Abraham, con 99 años, corrió hacia tres desconocidos? (Génesis 17:24; 18:1–15) (investigación 2026-11-11: 671,8K, 40x, en 45 s con título «¿Por qué…?»)
