@@ -37,7 +37,7 @@ Alternar historias y datos, todos en estilo clawd-papel (obligatorio desde 2026-
 - 5 frases que usas sin saber que vienen de la Biblia (Éxodo 21:24; Mateo 27:24; Mateo 4:4; Juan 8:7; Mateo 5:14) (investigación 2026-11-03)
 - Matusalén y el diluvio: la cuenta que casi nadie hace (187 + 182 + 600 = 969) (Génesis 5:25–29; 7:6) (investigación 2026-11-07: 264,4K en un canal de 4K; no antes del 14 nov, para separarlo del video de las edades)
 - (publicado 2026-11-09) Los gigantes de la Biblia, con sus medidas: Goliat, la cama de Og y los espías «como langostas» (1 Samuel 17:4; Deuteronomio 3:11; Números 13:33) (investigación 2026-11-07: 366,8K; sin teorías sobre los nefilim)
-- Salomón en cifras: 3.000 proverbios, 1.005 cantares, 700 esposas… y un corazón desviado (1 Reyes 3:9–12; 4:32; 6:38; 11:3–4) (investigación 2026-11-11: 421,9K, 123x en 57 s; sin morbo y sin mencionar los 666 talentos)
+- (hecho 2026-11-13, prueba SOLO VIDEO, no publicado) Salomón en cifras: 3.000 proverbios, 1.005 cantares, 700 esposas… y un corazón desviado (1 Reyes 3:9–12; 4:32; 6:38; 11:3–4) (investigación 2026-11-11: 421,9K, 123x en 57 s; sin morbo y sin mencionar los 666 talentos)
 - (hecho 2026-11-11, prueba SOLO VIDEO, no publicado) ¿Qué tan grande era el arca de Noé? 300 × 50 × 30 codos (~135 × 22 × 13 m), 3 pisos, 8 personas, 40 días de lluvia y 150 días de aguas (Génesis 6:14–16; 7:6, 12–13, 24; 8:4, 11; 9:13) (métricas 2026-11-11: dato con personaje famoso + cifra)
 
 ## Archivado: IA (retirado el 2026-11-02, no usar)
