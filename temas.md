@@ -26,7 +26,7 @@ Alternar historias y datos, todos en estilo clawd-papel (obligatorio desde 2026-
 - ¿Por qué Abraham, con 99 años, corrió hacia tres desconocidos? (Génesis 17:24; 18:1–15) (investigación 2026-11-11: 671,8K, 40x, en 45 s con título «¿Por qué…?»)
 
 ### Datos y curiosidades
-- 5 datos de la Biblia que casi nadie sabe (idiomas, autores, capítulo más largo y más corto, años de escritura)
+- (hecho 2026-11-14, prueba SOLO VIDEO, no publicado) 5 datos de la Biblia que casi nadie sabe (idiomas, autores, capítulo más largo y más corto, años de escritura)
 - ¿Por qué la Biblia católica tiene más libros que la evangélica? (explicado sin polémica)
 - (publicado 2026-11-07) El hombre que más vivió según la Biblia: Matusalén y las edades bíblicas (Génesis 5:27; Salmo 90:10–12)
 - Los 12 apóstoles en 60 segundos
