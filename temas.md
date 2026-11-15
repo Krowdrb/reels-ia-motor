@@ -24,6 +24,8 @@ Alternar historias y datos, todos en estilo clawd-papel (obligatorio desde 2026-
 - El único que se quedó: el discípulo amado al pie de la cruz (Juan 19:25–27; Mateo 26:56) (investigación 2026-11-11: 755,3K, 172x, 1,3K vistas/h; Vida de Jesús; decir «que la tradición identifica con Juan»)
 - Agar: la esclava a la que Dios vio (Génesis 16:1–13; 21:14–19) (investigación 2026-11-11: 293K, 144x, 10 % de engagement; poco conocida: gancho con giro)
 - ¿Por qué Abraham, con 99 años, corrió hacia tres desconocidos? (Génesis 17:24; 18:1–15) (investigación 2026-11-11: 671,8K, 40x, en 45 s con título «¿Por qué…?»)
+- Pedro y Judas: los dos le fallaron a Jesús la misma noche… y solo uno volvió (Mateo 26:14–16, 47–50, 69–75; 27:3–5; Juan 21:15–17) (investigación 2026-11-15: Pedro 406K en TikTok en 60 días; estructura A vs B, 3,05M en 23 s; Vida de Jesús; lo de Judas en una frase sobria)
+- La noche de los 185.000: el rey Ezequías pone la carta delante de Dios (2 Reyes 19:14–19, 32–36; Isaías 37) (investigación 2026-11-15: «The Angel Who Killed 185,000 Assyrians in One Night» 262K, 11,4×; la cifra una vez, sin morbo)
 
 ### Datos y curiosidades
 - (hecho 2026-11-14, prueba SOLO VIDEO, no publicado) 5 datos de la Biblia que casi nadie sabe (idiomas, autores, capítulo más largo y más corto, años de escritura)
@@ -39,6 +41,9 @@ Alternar historias y datos, todos en estilo clawd-papel (obligatorio desde 2026-
 - (publicado 2026-11-09) Los gigantes de la Biblia, con sus medidas: Goliat, la cama de Og y los espías «como langostas» (1 Samuel 17:4; Deuteronomio 3:11; Números 13:33) (investigación 2026-11-07: 366,8K; sin teorías sobre los nefilim)
 - (hecho 2026-11-13, prueba SOLO VIDEO, no publicado) Salomón en cifras: 3.000 proverbios, 1.005 cantares, 700 esposas… y un corazón desviado (1 Reyes 3:9–12; 4:32; 6:38; 11:3–4) (investigación 2026-11-11: 421,9K, 123x en 57 s; sin morbo y sin mencionar los 666 talentos)
 - (hecho 2026-11-11, prueba SOLO VIDEO, no publicado) ¿Qué tan grande era el arca de Noé? 300 × 50 × 30 codos (~135 × 22 × 13 m), 3 pisos, 8 personas, 40 días de lluvia y 150 días de aguas (Génesis 6:14–16; 7:6, 12–13, 24; 8:4, 11; 9:13) (métricas 2026-11-11: dato con personaje famoso + cifra)
+- María de Betania y el perfume de 300 denarios: casi un año de sueldo a los pies de Jesús (Juan 12:1–8; Marcos 14:3–9; Mateo 20:2) (investigación 2026-11-15: «¿Por qué María usó su cabello…?» 82K en 22 días, 3,2×; dato de dinero + Vida de Jesús + Mujeres de la Biblia)
+- Job en cifras: 7.000 ovejas, 3.000 camellos… lo perdió todo en un día y recibió el doble (Job 1:2–3, 13–22; 42:10–17) (investigación 2026-11-15: «Mi nombre es Job y esta es mi historia» 4,47M, histórico; máximo 3 cifras: 7.000 → 14.000 ovejas, 3.000 → 6.000 camellos, 140 años más)
+- ¿Cuántos ángeles tienen nombre en la Biblia? Miguel, Gabriel… y Rafael en Tobías (Daniel 9:21; 10:13; Lucas 1:19, 26–37; Judas 9; Tobías 12:15) (investigación 2026-11-15: «Every Angel in the Bible» 4,8M; solo canon, sin Uriel ni jerarquías; lo de Tobías, sin polémica)
 
 ## Archivado: IA (retirado el 2026-11-02, no usar)
 Nicho: cómo usar IA (sobre todo Claude) para ganar dinero, conseguir clientes y trabajar mejor, sin saber programar. Público: creadores y emprendedores de Latinoamérica.
