@@ -14,26 +14,26 @@ Este archivo lo mantiene el analista de métricas. Dentro de la Biblia, se cambi
 Con menos datos se anota como «nicho candidato en prueba» y se le dedica 1 de cada 3 videos.
 
 ## Ranking de subnichos y tipos de tema (de los videos de todas las páginas conectadas)
-Actualizado 2026-11-15 00:08 UTC (14 nov 19:08 Bogotá), últimos 90 días (detalle en metricas/2026-11-15.md). Vistas = TikTok + Facebook + YouTube; **YouTube sin lectura nueva** (Metricool lo da en null y no se usó vidIQ, 15 créditos): se usan los valores del 12 nov. Retención = tiempo medio visto en Facebook / duración (TikTok no da retención, alcance ni fuentes; % de video completo sin dato en todas las redes). «×» = frente a la mediana de «Biblia: historias» con >72 h (547, 11 videos; retención 9,9 %).
+Actualizado 2026-11-16 00:08 UTC (15 nov 19:08 Bogotá), últimos 90 días (detalle en metricas/2026-11-16.md). Vistas = TikTok + Facebook + YouTube; **YouTube sin lectura nueva** (Metricool lo da en null y no se usó vidIQ, 15 créditos): se usan los valores del 12 nov. Retención = tiempo medio visto en Facebook / duración (TikTok no da retención, alcance ni fuentes; % de video completo sin dato en todas las redes). «×» = frente a la mediana de «Biblia: historias» con >72 h (547, 11 videos; retención 9,9 %).
 
 | Subnicho / tipo de tema | Videos (>72 h) | Mediana de vistas | Retención media | Engagement | Veredicto |
 |---|---|---|---|---|---|
-| **Biblia: datos** (total) | 3 (3) | **1.154** | **11,0 %** | 4,3 % | **PRIORITARIO (cumple la regla desde el 14 nov: 2,11×, retención ≥ 9,9 %)** |
-| · Curiosidades con cifras sobre un personaje (Judas, Matusalén, Goliat) | 3 (3) | 1.154 | 11,0 % | 4,3 % | Los 3 mejores títulos de YouTube; gigantes, la retención más baja (8,6 %) |
-| · Curiosidades generales del libro (biblia-en-5-datos) | 0 | — | — | — | Sin publicar; se mide aparte (5 datos, sin personaje central) |
-| **Biblia: historias** (total) | 11 (11) | 547 | 9,9 % | 5,0 % | Base de comparación |
+| **Biblia: datos** (total) | 4 (3) | **1.155** | **11,0 %** | 4,3 % | **PRIORITARIO (cumple la regla: 2,11×, retención ≥ 9,9 %)**, solo por «personaje + cifra» |
+| · **Curiosidades con cifras sobre un personaje** (Judas, Matusalén, Goliat) | 3 (3) | 1.155 | 11,0 % | 4,3 % | **Tipo a priorizar.** Los 3 mejores títulos de YouTube |
+| · Curiosidades generales del libro (biblia-en-5-datos) | 1 (0) | 162 en TikTok a 7 h | — | 1,9 % | Señal floja (subido solo a TikTok, corte de 29 s, sin descripción). No se repite el formato por ahora |
+| **Biblia: historias** (total) | 12 (11) | 547 | 9,9 % | 5,0 % | Base de comparación |
 | · **Vida de Jesús** | 4 (4) | **830** | 10,3 % | **6,4 %** | **Cumple la regla al límite: 1,52×** → tipo prioritario dentro de historias, frágil |
 | · Antiguo Testamento | 6 (6) | 519 | 10,1 % | 4,1 % | 0,95× |
 | · Parábolas | 1 (1) | 540 | 7,0 % | 4,3 % | 0,99× |
-| · Mujeres de la Biblia | 0 | — | — | — | **Candidato en prueba** (mujer-samaritana, por publicar) |
+| · Mujeres de la Biblia | 1 probable (0) | 187 en TikTok a 7 h | — | 7,0 % | **Candidato en prueba**; primera señal (video de 46 s sin descripción, probablemente maria-de-betania o mujer-samaritana) |
 | Desamor (fuera de nicho, solo dato) | 6 (6) | 549 | 12,2 % | 3,9 % | No se produce |
-| IA (fuera de nicho, retirada, solo dato) | 4 (4) | 533 | 6,1 % | 2,4 % | Solo dato |
+| IA (fuera de nicho, retirada, solo dato) | 4 (4) | 534 | 6,1 % | 2,4 % | Solo dato |
 
 ## Subnicho y tema a priorizar
-- **Subnicho prioritario: «Biblia: datos» (curiosidades con cifras sobre un personaje o relato famoso, máximo 3 cifras).** Cumple la regla (3 videos de >72 h, 1.154 = 2,11×, retención 11,0 % ≥ 9,9 %). Va al menos en 1 de cada 2 videos.
+- **Subnicho prioritario: «Biblia: datos», tipo «personaje famoso + máximo 3 cifras».** Cumple la regla (3 videos de >72 h, 1.155 = 2,11×, retención 11,0 % ≥ 9,9 %). Va al menos en 1 de cada 2 videos. Las curiosidades generales sin personaje (5-datos) no se repiten hasta medir el video completo en las 3 redes.
 - **Dentro de «Biblia: historias»: Vida de Jesús**, al límite (1,52×). Solo relatos famosos con giro o cifra en la primera frase. En el Antiguo Testamento, solo personajes famosos con cifra o giro.
-- **Candidato en prueba (1 de cada 3): «Mujeres de la Biblia / gracia al marginado»**, empezando por mujer-samaritana (cuenta también como Vida de Jesús). 0 videos propios; evidencia externa (investigación 2026-11-11, Agar 144x con 10 % de engagement). Se decide con 3 videos de >72 h.
-- **Rotación:** datos → Vida de Jesús (o candidato) → datos → otra historia. Último publicado: gigantes (datos, `cinematico`, 11 nov 00:30 UTC); **96 h sin publicar a las 00:08 UTC del 15 nov y nada programado**. **Ningún `clawd-papel` del sistema se ha publicado** (5 renderizados; solo biblia-en-5-datos tiene la voz correcta, y los MP4 no están en el contenedor). Siguiente: biblia-en-5-datos (datos) en cuanto haya MP4; luego mujer-samaritana (Vida de Jesús + candidato) con la voz rehecha.
+- **Candidato en prueba (1 de cada 3): «Mujeres de la Biblia / gracia al marginado».** maria-de-betania (15 nov, `ef_dora` limpia) es el primero; un video de 46 s, probablemente suyo, salió solo en TikTok el 15 nov (187 vistas y 7,0 % de engagement a 7 h). Se decide con 3 videos de >72 h en las 3 redes.
+- **Rotación:** datos → Vida de Jesús (o candidato) → datos → otra historia. Último producido: maria-de-betania (historia, 15 nov) → **hoy, 16 nov, toca un dato** (propuesta: Job en cifras, 7.000 → 14.000 ovejas). Última publicación completa en las 3 redes: gigantes (11 nov 00:31 UTC); el 15 nov salieron 2 `clawd-papel` **solo en TikTok**, sin descripción y fuera del flujo. Nada programado en Metricool.
 - **IA (todo): retirada el 2026-11-02 por decisión del dueño.**
 
 ## Estilo por subnicho
@@ -41,10 +41,10 @@ Por decisión del dueño (2026-11-08), **todos los subnichos van en `clawd-papel
 
 | Estilo | Videos (>72 h) | Vistas | Retención FB | Engagement | Nota |
 |---|---|---|---|---|---|
-| **clawd-papel** | 1 (1) | 391 a 142 h (YT 205, TikTok 183, FB 3) | sin dato | 3,6 % | Solo Jonás, del dueño (57 s, «SÍ o NO», fuera de Metricool). Del sistema: **0 publicados** (5 renderizados). Sin prueba válida del estilo |
-| cinematico (anterior, solo dato) | 7 (7) | mediana 1.082 | 10,8 % | 5,2 % | Incluye los 3 de datos |
+| **clawd-papel** | 3 (1) | Jonás 393 a 166 h; del sistema 187 y 162 en TikTok a ~7 h | sin dato | 3,6 % / 7,0 % / 1,9 % | Primeros del sistema, solo TikTok: a 7 h ya cerca del piso de 72 h de los `cinematico` (178–249). En YouTube y FB, sin medición |
+| cinematico (anterior, solo dato) | 7 (7) | mediana 1.082 | 10,8 % | 5,2 % | Incluye los 3 de datos; su ventaja venía de YouTube |
 | otro (dueño) en la Biblia | 5 (5) | mediana 540 | 9,3 % | 5,5 % | Resurrección 1.826 |
-| personajes2d / motion | 1 / 4 | 577 / 533 | 9,8 % / 6,1 % | 0,9 % / 2,4 % | Dato |
+| personajes2d / motion | 1 / 4 | 578 / 534 | 9,8 % / 6,1 % | 0,9 % / 2,4 % | Dato |
 
 ## Historial de cambios
 - 2026-10-31: nicho inicial.
@@ -65,3 +65,4 @@ Por decisión del dueño (2026-11-08), **todos los subnichos van en `clawd-papel
 - 2026-11-13 (12 nov 19:08 Bogotá): sin cambio de prioridad. «Vida de Jesús» sigue cumpliendo la regla, pero al límite: con tentaciones a 72 h (448, YouTube 74) su mediana baja de 1.079 a 828 = 1,52× la de historias (546), retención 10,3 % ≥ 9,9 %. «Biblia: datos» sigue como candidato principal (1.152 = 2,11×, 11,1 %; decisión el 14 nov 00:30 UTC). Señales: gigantes, 84 vistas en FB a 48 h con 8,7 % de retención; 48 h sin publicar y 3 `clawd-papel` del sistema sin publicar. YouTube sin lectura (Metricool en null y sin créditos de vidIQ).
 - 2026-11-14 (13 nov 19:08 Bogotá): **«Biblia: datos» cumple la regla y pasa a subnicho prioritario** al pasar gigantes las 72 h (14 nov 00:31 UTC): 3 videos, mediana 1.154 = 2,11× la de historias (547) y retención 11,1 % ≥ 9,9 % (dinero 1.154, edades 1.494, gigantes 1.148 con YouTube de 24 h). «Vida de Jesús» sigue cumpliendo al límite (828 = 1,51×). Se abre **«Mujeres de la Biblia» como candidato en prueba** (0 videos propios; Agar 144x en la investigación 2026-11-11; mujer-samaritana lista). Señales: 72 h sin publicar y nada programado; los 4 `clawd-papel` del sistema llevan voz descartada (`em_santa` o efecto robótico) y hay que rehacerla con `ef_dora` sin efecto. YouTube sin lectura (Metricool en null y sin créditos de vidIQ).
 - 2026-11-15 (14 nov 19:08 Bogotá): sin cambio de prioridad ni de candidato (datos 2,11×; Vida de Jesús 1,52×; «Mujeres de la Biblia» en prueba con 0 videos). **Se corrige la sección de estilo**: ya no dice `cinematico`; el estilo obligatorio desde el 2026-11-08 es `clawd-papel` (Clawd narrador, papel recortado con lemo-opuscar, título solo al inicio, animación + subtítulos con palabras clave doradas, voz `ef_dora` es-419 sin efectos). Se separa en datos el tipo «curiosidades generales del libro» (biblia-en-5-datos) del de «personaje + cifra». Señales: 96 h sin publicar, nada programado, 5 `clawd-papel` sin publicar y sin MP4 en el contenedor. YouTube sin lectura.
+- 2026-11-16 (15 nov 19:08 Bogotá): sin cambio de prioridad ni de candidato (datos 2,11×; Vida de Jesús 1,52×). **Se precisa el tipo a priorizar en datos: «personaje famoso + máximo 3 cifras»** (los 3 videos que cumplen la regla son de ese tipo; biblia-en-5-datos, curiosidades generales, 1,9 % de engagement a 7 h). Primeros `clawd-papel` del sistema en una red: 2 en TikTok el 15 nov (187 y 162 a ~7 h, cerca del piso de 72 h de los `cinematico`), sin FB ni YouTube, sin descripción, uno recortado a 29 s y fuera del flujo. «Mujeres de la Biblia» suma su primera señal probable (46 s, 7,0 % de engagement). YouTube sin lectura.
