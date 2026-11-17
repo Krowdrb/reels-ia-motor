@@ -24,7 +24,7 @@ Alternar historias y datos, todos en estilo clawd-papel (obligatorio desde 2026-
 - El único que se quedó: el discípulo amado al pie de la cruz (Juan 19:25–27; Mateo 26:56) (investigación 2026-11-11: 755,3K, 172x, 1,3K vistas/h; Vida de Jesús; decir «que la tradición identifica con Juan»)
 - Agar: la esclava a la que Dios vio (Génesis 16:1–13; 21:14–19) (investigación 2026-11-11: 293K, 144x, 10 % de engagement; poco conocida: gancho con giro)
 - ¿Por qué Abraham, con 99 años, corrió hacia tres desconocidos? (Génesis 17:24; 18:1–15) (investigación 2026-11-11: 671,8K, 40x, en 45 s con título «¿Por qué…?»)
-- Pedro y Judas: los dos le fallaron a Jesús la misma noche… y solo uno volvió (Mateo 26:14–16, 47–50, 69–75; 27:3–5; Juan 21:15–17) (investigación 2026-11-15: Pedro 406K en TikTok en 60 días; estructura A vs B, 3,05M en 23 s; Vida de Jesús; lo de Judas en una frase sobria)
+- (hecho 2026-11-17, prueba SOLO VIDEO, no publicado) Pedro y Judas: los dos le fallaron a Jesús la misma noche… y solo uno volvió (Mateo 26:14–16, 47–50, 69–75; 27:3–5; Juan 21:15–17) (investigación 2026-11-15: Pedro 406K en TikTok en 60 días; estructura A vs B, 3,05M en 23 s; Vida de Jesús; lo de Judas en una frase sobria)
 - La noche de los 185.000: el rey Ezequías pone la carta delante de Dios (2 Reyes 19:14–19, 32–36; Isaías 37) (investigación 2026-11-15: «The Angel Who Killed 185,000 Assyrians in One Night» 262K, 11,4×; la cifra una vez, sin morbo)
 
 ### Datos y curiosidades
