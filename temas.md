@@ -12,7 +12,7 @@ Alternar historias y datos, todos en estilo clawd-papel (obligatorio desde 2026-
 - Los tres jóvenes en el horno de fuego (Daniel 3)
 - (publicado 2026-11-06) Pedro camina sobre el agua (Mateo 14:22–33)
 - Rut: la lealtad que cambió una familia (Rut 1–4)
-- Ester: la reina que arriesgó su vida (Ester 4–7)
+- Ester: la reina que arriesgó su vida (Ester 4–7) (investigación 2026-11-19: contarlo como «Ester en cifras» para el candidato Mujeres de la Biblia: 127 provincias, 30 días sin ser llamada, 3 días de ayuno → el cetro de oro (Ester 1:1; 4:11, 14, 16; 5:1–3); catálogos de mujeres 195K y 246K, 9,5×; nombre en el gancho y en el título)
 - (video de prueba 2026-11-10, no publicado) El buen samaritano (Lucas 10:25–37)
 - El hijo pródigo (Lucas 15:11–32; guion listo en guiones/hijo-prodigo.json, el dueño lo canceló el 1 nov: revisarlo antes de reusarlo)
 - La hija de Jefté: la promesa que nunca debió hacer (Jueces 11:29–40) (investigación 2026-11-03: outlier 38x en TikTok y 49,8x en Instagram)
@@ -26,6 +26,7 @@ Alternar historias y datos, todos en estilo clawd-papel (obligatorio desde 2026-
 - ¿Por qué Abraham, con 99 años, corrió hacia tres desconocidos? (Génesis 17:24; 18:1–15) (investigación 2026-11-11: 671,8K, 40x, en 45 s con título «¿Por qué…?»)
 - (hecho 2026-11-17, prueba SOLO VIDEO, no publicado) Pedro y Judas: los dos le fallaron a Jesús la misma noche… y solo uno volvió (Mateo 26:14–16, 47–50, 69–75; 27:3–5; Juan 21:15–17) (investigación 2026-11-15: Pedro 406K en TikTok en 60 días; estructura A vs B, 3,05M en 23 s; Vida de Jesús; lo de Judas en una frase sobria)
 - La noche de los 185.000: el rey Ezequías pone la carta delante de Dios (2 Reyes 19:14–19, 32–36; Isaías 37) (investigación 2026-11-15: «The Angel Who Killed 185,000 Assyrians in One Night» 262K, 11,4×; la cifra una vez, sin morbo)
+- Ana: la viuda que esperó hasta los 84 años y reconoció al niño en el templo (Lucas 2:36–38) (investigación 2026-11-19: Mujeres de la Biblia + Navidad, para finales de diciembre; Shorts de fecha con nombre famoso, 53K–268K en Historias Católicas; decir «ochenta y cuatro años, dice el texto», sin elegir entre RVR1960 y NVI)
 
 ### Datos y curiosidades
 - (hecho 2026-11-14, prueba SOLO VIDEO, no publicado) 5 datos de la Biblia que casi nadie sabe (idiomas, autores, capítulo más largo y más corto, años de escritura)
@@ -44,6 +45,10 @@ Alternar historias y datos, todos en estilo clawd-papel (obligatorio desde 2026-
 - María de Betania y el perfume de 300 denarios: casi un año de sueldo a los pies de Jesús (Juan 12:1–8; Marcos 14:3–9; Mateo 20:2) (investigación 2026-11-15: «¿Por qué María usó su cabello…?» 82K en 22 días, 3,2×; dato de dinero + Vida de Jesús + Mujeres de la Biblia)
 - (hecho 2026-11-16, prueba SOLO VIDEO, no publicado) Job en cifras: 7.000 ovejas, 3.000 camellos… lo perdió todo en un día y recibió el doble (Job 1:2–3, 13–22; 42:10–17) (investigación 2026-11-15: «Mi nombre es Job y esta es mi historia» 4,47M, histórico; máximo 3 cifras: 7.000 → 14.000 ovejas, 3.000 → 6.000 camellos, 140 años más)
 - ¿Cuántos ángeles tienen nombre en la Biblia? Miguel, Gabriel… y Rafael en Tobías (Daniel 9:21; 10:13; Lucas 1:19, 26–37; Judas 9; Tobías 12:15) (investigación 2026-11-15: «Every Angel in the Bible» 4,8M; solo canon, sin Uriel ni jerarquías; lo de Tobías, sin polémica)
+- Pedro y el «¿siete veces?»: 70 × 7 y la deuda de 10.000 talentos frente a 100 denarios (Mateo 18:21–35; Mateo 20:2) (investigación 2026-11-19: «Why did Jesus say forgive 70 × 7 times?» 57K, 51,8×; Pedro + cifra + dinero, nuestras dos mejores fórmulas; sin numerología del 490; «imposible de pagar», y si se da equivalencia, aproximada)
+- Pedro y los 153 peces: la red que no se rompió (Juan 21:1–14) (investigación 2026-11-19: «Why Jesus caught exactly 153 fish» 172K, 156,4×; máx. 3 cifras: una noche sin nada, 200 codos (~90 m), 153; sin teorías sobre el significado; publicar al menos una semana después de pedro-y-judas)
+- ¿Cuántos magos había? La Biblia no dice tres: cuenta los regalos (Mateo 2:1–12) (investigación 2026-11-19: Navidad y Reyes, publicar antes del 6 de enero; la tradición se nombra con respeto, sin «te mintieron»)
+- Moisés: tres vidas de 40 años, príncipe, pastor y libertador (Hechos 7:20–36; Éxodo 2:11–15; 3:1–10) (investigación 2026-11-19: Moisés 34,6M, el personaje bíblico animado más visto en español, Mi Primera Biblia; ángulo = el giro de cada etapa, no la edad final, para no repetir edades-en-la-biblia)
 
 ## Archivado: IA (retirado el 2026-11-02, no usar)
 Nicho: cómo usar IA (sobre todo Claude) para ganar dinero, conseguir clientes y trabajar mejor, sin saber programar. Público: creadores y emprendedores de Latinoamérica.
