@@ -1,0 +1,19 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Portada · Ester en cifras</title>
+<style>
+@font-face { font-family: Cinzel; src: url(../fonts/Cinzel-VF.ttf); font-weight: 400 900; }
+@font-face { font-family: Playfair; src: url(../fonts/PlayfairDisplay-Italic-VF.ttf); font-weight: 400 900; font-style: italic; }
+html, body { margin: 0; background: #000; overflow: hidden; }
+#c { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+#t { position: absolute; left: 40px; right: 40px; top: 270px; text-align: center; font-family: Cinzel; color: #fbf0d8; text-shadow: 0 0 4px rgba(10,4,14,.95), 0 5px 20px rgba(10,4,14,.9), 0 0 54px rgba(10,4,14,.7); }
+#t .a { font-weight: 900; font-size: 120px; line-height: 1.02; white-space: nowrap; }
+#t .b { font-weight: 900; font-size: 168px; line-height: 1.02; white-space: nowrap; margin-top: 4px; }
+#t .b span { color: #ffd27a; }
+#t .c { font-weight: 800; font-size: 104px; line-height: 1.08; white-space: nowrap; margin-top: 6px; }
+</style>
+<script type="importmap">{ "imports": { "three": "/node_modules/three/build/three.module.js", "three/addons/": "/node_modules/three/examples/jsm/" } }</script>
+<script>if (innerWidth < 1080) document.documentElement.style.zoom = innerWidth / 1080;   /* low-res previews (--size 540x960) see the whole frame */</script>
+</head><body><canvas id="c"></canvas>
+<div id="t"><div class="a">ESTER:</div><div class="b"><span>30</span> DÍAS</div><div class="c">SIN LLAMARLA</div></div>
+<script type="module" src="cover.js"></script>
+</body></html>
