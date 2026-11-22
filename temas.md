@@ -26,6 +26,7 @@ Alternar historias y datos, todos en estilo clawd-papel (obligatorio desde 2026-
 - ¿Por qué Abraham, con 99 años, corrió hacia tres desconocidos? (Génesis 17:24; 18:1–15) (investigación 2026-11-11: 671,8K, 40x, en 45 s con título «¿Por qué…?»)
 - (hecho 2026-11-17, prueba SOLO VIDEO, no publicado) Pedro y Judas: los dos le fallaron a Jesús la misma noche… y solo uno volvió (Mateo 26:14–16, 47–50, 69–75; 27:3–5; Juan 21:15–17) (investigación 2026-11-15: Pedro 406K en TikTok en 60 días; estructura A vs B, 3,05M en 23 s; Vida de Jesús; lo de Judas en una frase sobria)
 - La noche de los 185.000: el rey Ezequías pone la carta delante de Dios (2 Reyes 19:14–19, 32–36; Isaías 37) (investigación 2026-11-15: «The Angel Who Killed 185,000 Assyrians in One Night» 262K, 11,4×; la cifra una vez, sin morbo)
+- (hecho 2026-11-22, prueba SOLO VIDEO, no publicado) Lázaro: cuatro días en la tumba… y Jesús lloró antes de llamarlo (Juan 11:1–44; 11:17, 25, 35, 39, 43–44) (métricas 2026-11-22: Vida de Jesús 1,52×, historia sugerida por el analista)
 - Ana: la viuda que esperó hasta los 84 años y reconoció al niño en el templo (Lucas 2:36–38) (investigación 2026-11-19: Mujeres de la Biblia + Navidad, para finales de diciembre; Shorts de fecha con nombre famoso, 53K–268K en Historias Católicas; decir «ochenta y cuatro años, dice el texto», sin elegir entre RVR1960 y NVI)
 
 ### Datos y curiosidades
