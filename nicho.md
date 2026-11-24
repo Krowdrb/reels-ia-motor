@@ -14,38 +14,38 @@ Este archivo lo mantiene el analista de métricas. Dentro de la Biblia, se cambi
 Con menos datos se anota como «nicho candidato en prueba» y se le dedica 1 de cada 3 videos.
 
 ## Ranking de subnichos y tipos de tema (de los videos de todas las páginas conectadas)
-Actualizado 2026-11-23 00:10 UTC (22 nov 19:10 Bogotá), últimos 90 días (detalle en metricas/2026-11-23.md). Sin cambios de mediana: nada se publica desde el 15 nov. Vistas = TikTok + Facebook + YouTube; **YouTube sin lectura nueva** (Metricool en null, vidIQ sin créditos): valores del 12 nov. Retención = tiempo medio en Facebook / duración (TikTok no da retención, alcance ni fuentes; % completo sin dato). «×» = frente a la mediana de «Biblia: historias» con >72 h y YouTube (547, 11 videos; retención 9,9 %).
+Actualizado 2026-11-24 00:09 UTC (23 nov 19:09 Bogotá, «Actualización 23 nov (tarde)» en metricas/2026-11-23.md), últimos 90 días. Sin cambios de veredicto: nada se publica desde el 15 nov (199 h) y nada está programado. Vistas = TikTok + Facebook + YouTube; **YouTube sin lectura nueva** (Metricool en null, vidIQ sin créditos): valores del 12 nov. Retención = tiempo medio en Facebook / duración (TikTok no da retención, alcance ni fuentes; % completo sin dato). «×» = frente a la mediana de «Biblia: historias» con >72 h y YouTube (548, 11 videos; retención 9,9 %).
 
 | Subnicho / tipo de tema | Videos (>72 h) | Mediana de vistas | Retención media | Engagement | Veredicto |
 |---|---|---|---|---|---|
-| **Biblia: datos** (total) | 4 (4) | **1.161** | 10,4 % (11,0 % sin 5-datos) | 3,5 % | **PRIORITARIO (cumple la regla: 2,12×, retención ≥ 9,9 %)**, solo por «personaje + cifra» |
-| · **Personaje famoso + cifra** (Judas, Matusalén, Goliat) | 3 (3) | 1.161 | **11,0 %** | 4,3 % | **Tipo a priorizar** |
+| **Biblia: datos** (total) | 4 (4) | **1.162** | 10,4 % (11,0 % sin 5-datos) | 3,5 % | **PRIORITARIO (cumple la regla: 2,12×, retención ≥ 9,9 %)**, solo por «personaje + cifra» |
+| · **Personaje famoso + cifra** (Judas, Matusalén, Goliat) | 3 (3) | 1.162 | **11,0 %** | 4,3 % | **Tipo a priorizar** |
 | · Curiosidades generales (biblia-en-5-datos) | 1 (1) | 413 sin YouTube | 8,9 % | **1,0 %** | No se repite |
-| **Biblia: historias** (total) | 12 (12) | 547 | 9,9 % | 5,0 % | Base de comparación |
+| **Biblia: historias** (total) | 12 (12) | 548 | 9,9 % | 5,0 % | Base de comparación |
 | · **Vida de Jesús** | 4 (4) | **832** | 10,3 % | **6,4 %** | **Cumple la regla al límite: 1,52×** → prioritario dentro de historias |
-| · Antiguo Testamento | 6 (6) | 519 | 10,1 % | 4,2 % | 0,95× |
-| · Parábolas | 1 (1) | 546 | 6,9 % | 4,2 % | 1,00× |
+| · Antiguo Testamento | 6 (6) | 520 | 10,1 % | 4,2 % | 0,95× |
+| · Parábolas | 1 (1) | 548 | 6,9 % | 4,2 % | 1,00× |
 | · Mujeres de la Biblia (maria-de-betania) | 1 (1) | 397 sin YouTube | 8,1 % | 3,8 % | **Candidato en prueba**: 1 publicado + 2 producidos (ester-en-cifras, agar-dios-que-ve); ya tiene sus 3 videos, falta publicarlos; no lleva un 4.º |
 | Desamor (fuera de nicho, solo dato) | 6 (6) | 550 | 12,2 % | 3,9 % | No se produce |
-| IA (fuera de nicho, retirada, solo dato) | 4 (4) | 535 | 6,1 % | 2,4 % | Solo dato |
+| IA (fuera de nicho, retirada, solo dato) | 4 (4) | 536 | 6,1 % | 2,4 % | Solo dato |
 
 ## Subnicho y tema a priorizar
-- **Subnicho prioritario: «Biblia: datos», tipo «personaje famoso + máximo 3 cifras»** (3 videos de >72 h, 1.161 = 2,12×, retención 11,0 % ≥ 9,9 %). Al menos 1 de cada 2 videos. Nada de curiosidades generales sin personaje.
-- **Dentro de «Biblia: historias»: Vida de Jesús** (1,52×), con personaje famoso nombrado y giro o cifra en la primera frase. En el AT, solo personajes famosos con cifra o giro.
+- **Subnicho prioritario: «Biblia: datos», tipo «personaje famoso + máximo 3 cifras»** (3 videos de >72 h, 1.162 = 2,12×, retención 11,0 % ≥ 9,9 %). Al menos 1 de cada 2 videos. Nada de curiosidades generales sin personaje.
+- **Dentro de «Biblia: historias»: Vida de Jesús** (1,52×), con personaje famoso nombrado y giro o cifra en la primera frase (Jesús a los 12 años, Caná, José de Nazaret para Adviento). En el AT, solo personajes famosos con cifra o giro.
 - **Candidato en prueba (1 de cada 3): «Mujeres de la Biblia».** Ya tiene sus 3 videos: maria-de-betania (publicado, 397 en TikTok + FB a 151 h, 3,8 s en FB, gancho sin nombre), ester-en-cifras (19 nov) y agar-dios-que-ve (20 nov, prueba SOLO VIDEO del dueño, 42,55 s), ambos sin publicar. **No se produce un 4.º** hasta que los 3 lleven 72 h publicados; entonces se decide con la regla.
-- **Prueba SOLO VIDEO de hoy (22 nov Bogotá, pedida por el dueño; se hace aunque no haya programados, no es incumplimiento):** el último producido (lazaro-cuatro-dias, 22 nov, historia, 44,13 s) fue una historia, así que **toca un DATO · personaje famoso + máximo 3 cifras: Moisés, 40 / 80 / 120** (Hechos 7:23, 30; Éxodo 3:1–10; 7:7; Deuteronomio 34:7), gancho «Moisés tenía ochenta años… cuando Dios lo llamó desde una zarza», ángulo «para Dios no es tarde», ≤ 45 s y ≤ 100 palabras, sin repetir la lista de edades. Personaje nuevo (no repite Judas, Matusalén, Goliat, Salomón, Job, Ester, Noé ni Pedro).
-- **Cola lista (7, voz limpia), por publicar a las 19:30 Bogotá, uno por día:** matusalen-y-el-diluvio (dato) → pedro-y-judas (Vida de Jesús) → ester-en-cifras (dato + candidato) → agar-dios-que-ve (AT + candidato) → pedro-setenta-veces-siete (dato + Vida de Jesús) → lazaro-cuatro-dias (Vida de Jesús) → job-en-cifras (dato). **Ninguno tiene MP4 ni portada .jpg en el contenedor**: si se entregaron al dueño como pruebas SOLO VIDEO, él los sube o los devuelve para programar. Fuera de las pruebas que pida el dueño, **no se produce otra hasta que haya al menos 2 programados**. Última publicación: 15 nov 16:52 UTC (175 h); nada programado en Metricool hasta el 8 dic.
+- **Pruebas SOLO VIDEO del 23 nov (pedidas por el dueño; se hacen aunque no haya programados, no es incumplimiento):** (1) **moises-en-cifras** (mañana; dato · personaje + 3 cifras 40/80/120; 44,63 s, 99 palabras, 3.er `clawd-papel` dentro del tope); (2) **la de la tarde: jesus-doce-anos — HISTORIA · Vida de Jesús**, «Jesús a los 12 años: tres días perdido en Jerusalén» (Lucas 2:41–52). Gancho con el nombre primero y las dos cifras del texto («Jesús tenía doce años… y sus padres lo buscaron tres días»), clímax Lc 2:49 con el Padre solo como luz, ≤ 45 s y ≤ 100 palabras. Encaja en la rotación (tras un dato toca historia) y en el calendario de Adviento: **reservarla para el domingo de la Sagrada Familia (27 dic)** o la semana de Navidad.
+- **Cola lista (8, voz limpia), por publicar a las 19:30 Bogotá, uno por día:** matusalen-y-el-diluvio (dato) → pedro-y-judas (Vida de Jesús) → ester-en-cifras (dato + candidato) → agar-dios-que-ve (AT + candidato) → pedro-setenta-veces-siete (dato + Vida de Jesús) → lazaro-cuatro-dias (Vida de Jesús) → moises-en-cifras (dato) → job-en-cifras (dato); jesus-doce-anos aparte, para el 27 dic. **Ninguno tiene MP4 ni portada .jpg en el contenedor**: las pruebas SOLO VIDEO se entregaron al dueño; él los sube o los devuelve a /root/reels-ia-videos para programar. Fuera de las pruebas que pida el dueño, **no se produce otra hasta que haya al menos 2 programados**. Última publicación: 15 nov 16:52 UTC (199 h); nada programado en Metricool hasta el 10 dic.
 - **IA (todo): retirada el 2026-11-02 por decisión del dueño.**
 
 ## Estilo por subnicho
-Por decisión del dueño (2026-11-08), **todos los subnichos van en `clawd-papel`** con voz `ef_dora` sin efectos; los demás estilos solo son dato. Comparación en TikTok + FB (YouTube sin lectura), todos con >72 h (actualizado 2026-11-23, sin cambios).
+Por decisión del dueño (2026-11-08), **todos los subnichos van en `clawd-papel`** con voz `ef_dora` sin efectos; los demás estilos solo son dato. Comparación en TikTok + FB (YouTube sin lectura), todos con >72 h (actualizado 2026-11-24 00:09 UTC, sin cambios).
 
 | Estilo | Videos (>72 h) | TikTok + FB | Retención FB | Engagement | Nota |
 |---|---|---|---|---|---|
 | **clawd-papel** (sistema) | 2 (2) | **405** (413 y 397) | 8,5 % | 2,4 % | Iguala el piso de las redes; −2,3 puntos de retención (ganchos sin nombre famoso); YouTube sin medir (títulos = slug); con 2 videos no se puede juzgar; 7 listos sin publicar |
 | clawd-papel (Jonás, dueño) | 1 (1) | 189 | sin dato (FB 3) | 3,8 % | 394 con YouTube 205† |
 | cinematico (anterior, solo dato) | 7 (7) | 385 | 10,8 % | 5,2 % | Su ventaja (total 1.085) venía de YouTube |
-| otro (dueño) en la Biblia | 5 (5) | 462 | 9,3 % | 5,5 % | Resurrección 1.826 |
+| otro (dueño) en la Biblia | 5 (5) | 463 | 9,3 % | 5,5 % | Resurrección 1.826 |
 | personajes2d / motion | 1 / 4 | 405 / 404 | 9,8 % / 6,1 % | 0,9 % / 2,4 % | Dato |
 
 ## Historial de cambios
@@ -63,3 +63,4 @@ Por decisión del dueño (2026-11-08), **todos los subnichos van en `clawd-papel
 - 2026-11-21 (20 nov 19:08 Bogotá): sin cambio de prioridad (datos · personaje + cifra 2,12×; Vida de Jesús 1,52×). **«Mujeres de la Biblia» completa sus 3 videos** con agar-dios-que-ve (prueba SOLO VIDEO del dueño, 20 nov), pero solo maria-de-betania está publicada (396 sin YouTube a 127 h): sigue en prueba y no se produce un 4.º. `clawd-papel` 404 en TikTok + FB frente a 384 de `cinematico`, retención 8,5 % frente a 10,8 %. Problema principal: distribución (127 h sin publicar, 0 programados, 5 listos sin MP4 en el contenedor, 11 `clawd-papel` producidos y 2 publicados); las pruebas SOLO VIDEO del 20 nov y de hoy son decisión del dueño. YouTube sin lectura.
 - 2026-11-22 (21 nov 19:09 Bogotá): sin cambio de prioridad ni de candidato (datos · personaje + cifra 2,12×; Vida de Jesús 1,52×; «Mujeres de la Biblia» 1 publicado de 3, 397 sin YouTube a 151 h, no lleva un 4.º). `clawd-papel` 405 en TikTok + FB frente a 385 de `cinematico`, retención 8,5 % frente a 10,8 %. Problema principal: distribución (151 h sin publicar, 0 programados, 6 listos sin MP4 en el contenedor, 12 `clawd-papel` producidos y 2 publicados). pedro-setenta-veces-siete (21 nov) y la de hoy son pruebas SOLO VIDEO del dueño; hoy se sugiere una historia de Vida de Jesús: Lázaro. YouTube sin lectura.
 - 2026-11-23 (22 nov 19:10 Bogotá): sin cambio de prioridad ni de candidato (datos · personaje + cifra 2,12×; Vida de Jesús 1,52×; «Mujeres de la Biblia» 1 publicado de 3, 397 sin YouTube a 175 h). `clawd-papel` 405 en TikTok + FB frente a 385 de `cinematico`, retención 8,5 % frente a 10,8 %, sin datos nuevos. Problema principal: distribución (175 h sin publicar, 0 programados, 7 listos sin MP4 en el contenedor, 13 `clawd-papel` producidos y 2 publicados). lazaro-cuatro-dias (22 nov, 44,13 s, dentro del tope) y la de hoy son pruebas SOLO VIDEO del dueño; hoy se sugiere un dato: Moisés 40 / 80 / 120. YouTube sin lectura.
+- 2026-11-23 (tarde, 23 nov 19:09 Bogotá): sin cambio de prioridad ni de candidato (datos · personaje + cifra 1.162 = 2,12×; Vida de Jesús 832 = 1,52×; base 548). Nada publicado ni programado (199 h). moises-en-cifras producido (44,63 s); **la prueba SOLO VIDEO de la tarde, pedida por el dueño, es jesus-doce-anos (historia · Vida de Jesús, Lucas 2:41–52)**, a reservar para el 27 dic. 8 `clawd-papel` listos sin MP4 en el contenedor, 14 producidos y 2 publicados. Problema principal: distribución. YouTube sin lectura.
